@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <meta name="description" content="My home on the web.">
+    <meta name="keywords" content="1990, website">
+    <meta name="author" content="Daniel Miller">
+    <title>Webpage-1990-Colourised</title>
+    <link rel="shortcut icon" href="computer.gif">
+
+    <script language="JavaScript">
+        const speed = 60;
+        let pos = 0;
+        const msg = " Webpage-1990-Colourised ";
+
+        function Scroll() {
+            document.title = msg.substring(pos) + " | " + msg.substring(0, pos);
+            pos++;
+            if (pos > msg.length) pos = 0;
+            setTimeout(Scroll, speed);
+        }
+        Scroll();
+    </script>
+
+    <script language="JavaScript">
+        const trailLength = 15;
+        const trailImage = "ui/firecursor.gif";
+        let coordsStore = new Array(trailLength).fill({});
+        const initTrail = () => {
+            for (let i = 0; i < trailLength; i++) {
+                coordsStore[i] = new Object();
+                coordsStore[i].x = -1000;
+                coordsStore[i].y = -1000;
+                document.write(
+                    `<div id="obj-${i}" style="background-image:url(${trailImage});position:absolute;z-Index:100;height:35px;width:35px"></div>`,
+                );
+            }
+            trail();
+        };
+        const trail = () => {
+            for (let i = 0; i < trailLength; i++) {
+                document.querySelector(`#obj-${i}`).style.top = `${coordsStore[i].y}px`;
+                document.querySelector(`#obj-${i}`).style.left = `${coordsStore[i].x}px`;
+            }
+            for (let i = trailLength; i >= 1; i--) {
+                coordsStore[i] = coordsStore[i - 1];
+            }
+            setTimeout(trail, 0);
+        };
+        initTrail();
+        console.log(coordsStore)
+        document.onmousemove = (e) => void(coordsStore[0] = {
+            x: e.pageX + 12,
+            y: e.pageY + 12
+        });
+    </script>
+
+    <style type="text/css">
+        div[id^="obj"] {
+            margin: 0%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: 100;
+            transform: translate(-38%, -38%);
+            pointer-events: none
+        }
+
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-button:end:increment,
+        ::-webkit-scrollbar-button:start:decrement {
+            display: block
+        }
+
+        ::-webkit-scrollbar-button:vertical:end:decrement,
+        ::-webkit-scrollbar-button:vertical:start:increment {
+            display: none
+        }
+
+        ::-webkit-scrollbar-button:vertical:increment {
+            width: 18px;
+            background: silver url(ui/combo.gif) no-repeat 50%;
+            height: 18px;
+            margin: 1px 1px 1px 10px;
+            -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+            -webkit-transform: rotateY(-90deg);
+            transform: rotateY(-90deg);
+            border: 1px outset #fff;
+        }
+
+        ::-webkit-scrollbar-button:vertical:decrement {
+            width: 11px;
+            background: silver url(ui/comboup.gif) no-repeat 50%;
+            height: 16px;
+            margin: 1px 1px 1px 10px;
+            -webkit-transform: rotateY(180deg);
+            transform: rotateX(180deg);
+            border: 1px outset #fff;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-image: url(ui/scrollbartrack.gif)
+        }
+
+        ::-webkit-scrollbar-thumb:vertical {
+            border: 1px outset #fff;
+            height: 40px;
+            background-color: silver
+        }
+
+        ::-webkit-scrollbar-corner:vertical {
+            background-color: #000
+        }
+
+        :-webkit-scrollbar-button:start:decrement,
+        ::-webkit-scrollbar-button:end:increment {
+            display: block
+        }
+
+        ::-webkit-scrollbar-button:horizontal:end:decrement,
+        ::-webkit-scrollbar-button:horizontal:start:increment {
+            display: none
+        }
+
+        ::-webkit-scrollbar-button:horizontal:increment {
+            background: silver url(ui/comboright.gif) no-repeat 50%;
+            -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+            -webkit-transform: rotateY(-90deg);
+            transform: rotateY(-90deg)
+        }
+
+        ::-webkit-scrollbar-button:horizontal:decrement,
+        ::-webkit-scrollbar-button:horizontal:increment {
+            width: 18px;
+            height: 18px;
+            margin: 1px 1px 1px 10px;
+            border: 1px outset #fff;
+        }
+
+        ::-webkit-scrollbar-button:horizontal:decrement {
+            background: silver url(ui/comboleft.gif) no-repeat 50%;
+            -webkit-transform: rotateY(180deg);
+            transform: rotateX(180deg);
+        }
+
+        ::-webkit-scrollbar-track-piece {
+            margin: 1px;
+        }
+
+        ::-webkit-scrollbar-thumb:horizontal {
+            border: 1px outset #fff;
+            height: 40px;
+            background-color: silver
+        }
+
+        html {
+            height: 100%;
+            cursor: url("ui/firecursor.gif"), default;
+        }
+
+        body {
+            background-image: url("background.gif");
+            margin: 0%;
+        }
+
+        section {
+            margin: auto;
+            margin-bottom: 0;
+            width: 60%;
+            display: flex;
+            /* use for debugging */
+            /* background-color: DodgerBlue; */
+        }
+
+        header {
+            width: 100%;
+            /* use for debugging */
+            /* background-color: #f1f1f1; */
+        }
+
+        section>nav {
+            width: 100%;
+            padding: 0.1%;
+            background: -webkit-linear-gradient(left, #08216b, #a5cef7);
+            border: solid;
+            border-width: 0.2vw;
+            border-bottom-color: #424242;
+            border-right-color: #424242;
+            border-left-color: #fff;
+            border-top-color: #fff;
+        }
+
+        nav>ul {
+            list-style-type: none;
+            margin: 0%;
+            padding: 0%;
+        }
+
+        section>div {
+            width: 100%;
+            margin: 2%;
+            overflow: hidden;
+            text-align: center;
+            /* use for debugging */
+            /* background-color: #f1f1f1; */
+        }
+
+        div>h1 {
+            margin-top: 1%;
+            margin-bottom: 1%;
+            font-size: 1.5vw;
+            color: #fff;
+            /* use for debugging */
+            /* background-color: gold; */
+        }
+
+        div>h2 {
+            margin-top: 2%;
+            margin-bottom: 2%;
+            font-size: 1.2vw;
+            color: #fff;
+            /* use for debugging */
+            /* background-color: gold; */
+        }
+
+        div>p {
+            margin-top: 1%;
+            margin-bottom: 1%;
+            font-size: 1.2vw;
+            font-family: "Times New Roman", Times, serif;
+            color: #fff;
+            /* use for debugging */
+            /* background-color: gold; */
+        }
+
+        div>a {
+            cursor: url("ui/firecursor.gif"), default;
+            font-size: 1.2vw;
+            /* use for debugging */
+            /* background-color: gold; */
+        }
+
+        div>iframe {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            /* use for debugging */
+            /* background-color: gold; */
+        }
+
+        button {
+            cursor: url("ui/firecursor.gif"), default;
+            font-family: "MS Sans Serif", Tahoma, Verdana, sans-serif;
+            margin: auto;
+            font-size: 1vw;
+            border: solid;
+            border-width: 0.2vw;
+            border-bottom-color: #424242;
+            border-right-color: #424242;
+            border-left-color: #fff;
+            border-top-color: #fff;
+            background: silver;
+            color: #212529;
+        }
+
+        button:active {
+            border-bottom-color: #fff;
+            border-right-color: #fff;
+            border-left-color: #424242;
+            border-top-color: #424242;
+        }
+
+        img {
+            width: 100%;
+            /* use for debugging */
+            /* background-color: gold; */
+        }
+
+        hr {
+            margin: auto;
+            width: 98%;
+            height: 0%;
+        }
+
+        section>footer {
+            margin: auto;
+            background-color: silver;
+            margin: 2%;
+            margin-bottom: 0%;
+            border: solid;
+            border-width: 0.2vw;
+            border-bottom-color: #424242;
+            border-right-color: #424242;
+            border-left-color: #fff;
+            border-top-color: #fff;
+            background: silver;
+            color: #212529;
+            text-align: center;
+        }
+
+        footer>p {
+            margin: auto;
+            margin-bottom: 1%;
+            font-size: 1vw;
+            font-family: "MS Sans Serif";
+            /* use for debugging */
+            /* background-color: gold; */
+        }
+
+        footer>marquee {
+            margin: auto;
+            margin-top: 1%;
+            margin-left: 1%;
+            margin-right: 1%;
+        }
+
+        marquee>img {
+            width: 10%;
+            /* use for debugging */
+            /* background-color: gold; */
+        }
+
+        .window-header {
+            border-bottom-style: solid;
+            border-bottom-width: 0.1vw;
+            border-bottom-color: #dee2e6;
+            background: -webkit-linear-gradient(left, #08216b, #a5cef7);
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding-left: 1%;
+            padding-right: 1%;
+            text-align: left;
+        }
+
+        .window-header h2 {
+            font-family: "MS Sans Serif";
+        }
+
+        .window {
+            border: solid;
+            border-width: 0.2vw;
+            border-bottom-color: #424242;
+            border-right-color: #424242;
+            border-left-color: #fff;
+            border-top-color: #fff;
+            background: silver;
+            color: #212529;
+        }
+
+        .maximize {
+            background: url(ui/maximize.gif) no-repeat;
+            background-color: silver;
+            background-size: 75%;
+            background-position: top 40% left 40%;
+            width: 1.5vw;
+            height: 1.5vw;
+        }
+
+        .close {
+            background: url(ui/close.gif) no-repeat;
+            background-color: silver;
+            background-size: 75%;
+            background-position: top 45% left 45%;
+            width: 1.5vw;
+            height: 1.5vw;
+        }
+
+        .overlay {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0px;
+            margin: 0px;
+            display: block;
+            animation: scan 0.1s 0s infinite;
+            background-color: transparent;
+            z-index: 9;
+            pointer-events: none;
+            background-image: url(ui/scanlines.png);
+            opacity: 1;
+        }
+
+        @keyframes scan {
+            from {
+                top: 0;
+                ;
+            }
+
+            to {
+                top: 1px;
+            }
+        }
+
+        .rainbow {
+            background-image: -webkit-linear-gradient(left, #f00, #ff2b00, #f50, #ff8000, #fa0, #ffd500,
+                    #ff0, #d4ff00, #af0, #80ff00, #5f0, #2bff00, #0f0, #00ff2a, #0f5, #00ff80, #0fa,
+                    #00ffd5, #0ff, #00d5ff, #0af, #0080ff, #05f, #002aff, #00f, #2b00ff, #50f, #8000ff,
+                    #a0f, #d400ff, #f0f, #ff00d4, #f0a, #ff0080, #f05, #ff002b, #f00);
+            animation: animatedBackground_a 5s linear infinite alternate;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: #0000;
+            background-clip: text;
+        }
+
+        @keyframes animatedBackground_a {
+            0% {
+                background-position: 0 0
+            }
+
+            100% {
+                background-position: -500px 0
+            }
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            padding-top: 55%;
+        }
+
+        .iframepet {
+            width: 314px;
+            height: 321px;
+        }
+
+        .halfwidth {
+            width: 50%;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-list {
+            display: none;
+            position: absolute;
+            width: 25%;
+            top: 90%;
+            font-size: 1vw;
+            font-family: "MS Sans Serif";
+        }
+
+        .dropdown-list.show {
+            display: block;
+        }
+
+        .dropdown-list a {
+            font-size: 1vw;
+            font-family: "MS Sans Serif";
+            width: 85%;
+            padding-left: 10%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .dropdown-list a:hover {
+            background-color: #08216b;
+            color: #fff;
+        }
+
+        .dropdown-list h1 {
+            font-size: 1vw;
+            font-family: "MS Sans Serif";
+            margin: 0%;
+        }
+
+        .dropdown-list p {
+            font-size: 1vw;
+            font-family: "MS Sans Serif";
+            margin: 0%;
+        }
+
+        .dropdown-inner {
+            width: 125%;
+            left: 95%;
+            top: 0;
+            z-index: 1;
+        }
+
+        .updatedescr {
+            width: 80%;
+        }
+
+        .dropdown .dropdown-list .dropdown:hover>.dropdown-list {
+            display: block;
+        }
+
+        .nav-text {
+            margin: auto;
+            padding: 1%;
+        }
+
+        .nav-text h1 {
+            color: #000;
+        }
+
+        .nav-text p {
+            color: #000;
+        }
+
+        .clippy {
+            display: inline;
+            position: fixed;
+            margin: 0%;
+            width: 25%;
+            bottom: 0;
+            right: 0;
+            margin-right: 0.5%;
+            /* use for debugging */
+            /* background-color: DodgerBlue; */
+        }
+
+        .clippy img {
+            float: right;
+            width: 30%;
+            margin: 0%;
+        }
+
+        .clippy-box {
+            position: relative;
+            width: 75%;
+            padding: 1%;
+            font-size: 1vw;
+            color: black;
+            text-align: left;
+            font-family: "MS Sans Serif", Tahoma, Verdana, sans-serif;
+            background-color: #ffc;
+            border: 0.2vw solid black;
+            border-radius: .5em;
+            margin: 0%;
+            float: right;
+        }
+
+        .clippy-box:before,
+        .clippy-box:after {
+            content: ' ';
+            position: absolute;
+            width: 0;
+            height: 0;
+        }
+
+        .clippy-box:before {
+            left: auto;
+            right: 49.5%;
+            bottom: -26px;
+            border-style: solid;
+            border-width: 0 19px 25px 0;
+            border-color: #000 #000 transparent transparent;
+        }
+
+        .clippy-box:after {
+            left: auto;
+            right: 50%;
+            bottom: -20px;
+            border-style: solid;
+            border-width: 0 15px 20px 0;
+            border-color: #ffc #ffc transparent transparent;
+        }
+
+        .clippy-box hr {
+            border-bottom: 2px solid rgb(255, 255, 255);
+            border-top: 2px solid rgb(136, 140, 143);
+        }
+
+        .player-header {
+            background: linear-gradient(to right, #000080, rgb(16, 52, 166));
+        }
+
+        .player-header img {
+            width: 1vw;
+            float: left;
+            margin-top: 2%;
+            margin-right: 3%;
+        }
+
+        .player-header h2 {
+            font-size: 1vw;
+        }
+
+        .player-header .maximize {
+            background: url(ui/maximize.gif) no-repeat;
+            background-color: silver;
+            background-size: 75%;
+            background-position: top 40% left 35%;
+            width: 1.25vw;
+            height: 1.25vw;
+        }
+
+        .player-header .close {
+            background: url(ui/close.gif) no-repeat;
+            background-color: silver;
+            background-size: 75%;
+            background-position: top 45% left 45%;
+            width: 1.25vw;
+            height: 1.25vw;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .links {
+            width: 65%;
+            margin-left: 2%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .link {
+            font-family: "MS Sans Serif";
+            font-size: 1vw;
+            display: inline-flex;
+            color: rgb(136, 140, 143);
+            text-shadow: rgb(255 255 255) 1px 1px;
+            border: none;
+        }
+
+        .slider {
+            margin: auto;
+            margin-top: 3%;
+            margin-bottom: 3%;
+            width: 90%;
+            height: 0.5vw;
+            appearance: none;
+            border: solid;
+            border-width: 0.2vw;
+            border-bottom-color: #fff;
+            border-right-color: #fff;
+            border-left-color: #424242;
+            border-top-color: #424242;
+            background: #fff;
+        }
+
+        .slider::-webkit-slider-thumb {
+            appearance: none;
+            width: 0.75vw;
+            height: 1.5vw;
+            border: solid;
+            border-width: 0.16vw;
+            border-bottom-color: #424242;
+            border-right-color: #424242;
+            border-left-color: #fff;
+            border-top-color: #fff;
+            background: silver;
+        }
+
+        .toolbar {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding-left: 1%;
+            padding-right: 1%;
+            margin-top: 0.75%;
+            margin-bottom: 0.75%;
+        }
+
+        .togglebtn {
+            background: url(ui/play.gif) no-repeat;
+            background-size: 75%;
+            background-position: top 40% left 40%;
+            width: 1.5vw;
+            height: 1.5vw;
+        }
+
+        .skip-buttons {
+            display: flex;
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+
+        .back {
+            background: url(ui/backskip.gif) no-repeat;
+            background-color: silver;
+            background-size: 75%;
+            background-position: top 40% left 40%;
+            width: 1.5vw;
+            height: 1.5vw;
+        }
+
+        .next {
+            background: url(ui/forwardskip.gif) no-repeat;
+            background-color: silver;
+            background-size: 75%;
+            background-position: top 40% left 40%;
+            width: 1.5vw;
+            height: 1.5vw;
+        }
+
+        .vertical-hr {
+            width: 0%;
+            border-right: 2px solid rgb(255, 255, 255);
+            border-left: 2px solid rgb(136, 140, 143);
+            align-self: stretch;
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+
+        .time {
+            position: relative;
+            padding: 1%;
+            border-style: solid;
+            border-width: 2px;
+            border-color: rgb(136, 140, 143) rgb(255, 255, 255) rgb(255, 255, 255) rgb(136, 140, 143);
+        }
+
+        .time::before {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            content: "";
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
+            border-style: solid;
+            border-width: 2px;
+            border-color: rgb(5, 6, 8) rgb(223, 224, 227) rgb(223, 224, 227) rgb(5, 6, 8);
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="clippy">
+            <div class="clippy-box" id="clippy-box">
+                <div class="window">
+                    <audio id="playing">
+                    </audio>
+                    <div class="window-header player-header">
+                        <div>
+                            <img src="mediaplayer.gif">
+                            <h2>Media Player</h2>
+                        </div>
+                        <div style="margin-top: 1%; margin-bottom: 1%;">
+                            <button class="maximize">
+                            </button>
+                            <button class="close" id="closebtn">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="links">
+                        <p class="link"><u>F</u>ile</p>
+                        <p class="link"><u>E</u>dit</p>
+                        <p class="link"><u>D</u>evice</p>
+                        <p class="link"><u>H</u>elp</p>
+                    </div>
+                    <hr>
+                    <div style="display: flex;">
+                        <input type="range" id="seek" min="0" max="100" value="0" class="slider">
+                    </div>
+                    <hr>
+                    <div class="toolbar">
+                        <div>
+                            <button class="togglebtn" id="togglebtn"></button>
+                        </div>
+                        <div class="skip-buttons">
+                            <button class="back" id="back"></button>
+                            <button class="next" id="next"></button>
+                        </div>
+                        <input type="range" id="volume" min="0" max="100" step="1" value="100" class="slider"
+                            style="flex-grow: 1;">
+                        <div class="vertical-hr"></div>
+                        <div class="time">
+                            <span id="time">00:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="clippy.gif" id="clippybtn">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <header>
+            <img src="headingtop.gif" alt="Webpage">
+            <img src="headingbottom.gif" alt="1990 Colourised">
+        </header>
+    </section>
+
+    <section>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <button class="dropdown-btn">Updates⏷</button>
+                    <div class="dropdown-list window">
+                        <div class="dropdown">
+                            <a class="dropdown-btn">24/02/2022<p>⏵</p></a>
+                            <div class="dropdown-list updatedescr window dropdown-inner">
+                                <div class="nav-text">
+                                    <h1>24/02/2022</h1>
+                                    <hr>
+                                    <p>
+                                        Added a handy little Updates button so you can see exactly what I have done.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="dropdown">
+                            <a class="dropdown-btn">03/03/2022<p>⏵</p></a>
+                            <div class="dropdown-list updatedescr window dropdown-inner">
+                                <div class="nav-text">
+                                    <h1>03/03/2022</h1>
+                                    <hr>
+                                    <p>
+                                        Invited Clippy to hangout on my site. He said he would DJ, just needs to get set
+                                        up first.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="dropdown">
+                            <a class="dropdown-btn">25/03/2022<p>⏵</p></a>
+                            <div class="dropdown-list updatedescr window dropdown-inner">
+                                <div class="nav-text">
+                                    <h1>25/03/2022</h1>
+                                    <hr>
+                                    <p>
+                                        It took a bit longer than expected but Clippy has finaly gotten set up and is
+                                        ready to DJ.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="dropdown">
+                            <a class="dropdown-btn">COMMING SOON<p>⏵</p></a>
+                            <div class="dropdown-list updatedescr window dropdown-inner">
+                                <div class="nav-text">
+                                    <h1>00/00/0000</h1>
+                                    <hr>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lacinia cursus ex
+                                        nec iaculis.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
+    <section>
+        <div>
+            <img class="halfwidth" src="computer.gif">
+        </div>
+        <div>
+            <img src="welcome.gif">
+            <img
+                src="https://hitwebcounter.com/counter/counter.php?page=7905509&style=0010&nbdigits=6&type=ip&initCount=0"></a>
+            </a>
+        </div>
+        <div>
+            <img class="halfwidth" src="computer.gif">
+        </div>
+    </section>
+
+    <section>
+        <div style="width: 50%;">
+            <img src="open24hrs.gif">
+        </div>
+        <div style="width: 150%;">
+            <h1>
+                Hey there, websurfer welcome to my webpage!
+                <br>Kick back, and relax for a while
+                at my site!</h1>
+            <img src="dividergreen.gif">
+            <p>
+                Greetings, I am Dan and this is my very own website. Here you'll find my web project with my inane
+                ramblings and whatever rubbish I'm going to throw on it.<br> Why I hear you ask?
+            </p>
+            <p class="rainbow" style="font-weight: bold;">Becouse frick you thats why!</p>
+            <p>
+                I created Webpage 1990 Colourised because I really liked the look of geocities pages and I thought it
+                would be cool and fun to have my own little slice of the web, it would also pass the time and allow me
+                to practise my epic HTML, Java & CSS skillz. This webpage is under construction so remember to check on
+                it
+                every now
+                and then. I just might have added something new and super cool... or not ¯\_(ツ)_/¯
+            </p>
+            <h2>
+                Oh and I almost forgot sign my guestbook, bookmark this page and follow!
+            </h2>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <img src="dividerfire.gif">
+        </div>
+    </section>
+
+    <section>
+        <div class="window" style="width: 125%;">
+            <div class="window-header">
+                <div>
+                    <h2>
+                        <img src="book.gif" style="width: 1.5vw;">
+                        Sign my guestbook
+                    </h2>
+                </div>
+                <div>
+                    <button class="maximize"
+                        onclick="window.location.href = 'https://webpage1990colour.123guestbook.com/';">
+                    </button>
+                    <button class="close">
+                    </button>
+                </div>
+            </div>
+            <div class="container">
+                <iframe class="guestbook" scrolling="yes" src="http://webpage1990colour.123guestbook.com/"
+                    frameborder="0">
+                </iframe>
+            </div>
+        </div>
+        <div class="container" style="width: 75%; padding-top: 25%;">
+            <iframe class="iframepet" scrolling="no" src="https://gifypet.neocities.org/pet/pet.html?name=Astartes&dob=16426721
+77&gender=m&element=Fire&pet=https%3A%2F%2Fth.bing.com%2Fth%2Fid%2FR.55ac1a8a854dcc2badb9e95675dc9f0d%3Frik%3DBNA8%
+252b8Owaseidg%26riu%3Dhttp%253a%252f%252fi.imgur.com%252f51cLq.gif%26ehk%3D3qqGSlAk%252bc4B2L2qe9rJJdnhjOsqeh3S85Mi
+Nz2%252fStY%253d%26risl%3D%26pid%3DImgRaw%26r%3D0&map=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fth
+umb%2F2%2F2c%2FRotating_earth_%2528large%2529.gif%2F200px-Rotating_earth_%2528large%2529.gif&background=&tablecolor
+=%23ff0000&textcolor=%23ffff00" frameborder="0">
+            </iframe>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <img src="dividerconstruction.gif">
+            <img src="thatsallfolks.gif">
+        </div>
+    </section>
+
+    <!-- TODO : remove this section onece done with links -->
+    <section>
+        <div
+            style=" background-color: silver; border: solid; border-width: 0.2vw; border-bottom-color: #424242; border-right-color: #424242; border-left-color: #fff; border-top-color: #fff; font-family: MS Sans Serif;">
+            <h1 style="margin-top: 0px; color: black; font-family: MS Sans Serif;">linkz</h1>
+            <div>
+                <p style="color: black; font-family: MS Sans Serif;">Buttons</p>
+                <a href="https://buttonwall.neocities.org/">Button wall</a>
+                <br>
+                <a href="https://anlucas.neocities.org/88x31Buttons.html">Lucas's button wall</a>
+                <br>
+                <a href="https://sadgrl.online/projects/88x31-button-maker.html">button maker</a>
+                <br>
+                <p style="color: black; font-family: MS Sans Serif;">Gifs</p>
+                <a href="https://www.cameronsworld.net/">cameron's world</a>
+                <br>
+                <a href="https://coolgifs.neocities.org/">The web site of cool gifs</a>
+                <br>
+                <a href="https://benisland.neocities.org/petpet/">petpet generator</a>
+                <br>
+                <a href="https://gifcities.org/">gifcities</a>
+                <br>
+                <a href="https://textanim.com/">textanim 2.0</a>
+                <br>
+                <a href="https://cooltext.com/">cooltext</a>
+                <br>
+                <p style="color: black; font-family: MS Sans Serif;">Graphics</p>
+                <a href="http://www.acme.com/">ACME Laboratories</a>
+                <br>
+                <a href="http://atom.smasher.org/">Atom Smasher</a>
+                <br>
+                <a href="https://emojipedia.org/softbank/1997/">SoftBank 1997</a>
+                <br>
+                <p style="color: black; font-family: MS Sans Serif;">CSS</p>
+                <a href="https://alexbsoft.github.io/win95.css/">Win95.CSS</a>
+                <br>
+                <a href="https://github.com/jdan/98.css">jdan.css</a>
+                <br>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <footer>
+            <marquee direction="right">
+                <img src="buttons/email-icon.gif" alt="buttons/email-icon.gif">
+                <img src="buttons/best_viewed_with_eyes.gif" alt="buttons/best_viewed_with_eyes.gif">
+                <img src="buttons/notepad2.gif" alt="buttons/notepad2.gif">
+                <img src="buttons/made_with_windows.gif" alt="buttons/made_with_windows.gif">
+                <img src="buttons/browser.gif" alt="buttons/browser.gif">
+                <img src="buttons/hedied4u.gif" alt="buttons/hedied4u.gif">
+                <img src="buttons/noedit.gif" alt="buttons/noedit.jpg">
+                <img src="buttons/truth.gif" alt="buttons/truth.png">
+                <img src="buttons/dilbert.gif" alt="buttons/dilbert.gif">
+                <img src="buttons/wwwbutton.gif" alt="buttons/wwwbutton.gif">
+            </marquee>
+            <marquee direction="left>">
+                <img src="buttons/bantime.gif" alt="buttons/bantime.png">
+                <img src="buttons/mailput.gif" alt="buttons/mailput.gif">
+                <img src="buttons/nocodeandrun.gif" alt="buttons/nocodeandrun.gif">
+                <img src="buttons/freespeechforever.gif" alt="buttons/freespeechforever.gif">
+                <img src="buttons/bookmark_this_page.gif" alt="buttons/bookmark_this_page.gif">
+                <img src="buttons/homernow.gif" alt="buttons/homernow.gif">
+                <img src="buttons/alienow.gif" alt="buttons/alienow.gif">
+                <img src="buttons/psbutton.gif" alt="buttons/psbutton.gif">
+                <img src="buttons/chill_pill.gif" alt="buttons/chill_pill.gif">
+                <img src="buttons/nneighborhoodsmall.gif" alt="buttons/nneighborhoodsmall.png">
+            </marquee>
+            <p>©1990 Webpage-1990-Colourised</p>
+        </footer>
+    </section>
+
+    <section class="overlay">
+    </section>
+
+    <script language="JavaScript">
+        const dropdown_btns = document.querySelectorAll(".dropdown-btn");
+
+        dropdown_btns.forEach((btn) => {
+            btn.addEventListener("click", (e) => {
+                const dropdown = e.currentTarget.nextElementSibling;
+
+                dropdown.classList.toggle("show");
+                document
+                    .querySelectorAll(".dropdown-btn + .dropdown-list")
+                    .forEach((dropdown) => {
+                        if (dropdown !== e.currentTarget.nextElementSibling) {
+                            dropdown.classList.remove("show");
+                        }
+                    });
+            });
+        });
+
+        window.onclick = (e) => {
+            if (!e.target.matches(".dropdown-btn")) {
+                const dropdowns = document.querySelectorAll(".dropdown-list");
+                dropdowns.forEach((drpodown) => {
+                    drpodown.classList.remove("show");
+                });
+            }
+        };
+    </script>
+
+    <script language="JavaScript">
+        var playlist = [
+            "https://vgmsite.com/soundtracks/duck-tales/uznqdxepvc/07%20Moon%20Surface%20%28The%20Moon%29.mp3",
+            "https://t4.bcbits.com/stream/fe442dc5e46636b63e543a98d4ee7731/mp3-128/2163436973?p=0&ts=1648226242&t=ab25b1fa5d09b6c3e82f57244a3a434e12ba5455&token=1648226242_7e921904ea0f9be33f203f40d6456eee40dbaf84",
+            "https://vgmsite.com/soundtracks/london-racer-psx-gamerip/mndevhtf/SLES-02694%20-%2002%20M25%20South.mp3",
+            "http://www.dream-ware.co.uk/downloads/music/fe2/mp3/fe2-frontier-main-theme.mp3",
+        ];
+        var index = 0;
+        var seek = document.getElementById("seek");
+        var togglebtn = document.getElementById("togglebtn");
+        var back = document.getElementById("back");
+        var next = document.getElementById("next");
+        var volume = document.getElementById("volume");
+        var playing = document.getElementById("playing")
+        var time = document.getElementById("time");
+
+        playing.src = playlist[index];
+
+        playing.addEventListener("loadedmetadata", setSliderMax);
+
+        function setSliderMax() {
+            seek.setAttribute("max", playing.duration);
+            seek.setAttribute("min", 0);
+        }
+
+        playing.addEventListener("timeupdate", setSeekVal);
+
+        function setSeekVal() {
+            seek.value = playing.currentTime;
+            if (playing.ended) {
+                seek.value = 0;
+                playing.currentTime = 0;
+                togglebtn.style.backgroundImage = "url('ui/play.gif')";
+                playing.pause();
+            }
+        }
+
+        seek.addEventListener("input", setSeek);
+
+        function setSeek() {
+            playing.currentTime = seek.value;
+        }
+
+        togglebtn.addEventListener("click", toggle);
+
+        function toggle() {
+            if (playing.paused) {
+                playing.play();
+                togglebtn.style.backgroundImage = "url('ui/pause.gif')";
+            } else {
+                playing.pause();
+                togglebtn.style.backgroundImage = "url('ui/play.gif')";
+            }
+        }
+
+        back.addEventListener("click", decrement);
+
+        function decrement() {
+            if (index === 0) {
+                index = playlist.length - 1;
+            } else {
+                index--;
+            }
+
+            playing.src = playlist[index];
+            playing.play();
+            togglebtn.style.backgroundImage = "url('ui/pause.gif')";
+        }
+
+        next.addEventListener("click", increment);
+
+        function increment() {
+            if (index === playlist.length - 1) {
+                index = 0;
+            } else {
+                index++;
+            }
+
+            playing.src = playlist[index];
+            playing.play();
+            togglebtn.style.backgroundImage = "url('ui/pause.gif')";
+        }
+
+        volume.addEventListener("input", setVol);
+
+        function setVol() {
+            playing.volume = volume.value / 100;
+        }
+
+        playing.addEventListener("timeupdate", seektime);
+
+        function seektime() {
+            var mins = Math.floor(playing.currentTime / 60);
+            var secs = Math.floor(playing.currentTime % 60);
+            if (secs < 10) {
+                secs = '0' + secs;
+            }
+            if (mins < 10) {
+                mins = '0' + mins;
+            }
+            time.innerHTML = mins + ':' + secs;
+        }
+
+        playing.addEventListener('ended', audioEnd);
+
+        function audioEnd() {
+            if (index === playlist.length - 1) {
+                index = 0;
+            } else {
+                index++;
+            }
+
+            playing.src = playlist[index];
+            playing.play();
+            togglebtn.style.backgroundImage = "url('ui/pause.gif')";
+        }
+    </script>
+
+    <script language="JavaScript">
+        var closebtn = document.getElementById("closebtn");
+        var clippybtn = document.getElementById("clippybtn");
+        var clippybox = document.getElementById("clippy-box");
+
+        closebtn.addEventListener("click", close);
+
+        function close() {
+            clippybox.classList.toggle("hide");
+            clippybtn.addEventListener("click", open);
+        }
+
+        function open() {
+            clippybox.classList.toggle("hide");
+            clippybtn.removeEventListener("click", open);
+        }
+    </script>
+</body>
+
+</html>
