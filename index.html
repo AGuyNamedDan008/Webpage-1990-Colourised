@@ -68,7 +68,7 @@
         }
 
         ::-webkit-scrollbar {
-            width: 12px;
+            width: 0.75vw;
         }
 
         ::-webkit-scrollbar-button:end:increment,
@@ -174,14 +174,10 @@
             margin-bottom: 0;
             width: 60%;
             display: flex;
-            /* use for debugging */
-            /* background-color: DodgerBlue; */
         }
 
         header {
             width: 100%;
-            /* use for debugging */
-            /* background-color: #f1f1f1; */
         }
 
         section>nav {
@@ -207,8 +203,6 @@
             margin: 2%;
             overflow: hidden;
             text-align: center;
-            /* use for debugging */
-            /* background-color: #f1f1f1; */
         }
 
         div>h1 {
@@ -216,8 +210,6 @@
             margin-bottom: 1%;
             font-size: 1.5vw;
             color: #fff;
-            /* use for debugging */
-            /* background-color: gold; */
         }
 
         div>h2 {
@@ -225,8 +217,6 @@
             margin-bottom: 2%;
             font-size: 1.2vw;
             color: #fff;
-            /* use for debugging */
-            /* background-color: gold; */
         }
 
         div>p {
@@ -235,15 +225,17 @@
             font-size: 1.2vw;
             font-family: "Times New Roman", Times, serif;
             color: #fff;
-            /* use for debugging */
-            /* background-color: gold; */
         }
 
         div>a {
             cursor: url("ui/firecursor.gif"), default;
             font-size: 1.2vw;
-            /* use for debugging */
-            /* background-color: gold; */
+        }
+
+        div>textarea {
+            cursor: url("ui/firecursor.gif"), default;
+            font-size: 0.75vw;
+            resize: none;
         }
 
         div>iframe {
@@ -254,8 +246,6 @@
             left: 0;
             bottom: 0;
             right: 0;
-            /* use for debugging */
-            /* background-color: gold; */
         }
 
         button {
@@ -282,8 +272,6 @@
 
         img {
             width: 100%;
-            /* use for debugging */
-            /* background-color: gold; */
         }
 
         hr {
@@ -293,19 +281,23 @@
         }
 
         section>footer {
-            margin: auto;
+            width: 100%;
+            margin: 2%;
+            padding-left: 0.5%;
+            padding-right: 0.5%;
+            overflow: hidden;
+            text-align: center;
             background-color: silver;
             margin: 2%;
             margin-bottom: 0%;
             border: solid;
             border-width: 0.2vw;
-            border-bottom-color: #424242;
+            border-bottom-width: 0;
             border-right-color: #424242;
             border-left-color: #fff;
             border-top-color: #fff;
             background: silver;
             color: #212529;
-            text-align: center;
         }
 
         footer>p {
@@ -313,29 +305,6 @@
             margin-bottom: 1%;
             font-size: 1vw;
             font-family: "MS Sans Serif";
-            /* use for debugging */
-            /* background-color: gold; */
-        }
-
-        footer>marquee {
-            margin: auto;
-            margin-top: 1%;
-            margin-left: 1%;
-            margin-right: 1%;
-        }
-
-        marquee>img {
-            width: 10%;
-            /* use for debugging */
-            /* background-color: gold; */
-        }
-
-        a>img {
-            width: 10%;
-            margin-left: 1%;
-            margin-right: 1%;
-            /* use for debugging */
-            /* background-color: gold; */
         }
 
         .window-header {
@@ -414,31 +383,10 @@
             }
         }
 
-        .rainbow {
-            background-image: -webkit-linear-gradient(left, #f00, #ff2b00, #f50, #ff8000, #fa0, #ffd500,
-                    #ff0, #d4ff00, #af0, #80ff00, #5f0, #2bff00, #0f0, #00ff2a, #0f5, #00ff80, #0fa,
-                    #00ffd5, #0ff, #00d5ff, #0af, #0080ff, #05f, #002aff, #00f, #2b00ff, #50f, #8000ff,
-                    #a0f, #d400ff, #f0f, #ff00d4, #f0a, #ff0080, #f05, #ff002b, #f00);
-            animation: animatedBackground_a 5s linear infinite alternate;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: #0000;
-            background-clip: text;
-        }
-
-        @keyframes animatedBackground_a {
-            0% {
-                background-position: 0 0
-            }
-
-            100% {
-                background-position: -500px 0
-            }
-        }
-
         .container {
             position: relative;
             width: 100%;
-            padding-top: 55%;
+            padding-top: 50%;
         }
 
         .iframepet {
@@ -529,8 +477,6 @@
             bottom: 0;
             right: 0;
             margin-right: 0.5%;
-            /* use for debugging */
-            /* background-color: DodgerBlue; */
         }
 
         .clippy img {
@@ -739,50 +685,61 @@
         }
 
         .marquee {
+            margin-top: 0.5%;
+            margin-bottom: 0.5%;
             position: relative;
             width: 100%;
-            height: 50%;
-            overflow-x: hidden;
+            height: 2vw;
+            overflow: hidden;
+        }
+
+        .marquee-right {
+            display: flex;
+            width: 450%;
+            position: absolute;
+            left: 0;
+            animation: track-right 35s linear infinite;
+        }
+
+        @keyframes track-right {
+            0% {
+                left: -225%;
+            }
+
+            100% {
+                left: 0%;
+            }
+        }
+
+        .marquee-left {
+            display: flex;
+            width: 450%;
+            position: absolute;
+            left: 0;
+            animation: track-left 35s linear infinite;
+        }
+
+        @keyframes track-left {
+            0% {
+                left: 0%;
+            }
+
+            100% {
+                left: -225%;
+            }
+        }
+
+        .track {
+            display: flex;
+            width: 50%;
+            justify-content: space-around;
         }
 
         .marquee img {
-            width: 10%;
-            /* use for debugging */
-            /* background-color: gold; */
-        }
-
-        .track-right {
-            position: absolute;
-            white-space: nowrap;
-            will-change: transform;
-            animation: marquee-right 15s linear infinite;
-        }
-
-        @keyframes marquee-right {
-            from {
-                transform: translate(-50%);
-            }
-
-            to {
-                transform: translate(0);
-            }
-        }
-
-        .track-left {
-            position: absolute;
-            white-space: nowrap;
-            will-change: transform;
-            animation: marquee-left 15s linear infinite;
-        }
-
-        @keyframes marquee-left {
-            from {
-                transform: translate(0);
-            }
-
-            to {
-                transform: translate(-50%);
-            }
+            margin-left: 0.3vw;
+            margin-right: 0.3vw;
+            width: 5.75vw;
+            height: 2vw;
         }
     </style>
 </head>
@@ -796,7 +753,7 @@
                     </audio>
                     <div class="window-header player-header">
                         <div>
-                            <img src="mediaplayer.gif">
+                            <img src="ui/mediaplayer.gif">
                             <h2>Media Player</h2>
                         </div>
                         <div style="margin-top: 1%; margin-bottom: 1%;">
@@ -835,7 +792,7 @@
                 </div>
             </div>
             <div>
-                <img src="clippy.gif" id="clippybtn">
+                <img src="ui/clippy.gif" id="clippybtn">
             </div>
         </div>
     </section>
@@ -867,28 +824,28 @@
                         </div>
                         <hr>
                         <div class="dropdown">
-                            <a class="dropdown-btn">03/03/2022<p>⏵</p></a>
-                            <div class="dropdown-list updatedescr window dropdown-inner">
-                                <div class="nav-text">
-                                    <h1>03/03/2022</h1>
-                                    <hr>
-                                    <p>
-                                        Invited Clippy to hangout on my site. He said he would DJ, just needs to get set
-                                        up first.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="dropdown">
                             <a class="dropdown-btn">25/03/2022<p>⏵</p></a>
                             <div class="dropdown-list updatedescr window dropdown-inner">
                                 <div class="nav-text">
                                     <h1>25/03/2022</h1>
                                     <hr>
                                     <p>
-                                        It took a bit longer than expected but Clippy has finaly gotten set up and is
-                                        ready to DJ.
+                                        Invited Clippy to hangout on my site. He said he would DJ, just needs to get set
+                                        up then he will be all ready to go.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="dropdown">
+                            <a class="dropdown-btn">23/04/2022<p>⏵</p></a>
+                            <div class="dropdown-list updatedescr window dropdown-inner">
+                                <div class="nav-text">
+                                    <h1>23/04/2022</h1>
+                                    <hr>
+                                    <p>
+                                        Added a Cool People section so you can see all of the other wonderful webistes
+                                        of the world wide web.
                                     </p>
                                 </div>
                             </div>
@@ -929,7 +886,7 @@
     </section>
 
     <section>
-        <div style="width: 50%;">
+        <div class="halfwidth">
             <img src="open24hrs.gif">
         </div>
         <div style="width: 150%;">
@@ -937,12 +894,22 @@
                 Hey there, websurfer welcome to my webpage!
                 <br>Kick back, and relax for a while
                 at my site!</h1>
-            <img src="dividergreen.gif">
+            <img src="dividers/dividergreen.gif">
             <p>
                 Greetings, I am Dan and this is my very own website. Here you'll find my web project with my inane
                 ramblings and whatever rubbish I'm going to throw on it.<br> Why I hear you ask?
             </p>
-            <p class="rainbow" style="font-weight: bold;">Becouse frick you thats why!</p>
+            <p>
+                <span class="rainbow">B</span><span class="rainbow">e</span><span class="rainbow">c</span><span
+                    class="rainbow">o</span><span class="rainbow">u</span><span class="rainbow">s</span><span
+                    class="rainbow">e</span>
+                <span class="rainbow">f</span><span class="rainbow">r</span><span class="rainbow">i</span><span
+                    class="rainbow">c</span><span class="rainbow">k</span>
+                <span class="rainbow">y</span><span class="rainbow">o</span><span class="rainbow">u</span>
+                <span class="rainbow">t</span><span class="rainbow">h</span><span class="rainbow">a</span><span
+                    class="rainbow">t</span><span class="rainbow">s</span>
+                <span class="rainbow">w</span><span class="rainbow">h</span><span class="rainbow">y</span><span
+                    class="rainbow">!</span></p>
             <p>
                 I created Webpage 1990 Colourised because I really liked the look of geocities pages and I thought it
                 would be cool and fun to have my own little slice of the web, it would also pass the time and allow me
@@ -959,7 +926,7 @@
 
     <section>
         <div>
-            <img src="dividerfire.gif">
+            <img src="dividers/dividerfire.gif">
         </div>
     </section>
 
@@ -968,7 +935,7 @@
             <div class="window-header">
                 <div>
                     <h2>
-                        <img src="book.gif" style="width: 1.5vw;">
+                        <img src="ui/book.gif" style="width: 1.5vw;">
                         Sign my guestbook
                     </h2>
                 </div>
@@ -999,80 +966,117 @@ umb%2F2%2F2c%2FRotating_earth_%2528large%2529.gif%2F200px-Rotating_earth_%2528la
 
     <section>
         <div>
-            <div style="display: flex; margin-left: 1.25%; margin-right: 1.25%;">
-                <img style="width: 40%; margin: auto; height: 1.5vw;" src="dividergreenglowblink.gif">
-                <h1 style="width: 20%;">Cool People</h1>
-                <img style="width: 40%; margin: auto; height: 1.5vw;" src="dividergreenglowblink.gif">
+            <div style="display: flex; width: 98%; margin: auto;">
+                <img style="height: 1.5vw; width: 42%; margin: auto;" src="dividers/dividergreenglowblink.gif">
+                <h1 style="margin: 0%; width: 16%;">
+                    <span class="rainbow">C</span><span class="rainbow">o</span><span class="rainbow">o</span><span
+                        class="rainbow">l</span>
+                    <span class="rainbow">P</span><span class="rainbow">e</span><span class="rainbow">o</span><span
+                        class="rainbow">p</span><span class="rainbow">l</span><span class="rainbow">e</span>
+                </h1>
+                <img style="height: 1.5vw; width: 42%; margin: auto;" src="dividers/dividergreenglowblink.gif">
             </div>
-            <div class="marquee" style="height: 2.5vw;">
-                <div class="track-right">
-                    <a href="https://momg.neocities.org/"><img
-                            src="https://momg.neocities.org/site-images/momg-badge.gif"></a>
-                    <a href="https://biggulpsupreme.neocities.org/"><img src="https://i.imgur.com/ZU3CcjO.gif"></a>
-                    <a href="https://sweethard666.neocities.org"><img
-                            src="https://sweethard666.neocities.org/sweethard666type.gif"></a>
-                    <a href="https://88by31.neocities.org/"><img src="https://transgender.money/index/8.png"></a>
-                    <a href="https://neocities.org/site/miraflutty"><img
-                            src="https://miraflutty.neocities.org/button.gif"></a>
-                    <a href="https://lostintheworld.neocities.org"><img
-                            src="https://lostintheworld.neocities.org/tex/litw-stamp.gif"></a>
-                    <a href="https://voodu.xyz/"><img src="https://voodu.xyz/img/button.gif"></a>
-                    <a href="http://2bit.neocities.org"><img src="https://2bit.neocities.org/2bit_button.png"></a>
-                    <a href="https://errormine.neocities.org/"><img
-                            src="https://errormine.neocities.org/buttons/img/errormine-button.gif"></a>
-                    <a href="https://fretnoize.neocities.org/"><img
-                            src="https://fretnoize.neocities.org/Images/fretnoize.png"></a>
-                    <a href="https://billsworld.neocities.org/"><img
-                            src="https://billsworld.neocities.org/images/billsworld.gif" /></a>
-                    <a href="https://www.44nifty.com"><img src="https://44nifty.com/img/88x31/niftows-animated.gif"></a>
-                    <a href="https://cerealki11er.neocities.org/"><img
-                            src="https://cerealki11er.neocities.org/buttonn.png"></a>
-                    <a href="https://melonking.net"><img
-                            src="https://melonking.net/images/badges/MELON-BADGE-2.GIF"></a>
-                    <a href="https://youtuube.neocities.org/"><img
-                            src="https://youtuube.neocities.org/Misc%20Assets/Internet/KitajimasKornerBadgeIcon.gif"></a>
-                    <a href="https://dokodemo.neocities.org/"><img
-                            src="https://dokodemo.neocities.org/images/buttons/dokodemobutton3.gif"></a>
-                    <a href="https://dannarchy.com/"><img src="https://dannarchy.com/images/d_now.gif"></a>
-                    <a href="https://momg.neocities.org/"><img
-                            src="https://momg.neocities.org/site-images/momg-badge.gif"></a>
-                    <a href="https://biggulpsupreme.neocities.org/"><img src="https://i.imgur.com/ZU3CcjO.gif"></a>
-                    <a href="https://sweethard666.neocities.org"><img
-                            src="https://sweethard666.neocities.org/sweethard666type.gif"></a>
-                    <a href="https://88by31.neocities.org/"><img src="https://transgender.money/index/8.png"></a>
-                    <a href="https://neocities.org/site/miraflutty"><img
-                            src="https://miraflutty.neocities.org/button.gif"></a>
-                    <a href="https://lostintheworld.neocities.org"><img
-                            src="https://lostintheworld.neocities.org/tex/litw-stamp.gif"></a>
-                    <a href="https://voodu.xyz/"><img src="https://voodu.xyz/img/button.gif"></a>
-                    <a href="http://2bit.neocities.org"><img src="https://2bit.neocities.org/2bit_button.png"></a>
-                    <a href="https://errormine.neocities.org/"><img
-                            src="https://errormine.neocities.org/buttons/img/errormine-button.gif"></a>
-                    <a href="https://fretnoize.neocities.org/"><img
-                            src="https://fretnoize.neocities.org/Images/fretnoize.png"></a>
-                    <a href="https://billsworld.neocities.org/"><img
-                            src="https://billsworld.neocities.org/images/billsworld.gif" /></a>
-                    <a href="https://www.44nifty.com"><img src="https://44nifty.com/img/88x31/niftows-animated.gif"></a>
-                    <a href="https://cerealki11er.neocities.org/"><img
-                            src="https://cerealki11er.neocities.org/buttonn.png"></a>
-                    <a href="https://melonking.net"><img
-                            src="https://melonking.net/images/badges/MELON-BADGE-2.GIF"></a>
-                    <a href="https://youtuube.neocities.org/"><img
-                            src="https://youtuube.neocities.org/Misc%20Assets/Internet/KitajimasKornerBadgeIcon.gif"></a>
-                    <a href="https://dokodemo.neocities.org/"><img
-                            src="https://dokodemo.neocities.org/images/buttons/dokodemobutton3.gif"></a>
-                    <a href="https://dannarchy.com/"><img src="https://dannarchy.com/images/d_now.gif"></a>
+            <div class="marquee">
+                <div class="marquee-right">
+                    <div class="track">
+                        <a href="https://momg.neocities.org/"><img
+                                src="https://momg.neocities.org/site-images/momg-badge.gif"></a>
+                        <a href="https://biggulpsupreme.neocities.org/"><img src="https://i.imgur.com/ZU3CcjO.gif"></a>
+                        <a href="https://sweethard666.neocities.org"><img
+                                src="https://sweethard666.neocities.org/sweethard666type.gif"></a>
+                        <a href="https://88by31.neocities.org/"><img src="https://transgender.money/index/8.png"></a>
+                        <a href="https://miraflutty.neocities.org/"><img
+                                src="https://miraflutty.neocities.org/button.gif"></a>
+                        <a href="https://lostintheworld.neocities.org"><img
+                                src="https://lostintheworld.neocities.org/tex/litw-stamp.gif"></a>
+                        <a href="https://voodu.xyz/"><img src="https://voodu.xyz/img/button.gif"></a>
+                        <a href="http://2bit.neocities.org"><img src="https://2bit.neocities.org/2bit_button.png"></a>
+                        <a href="https://errormine.neocities.org/"><img
+                                src="https://errormine.neocities.org/buttons/img/errormine-button.gif"></a>
+                        <a href="https://fretnoize.neocities.org/"><img
+                                src="https://fretnoize.neocities.org/Images/fretnoize.png"></a>
+                        <a href="https://billsworld.neocities.org/"><img
+                                src="https://billsworld.neocities.org/images/billsworld.gif" /></a>
+                        <a href="https://www.44nifty.com"><img
+                                src="https://44nifty.com/img/88x31/niftows-animated.gif"></a>
+                        <a href="https://cerealki11er.neocities.org/"><img
+                                src="https://cerealki11er.neocities.org/buttonn.png"></a>
+                        <a href="https://melonking.net"><img
+                                src="https://melonking.net/images/badges/MELON-BADGE-2.GIF"></a>
+                        <a href="https://youtuube.neocities.org/"><img
+                                src="https://youtuube.neocities.org/Misc%20Assets/Internet/KitajimasKornerBadgeIcon.gif"></a>
+                        <a href="https://dokodemo.neocities.org/"><img
+                                src="https://dokodemo.neocities.org/images/buttons/dokodemobutton3.gif"></a>
+                        <a href="https://dannarchy.com/"><img src="https://dannarchy.com/images/d_now.gif"></a>
+                        <a href="https://auzziejay.com"><img src="https://auzziejay.com/images/auzzie1.gif"></a>
+                        <a href="https://exephile.neocities.org"><img src="https://exephile.neocities.org/exe.gif"></a>
+                    </div>
+                    <div class="track">
+                        <a href="https://momg.neocities.org/"><img
+                                src="https://momg.neocities.org/site-images/momg-badge.gif"></a>
+                        <a href="https://biggulpsupreme.neocities.org/"><img src="https://i.imgur.com/ZU3CcjO.gif"></a>
+                        <a href="https://sweethard666.neocities.org"><img
+                                src="https://sweethard666.neocities.org/sweethard666type.gif"></a>
+                        <a href="https://88by31.neocities.org/"><img src="https://transgender.money/index/8.png"></a>
+                        <a href="https://miraflutty.neocities.org/"><img
+                                src="https://miraflutty.neocities.org/button.gif"></a>
+                        <a href="https://lostintheworld.neocities.org"><img
+                                src="https://lostintheworld.neocities.org/tex/litw-stamp.gif"></a>
+                        <a href="https://voodu.xyz/"><img src="https://voodu.xyz/img/button.gif"></a>
+                        <a href="http://2bit.neocities.org"><img src="https://2bit.neocities.org/2bit_button.png"></a>
+                        <a href="https://errormine.neocities.org/"><img
+                                src="https://errormine.neocities.org/buttons/img/errormine-button.gif"></a>
+                        <a href="https://fretnoize.neocities.org/"><img
+                                src="https://fretnoize.neocities.org/Images/fretnoize.png"></a>
+                        <a href="https://billsworld.neocities.org/"><img
+                                src="https://billsworld.neocities.org/images/billsworld.gif" /></a>
+                        <a href="https://www.44nifty.com"><img
+                                src="https://44nifty.com/img/88x31/niftows-animated.gif"></a>
+                        <a href="https://cerealki11er.neocities.org/"><img
+                                src="https://cerealki11er.neocities.org/buttonn.png"></a>
+                        <a href="https://melonking.net"><img
+                                src="https://melonking.net/images/badges/MELON-BADGE-2.GIF"></a>
+                        <a href="https://youtuube.neocities.org/"><img
+                                src="https://youtuube.neocities.org/Misc%20Assets/Internet/KitajimasKornerBadgeIcon.gif"></a>
+                        <a href="https://dokodemo.neocities.org/"><img
+                                src="https://dokodemo.neocities.org/images/buttons/dokodemobutton3.gif"></a>
+                        <a href="https://dannarchy.com/"><img src="https://dannarchy.com/images/d_now.gif"></a>
+                        <a href="https://auzziejay.com"><img src="https://auzziejay.com/images/auzzie1.gif"></a>
+                        <a href="https://exephile.neocities.org"><img src="https://exephile.neocities.org/exe.gif"></a>
+                    </div>
                 </div>
             </div>
             <div>
-                <img style="height: 1.5vw;" src="dividergreenglowblink.gif">
+                <img style="height: 1.5vw; margin: auto;" src="dividers/dividergreenglowblink.gif">
+                <div style="display: flex; justify-content: space-between;">
+                    <img style="width: 10%; height: 10%; margin-top: 10%; margin-left: 10%;" src="groovy1.gif">
+                    <div>
+                        <p>
+                            If you find yourself on here, good job! Clearly you have<br>one of the coolest sites around,
+                            and you know what<br>if you would like to return the favour or would<br>like to find
+                            yourself up with all these other<br>cool folk, you could add my button to<br>your lovely
+                            webpage. I would be<br>eternally grateful for it.<br><b>Add me HERE</b>
+                        </p>
+                        <a href="https://webpage1990colourised.neocities.org/"><img style="width: 5.75vw; height: 2vw;"
+                                src="Webpage-1990-Colourised.gif"></a>
+                        <textarea
+                            readonly><a href="https://webpage1990colourised.neocities.org/"><img src="https://webpage1990colourised.neocities.org/buttons/Webpage-1990-Colourised.gif"></a></textarea>
+                    </div>
+                    <img style="width: 10%; height: 10%; margin-top: 10%; margin-right: 10%;" src="groovy2.gif">
+                </div>
             </div>
         </div>
     </section>
 
     <section>
         <div>
-            <img src="dividerconstruction.gif">
+            <img style="width: 10%;" src="ui/top.gif" id="topbtn">
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <img src="dividers/dividerconstruction.gif">
             <img src="thatsallfolks.gif">
         </div>
     </section>
@@ -1083,13 +1087,6 @@ umb%2F2%2F2c%2FRotating_earth_%2528large%2529.gif%2F200px-Rotating_earth_%2528la
             style=" background-color: silver; border: solid; border-width: 0.2vw; border-bottom-color: #424242; border-right-color: #424242; border-left-color: #fff; border-top-color: #fff; font-family: MS Sans Serif;">
             <h1 style="margin-top: 0px; color: black; font-family: MS Sans Serif;">linkz</h1>
             <div>
-                <p style="color: black; font-family: MS Sans Serif;">Buttons</p>
-                <a href="https://buttonwall.neocities.org/">Button wall</a>
-                <br>
-                <a href="https://anlucas.neocities.org/88x31Buttons.html">Lucas's button wall</a>
-                <br>
-                <a href="https://sadgrl.online/projects/88x31-button-maker.html">button maker</a>
-                <br>
                 <p style="color: black; font-family: MS Sans Serif;">Gifs</p>
                 <a href="https://www.cameronsworld.net/">cameron's world</a>
                 <br>
@@ -1121,50 +1118,167 @@ umb%2F2%2F2c%2FRotating_earth_%2528large%2529.gif%2F200px-Rotating_earth_%2528la
 
     <section>
         <footer>
-            <marquee direction="right">
-                <img src="buttons/email-icon.gif">
-                <img src="buttons/best_viewed_with_eyes.gif">
-                <img src="buttons/notepad2.gif">
-                <img src="buttons/made_with_windows.gif">
-                <img src="buttons/browser.gif">
-                <img src="buttons/hedied4u.gif">
-                <img src="buttons/noedit.gif">
-                <img src="buttons/truth.gif">
-                <img src="buttons/dilbert.gif">
-                <img src="buttons/wwwbutton.gif">
-                <img src="buttons/W3Chtml.gif">
-                <img src="buttons/computer.png">
-                <img src="buttons/pirvacynow.gif">
-                <img src="buttons/hand_coded.gif">
-                <img src="buttons/ezgif.png">
-                <img src="buttons/ieexplode.gif">
-                <img src="buttons/homicidenow.gif">
-            </marquee>
-            <marquee direction="left>">
-                <img src="buttons/bantime.gif">
-                <img src="buttons/mailput.gif">
-                <img src="buttons/nocodeandrun.gif">
-                <img src="buttons/freespeechforever.gif">
-                <img src="buttons/bookmark_this_page.gif">
-                <img src="buttons/homernow.gif">
-                <img src="buttons/alienow.gif">
-                <img src="buttons/psbutton.gif">
-                <img src="buttons/chill_pill.gif">
-                <img src="buttons/nneighborhoodsmall.gif">
-                <img src="buttons/drmario.gif">
-                <img src="buttons/wheel.gif">
-                <img src="buttons/freekevin.gif">
-                <img src="buttons/piracy.gif">
-                <img src="buttons/schoolsucks.gif">
-                <img src="buttons/albutton.png">
-                <img src="buttons/freeware.gif">
-            </marquee>
+            <div class="marquee">
+                <div class="marquee-right">
+                    <div class="track">
+                        <img src="buttons/email-icon.gif">
+                        <img src="buttons/best_viewed_with_eyes.gif">
+                        <img src="buttons/notepad2.gif">
+                        <img src="buttons/made_with_windows.gif">
+                        <img src="buttons/browser.gif">
+                        <img src="buttons/hedied4u.gif">
+                        <img src="buttons/noedit.gif">
+                        <img src="buttons/truth.gif">
+                        <img src="buttons/dilbert.gif">
+                        <img src="buttons/wwwbutton.gif">
+                        <img src="buttons/W3Chtml.gif">
+                        <img src="buttons/computer.gif">
+                        <img src="buttons/pirvacynow.gif">
+                        <img src="buttons/hand_coded.gif">
+                        <img src="buttons/ezgif.gif">
+                        <img src="buttons/ieexplode.gif">
+                        <img src="buttons/homicidenow.gif">
+                        <img src="buttons/heavensgate.gif">
+                        <img src="buttons/ravenow.gif">
+                        <img src="buttons/go2hell.gif">
+                    </div>
+                    <div class="track">
+                        <img src="buttons/email-icon.gif">
+                        <img src="buttons/best_viewed_with_eyes.gif">
+                        <img src="buttons/notepad2.gif">
+                        <img src="buttons/made_with_windows.gif">
+                        <img src="buttons/browser.gif">
+                        <img src="buttons/hedied4u.gif">
+                        <img src="buttons/noedit.gif">
+                        <img src="buttons/truth.gif">
+                        <img src="buttons/dilbert.gif">
+                        <img src="buttons/wwwbutton.gif">
+                        <img src="buttons/W3Chtml.gif">
+                        <img src="buttons/computer.gif">
+                        <img src="buttons/pirvacynow.gif">
+                        <img src="buttons/hand_coded.gif">
+                        <img src="buttons/ezgif.gif">
+                        <img src="buttons/ieexplode.gif">
+                        <img src="buttons/homicidenow.gif">
+                        <img src="buttons/heavensgate.gif">
+                        <img src="buttons/ravenow.gif">
+                        <img src="buttons/go2hell.gif">
+                    </div>
+                </div>
+            </div>
+            <div class="marquee">
+                <div class="marquee-left">
+                    <div class="track">
+                        <img src="buttons/bantime.gif">
+                        <img src="buttons/mailput.gif">
+                        <img src="buttons/nocodeandrun.gif">
+                        <img src="buttons/freespeechforever.gif">
+                        <img src="buttons/bookmark_this_page.gif">
+                        <img src="buttons/homernow.gif">
+                        <img src="buttons/alienow.gif">
+                        <img src="buttons/psbutton.gif">
+                        <img src="buttons/chill_pill.gif">
+                        <img src="buttons/nneighborhoodsmall.gif">
+                        <img src="buttons/drmario.gif">
+                        <img src="buttons/wheel.gif">
+                        <img src="buttons/freekevin.gif">
+                        <img src="buttons/piracy.gif">
+                        <img src="buttons/schoolsucks.gif">
+                        <img src="buttons/albutton.gif">
+                        <img src="buttons/freeware.gif">
+                        <img src="buttons/seedyourtorrents.gif">
+                        <img src="buttons/steam.gif">
+                        <img src="buttons/benis.gif">
+                    </div>
+                    <div class="track">
+                        <img src="buttons/bantime.gif">
+                        <img src="buttons/mailput.gif">
+                        <img src="buttons/nocodeandrun.gif">
+                        <img src="buttons/freespeechforever.gif">
+                        <img src="buttons/bookmark_this_page.gif">
+                        <img src="buttons/homernow.gif">
+                        <img src="buttons/alienow.gif">
+                        <img src="buttons/psbutton.gif">
+                        <img src="buttons/chill_pill.gif">
+                        <img src="buttons/nneighborhoodsmall.gif">
+                        <img src="buttons/drmario.gif">
+                        <img src="buttons/wheel.gif">
+                        <img src="buttons/freekevin.gif">
+                        <img src="buttons/piracy.gif">
+                        <img src="buttons/schoolsucks.gif">
+                        <img src="buttons/albutton.gif">
+                        <img src="buttons/freeware.gif">
+                        <img src="buttons/seedyourtorrents.gif">
+                        <img src="buttons/steam.gif">
+                        <img src="buttons/benis.gif">
+                    </div>
+                </div>
+            </div>
             <p>©1990 Webpage-1990-Colourised</p>
         </footer>
     </section>
 
     <section class="overlay">
     </section>
+
+    <script language="JavaScript">
+        topbtn = document.getElementById("topbtn")
+
+        topbtn.addEventListener("click", totop);
+
+        function totop() {
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <script language="JavaScript">
+        const colours = ["#ff0000", "#ff5500", "#ffaa00", "#ffff00", "#aaff00", "#55ff00", "#00ff00", "#00ff55",
+            "#00ffaa", "#00ffff", "#00aaff", "#0055ff", "#0000ff", "#5500ff", "#aa00ff", "#ff00ff", "#ff00aa",
+            "#ff0055"
+        ];
+
+        let letters = document.querySelectorAll(".rainbow");
+
+        let intervalDelay = 100;
+
+        let counter = 0;
+        for (let x = 0; x < letters.length; x++) {
+            if (colours[x] === undefined) {
+                letters[x].style.color = colours[x - (colours.length * parseInt(counter + .1))];
+            } else {
+                letters[x].style.color = colours[x];
+            }
+            counter += 1 / colours.length;
+        }
+
+        var intervalId = window.setInterval(function () {
+
+            for (let i = 0; i < letters.length; i++) {
+                funky(i);
+            }
+
+        }, intervalDelay);
+
+        function funky(i) {
+
+            function cleanupRichText(richText) {
+                return richText.replace(/rgb\((.+?)\)/ig, (_, rgb) => {
+                    return '#' + rgb.split(',')
+                        .map(str => parseInt(str, 10).toString(16).padStart(2, '0'))
+                        .join('')
+                })
+            }
+
+            let hexColour = cleanupRichText(letters[i].style.color);
+
+            if (colours.indexOf(hexColour) + 1 === colours.length) {
+                colourIndex = 0;
+            } else {
+                colourIndex = colours.indexOf(hexColour) + 1;
+            }
+            letters[i].style.color = colours[colourIndex];
+        }
+    </script>
 
     <script language="JavaScript">
         const dropdown_btns = document.querySelectorAll(".dropdown-btn");
@@ -1196,10 +1310,14 @@ umb%2F2%2F2c%2FRotating_earth_%2528large%2529.gif%2F200px-Rotating_earth_%2528la
 
     <script language="JavaScript">
         var playlist = [
+            "https://www.mboxdrive.com/frontier-main-theme.mp3",
+            "https://vgmsite.com/soundtracks/animal-crossing-gc-rip/azzmbawn/76%207PM.mp3",
+            "https://vgmsite.com/soundtracks/goldeneye-original-soundtrack/uhhbpvyd/05%20-%20escape%20from%20arkangelsk.mp3",
             "https://vgmsite.com/soundtracks/duck-tales/uznqdxepvc/07%20Moon%20Surface%20%28The%20Moon%29.mp3",
-            "https://t4.bcbits.com/stream/fe442dc5e46636b63e543a98d4ee7731/mp3-128/2163436973?p=0&ts=1648226242&t=ab25b1fa5d09b6c3e82f57244a3a434e12ba5455&token=1648226242_7e921904ea0f9be33f203f40d6456eee40dbaf84",
+            "https://vgmsite.com/soundtracks/elite-commodore-64/rinajbdj/02_Docking%20Sequence.mp3",
+            "https://vgmsite.com/soundtracks/kirby-super-star/lqhlwtvqfb/27%20Run%2C%20Kirby%2C%20Run%21.mp3",
             "https://vgmsite.com/soundtracks/london-racer-psx-gamerip/mndevhtf/SLES-02694%20-%2002%20M25%20South.mp3",
-            "http://www.dream-ware.co.uk/downloads/music/fe2/mp3/fe2-frontier-main-theme.mp3",
+            "https://vgmsite.com/soundtracks/half-life-original-soundtrack/bkzrrkqpyt/24.%20Credits%20Closing%20Theme.mp3",
         ];
         var index = 0;
         var seek = document.getElementById("seek");
