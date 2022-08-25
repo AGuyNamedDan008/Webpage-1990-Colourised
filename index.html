@@ -1,0 +1,2036 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <meta name="description" content="My home on the web.">
+    <meta name="keywords" content="1990, website">
+    <meta name="author" content="Daniel Miller">
+    <title>Webpage-1990-Colourised</title>
+    <link rel="shortcut icon" href="graphics/computer.gif">
+
+    <script language="JavaScript">
+        const speed = 60;
+        let pos = 0;
+        const msg = " Webpage-1990-Colourised ";
+
+        function Scroll() {
+            document.title = msg.substring(pos) + " | " + msg.substring(0, pos);
+            pos++;
+            if (pos > msg.length) pos = 0;
+            setTimeout(Scroll, speed);
+        }
+        Scroll();
+    </script>
+
+    <script language="JavaScript">
+        const trailLength = 15;
+        const trailImage = "graphics/ui/firecursor.gif";
+        let coordsStore = new Array(trailLength).fill({});
+        const initTrail = () => {
+            for (let i = 0; i < trailLength; i++) {
+                coordsStore[i] = new Object();
+                coordsStore[i].x = -1000;
+                coordsStore[i].y = -1000;
+                document.write(
+                    `<div id="obj-${i}" style="background-image:url(${trailImage});position:absolute;z-Index:100;height:35px;width:35px"></div>`,
+                );
+            }
+            trail();
+        };
+        const trail = () => {
+            for (let i = 0; i < trailLength; i++) {
+                document.querySelector(`#obj-${i}`).style.top = `${coordsStore[i].y}px`;
+                document.querySelector(`#obj-${i}`).style.left = `${coordsStore[i].x}px`;
+            }
+            for (let i = trailLength; i >= 1; i--) {
+                coordsStore[i] = coordsStore[i - 1];
+            }
+            setTimeout(trail, 0);
+        };
+        initTrail();
+        console.log(coordsStore)
+        document.onmousemove = (e) => void(coordsStore[0] = {
+            x: e.pageX + 12,
+            y: e.pageY + 12
+        });
+    </script>
+
+    <style type="text/css">
+        div[id^="obj"] {
+            margin: 0%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: 100;
+            transform: translate(-38%, -38%);
+            pointer-events: none
+        }
+
+        ::-webkit-scrollbar {
+            width: 0.75vw;
+        }
+
+        ::-webkit-scrollbar-button:end:increment,
+        ::-webkit-scrollbar-button:start:decrement {
+            display: block
+        }
+
+        ::-webkit-scrollbar-button:vertical:end:decrement,
+        ::-webkit-scrollbar-button:vertical:start:increment {
+            display: none
+        }
+
+        ::-webkit-scrollbar-button:vertical:increment {
+            width: 18px;
+            background: silver url(graphics/ui/combo.gif) no-repeat 50%;
+            height: 18px;
+            margin: 1px 1px 1px 10px;
+            -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+            -webkit-transform: rotateY(-90deg);
+            transform: rotateY(-90deg);
+            border: 1px outset #fff;
+        }
+
+        ::-webkit-scrollbar-button:vertical:decrement {
+            width: 11px;
+            background: silver url(graphics/ui/comboup.gif) no-repeat 50%;
+            height: 16px;
+            margin: 1px 1px 1px 10px;
+            -webkit-transform: rotateY(180deg);
+            transform: rotateX(180deg);
+            border: 1px outset #fff;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-image: url(graphics/ui/scrollbartrack.gif)
+        }
+
+        ::-webkit-scrollbar-thumb:vertical {
+            border: 1px outset #fff;
+            height: 40px;
+            background-color: silver
+        }
+
+        ::-webkit-scrollbar-corner:vertical {
+            background-color: #000
+        }
+
+        :-webkit-scrollbar-button:start:decrement,
+        ::-webkit-scrollbar-button:end:increment {
+            display: block
+        }
+
+        ::-webkit-scrollbar-button:horizontal:end:decrement,
+        ::-webkit-scrollbar-button:horizontal:start:increment {
+            display: none
+        }
+
+        ::-webkit-scrollbar-button:horizontal:increment {
+            background: silver url(ui/comboright.gif) no-repeat 50%;
+            -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+            -webkit-transform: rotateY(-90deg);
+            transform: rotateY(-90deg)
+        }
+
+        ::-webkit-scrollbar-button:horizontal:decrement,
+        ::-webkit-scrollbar-button:horizontal:increment {
+            width: 18px;
+            height: 18px;
+            margin: 1px 1px 1px 10px;
+            border: 1px outset #fff;
+        }
+
+        ::-webkit-scrollbar-button:horizontal:decrement {
+            background: silver url(ui/comboleft.gif) no-repeat 50%;
+            -webkit-transform: rotateY(180deg);
+            transform: rotateX(180deg);
+        }
+
+        ::-webkit-scrollbar-track-piece {
+            margin: 1px;
+        }
+
+        ::-webkit-scrollbar-thumb:horizontal {
+            border: 1px outset #fff;
+            height: 40px;
+            background-color: silver
+        }
+
+        html {
+            cursor: url("graphics/ui/firecursor.gif"), default;
+            height: 100%;
+        }
+
+        body {
+            background-color: #000;
+            background-image: url("graphics/backgrounds/space.gif");
+            margin: 0%;
+            overflow-x: hidden;
+        }
+
+        section {
+            margin: auto;
+            margin-bottom: 0;
+            width: 60%;
+            display: flex;
+        }
+
+        header {
+            width: 100%;
+        }
+
+        section>nav {
+            width: 100%;
+            padding: 0.2%;
+            background: -webkit-linear-gradient(left, #08216b, #a5cef7);
+            border: solid;
+            border-bottom-color: #424242;
+            border-right-color: #424242;
+            border-left-color: #fff;
+            border-top-color: #fff;
+        }
+
+        nav>ul {
+            list-style-type: none;
+            margin: 0%;
+            padding: 0%;
+        }
+
+        section>div {
+            width: 100%;
+            margin: 2%;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        div>h1 {
+            margin-top: 1%;
+            margin-bottom: 1%;
+            font-size: 1.5vw;
+            color: #fff;
+        }
+
+        div>h2 {
+            margin-top: 2%;
+            margin-bottom: 2%;
+            font-size: 1.2vw;
+            color: #fff;
+        }
+
+        div>p {
+            margin-top: 1%;
+            margin-bottom: 1%;
+            font-size: 1.2vw;
+            font-family: "Times New Roman", Times, serif;
+            color: #fff;
+        }
+
+        div>a {
+            cursor: url("graphics/ui/firecursor.gif"), default;
+            font-size: 1.2vw;
+        }
+
+        div>textarea {
+            cursor: url("graphics/ui/firecursor.gif"), default;
+            font-size: 0.75vw;
+            resize: none;
+        }
+
+        div>iframe {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+
+        button {
+            cursor: url("graphics/ui/firecursor.gif"), default;
+            font-family: "MS Sans Serif", Tahoma, Verdana, sans-serif;
+            font-size: 1vw;
+            border: solid;
+            border-width: 0.2vw;
+            border-bottom-color: #424242;
+            border-right-color: #424242;
+            border-left-color: #fff;
+            border-top-color: #fff;
+            background: silver;
+            color: #212529;
+        }
+
+        button:active {
+            border-bottom-color: #fff;
+            border-right-color: #fff;
+            border-left-color: #424242;
+            border-top-color: #424242;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        hr {
+            margin: auto;
+            width: 98%;
+            height: 0%;
+        }
+
+        section>footer {
+            width: 100%;
+            margin: 2%;
+            padding-left: 0.5%;
+            padding-right: 0.5%;
+            overflow: hidden;
+            text-align: center;
+            background-color: silver;
+            margin: 2%;
+            margin-bottom: 0%;
+            border: solid;
+            border-width: 0.2%;
+            border-bottom-width: 0;
+            border-right-color: #424242;
+            border-left-color: #fff;
+            border-top-color: #fff;
+            background: silver;
+            color: #212529;
+        }
+
+        footer>p {
+            margin: auto;
+            margin-bottom: 1%;
+            font-size: 1vw;
+            font-family: "MS Sans Serif";
+        }
+
+        .flex {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .window {
+            border: solid;
+            border-bottom-color: #424242;
+            border-right-color: #424242;
+            border-left-color: #fff;
+            border-top-color: #fff;
+            background: silver;
+            color: #212529;
+        }
+
+        .window-header {
+            border-bottom-style: solid;
+            border-bottom-width: 0.1vw;
+            border-bottom-color: #dee2e6;
+            background: -webkit-linear-gradient(left, #08216b, #a5cef7);
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding-left: 1%;
+            padding-right: 1%;
+            text-align: left;
+        }
+
+        .window-header h2 {
+            font-family: "MS Sans Serif";
+        }
+
+        .maximize {
+            background: url(graphics/ui/maximize.gif) no-repeat;
+            background-color: silver;
+            background-size: 75%;
+            background-position: top 40% left 40%;
+            width: 1.5vw;
+            height: 1.5vw;
+        }
+
+        .close {
+            background: url(graphics/ui/close.gif) no-repeat;
+            background-color: silver;
+            background-size: 75%;
+            background-position: top 45% left 45%;
+            width: 1.5vw;
+            height: 1.5vw;
+        }
+
+        .overlay {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0px;
+            margin: 0px;
+            display: block;
+            animation: scan 0.1s 0s infinite;
+            background-color: transparent;
+            z-index: 9;
+            pointer-events: none;
+            background-image: url(graphics/ui/scanlines.png);
+            opacity: 1;
+        }
+
+        @keyframes scan {
+            from {
+                top: 0;
+                ;
+            }
+
+            to {
+                top: 1px;
+            }
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            padding-top: 50%;
+        }
+
+        .iframepet {
+            width: 314px;
+            height: 321px;
+        }
+
+        .halfwidth {
+            width: 50%;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-list {
+            display: none;
+            position: absolute;
+            width: 25%;
+            top: 90%;
+            font-size: 1vw;
+            font-family: "MS Sans Serif";
+        }
+
+        .dropdown-list.show {
+            display: block;
+        }
+
+        .dropdown-list a {
+            font-size: 1vw;
+            font-family: "MS Sans Serif";
+            width: 85%;
+            padding-left: 10%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .dropdown-list a:hover {
+            background-color: #08216b;
+            color: #fff;
+        }
+
+        .dropdown-list h1 {
+            font-size: 1vw;
+            font-family: "MS Sans Serif";
+            margin: 0%;
+        }
+
+        .dropdown-list p {
+            font-size: 1vw;
+            font-family: "MS Sans Serif";
+            margin: 0%;
+        }
+
+        .dropdown-inner {
+            width: 125%;
+            left: 95%;
+            top: 0;
+            z-index: 1;
+        }
+
+        .updatedescr {
+            width: 80%;
+        }
+
+        .dropdown .dropdown-list .dropdown:hover>.dropdown-list {
+            display: block;
+        }
+
+        .nav-text {
+            margin: auto;
+            padding: 1%;
+        }
+
+        .nav-text h1 {
+            color: #000;
+        }
+
+        .nav-text p {
+            color: #000;
+        }
+
+        .clippy {
+            display: inline;
+            position: fixed;
+            margin: 0%;
+            width: 20%;
+            bottom: 0;
+            right: 0;
+            margin-right: 0.5%;
+        }
+
+        .clippy img {
+            float: right;
+            width: 40%;
+            margin: 0%;
+        }
+
+        .clippy-box {
+            position: relative;
+            width: 95%;
+            padding: 1%;
+            padding-right: 1.4%;
+            padding-bottom: 1.4%;
+            font-size: 1vw;
+            color: black;
+            text-align: left;
+            font-family: "MS Sans Serif", Tahoma, Verdana, sans-serif;
+            background-color: #ffc;
+            border-color: #000;
+            border: solid;
+            border-width: 1%;
+            border-radius: .5em;
+            margin: auto;
+            float: right;
+        }
+
+        .clippy-box:before,
+        .clippy-box:after {
+            content: ' ';
+            position: absolute;
+            width: 0;
+            height: 0;
+        }
+
+        .clippy-box:before {
+            left: auto;
+            right: 49.5%;
+            bottom: -26px;
+            border-style: solid;
+            border-width: 0 19px 25px 0;
+            border-color: #000 #000 transparent transparent;
+        }
+
+        .clippy-box:after {
+            left: auto;
+            right: 50%;
+            bottom: -20px;
+            border-style: solid;
+            border-width: 0 15px 20px 0;
+            border-color: #ffc #ffc transparent transparent;
+        }
+
+        .clippy-box hr {
+            border-bottom: 2px solid rgb(255, 255, 255);
+            border-top: 2px solid rgb(136, 140, 143);
+        }
+
+        .player-header {
+            background: linear-gradient(to right, #000080, rgb(16, 52, 166));
+        }
+
+        .player-header img {
+            width: 1vw;
+            float: left;
+            margin-top: 2%;
+            margin-right: 3%;
+        }
+
+        .player-header h2 {
+            font-size: 1vw;
+        }
+
+        .player-header .maximize {
+            background: url(graphics/ui/maximize.gif) no-repeat;
+            background-color: silver;
+            background-size: 75%;
+            background-position: top 40% left 35%;
+            width: 1.25vw;
+            height: 1.25vw;
+        }
+
+        .player-header .close {
+            background: url(graphics/ui/close.gif) no-repeat;
+            background-color: silver;
+            background-size: 75%;
+            background-position: top 45% left 45%;
+            width: 1.25vw;
+            height: 1.25vw;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .links {
+            width: 65%;
+            margin-left: 2%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .link {
+            font-family: "MS Sans Serif";
+            font-size: 1vw;
+            display: inline-flex;
+            color: rgb(136, 140, 143);
+            text-shadow: rgb(255 255 255) 1px 1px;
+            border: none;
+        }
+
+        .slider {
+            cursor: url("graphics/ui/firecursor.gif"), default;
+            margin: auto;
+            margin-top: 3%;
+            margin-bottom: 3%;
+            width: 90%;
+            height: 0.5vw;
+            appearance: none;
+            border: solid;
+            border-width: 0.2vw;
+            border-bottom-color: #fff;
+            border-right-color: #fff;
+            border-left-color: #424242;
+            border-top-color: #424242;
+            background: #fff;
+        }
+
+        .slider::-webkit-slider-thumb {
+            appearance: none;
+            width: 0.75vw;
+            height: 1.5vw;
+            border: solid;
+            border-bottom-color: #424242;
+            border-right-color: #424242;
+            border-left-color: #fff;
+            border-top-color: #fff;
+            background: silver;
+        }
+
+        .toolbar {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding-left: 1%;
+            padding-right: 1%;
+            margin-top: 0.75%;
+            margin-bottom: 0.75%;
+        }
+
+        .togglebtn {
+            background: url(graphics/ui/play.gif) no-repeat;
+            background-size: 75%;
+            background-position: top 40% left 40%;
+            width: 1.5vw;
+            height: 1.5vw;
+        }
+
+        .skip-buttons {
+            display: flex;
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+
+        .back {
+            background: url(graphics/ui/backskip.gif) no-repeat;
+            background-color: silver;
+            background-size: 75%;
+            background-position: top 40% left 40%;
+            width: 1.5vw;
+            height: 1.5vw;
+        }
+
+        .next {
+            background: url(graphics/ui/forwardskip.gif) no-repeat;
+            background-color: silver;
+            background-size: 75%;
+            background-position: top 40% left 40%;
+            width: 1.5vw;
+            height: 1.5vw;
+        }
+
+        .vertical-hr {
+            width: 0%;
+            border-right: 2px solid rgb(255, 255, 255);
+            border-left: 2px solid rgb(136, 140, 143);
+            align-self: stretch;
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+
+        .time {
+            position: relative;
+            padding: 1%;
+            border-style: solid;
+            border-width: 2px;
+            border-color: rgb(136, 140, 143) rgb(255, 255, 255) rgb(255, 255, 255) rgb(136, 140, 143);
+        }
+
+        .time::before {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            content: "";
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
+            border-style: solid;
+            border-width: 2px;
+            border-color: rgb(5, 6, 8) rgb(223, 224, 227) rgb(223, 224, 227) rgb(5, 6, 8);
+        }
+
+        .marquee {
+            margin-top: 0.5%;
+            margin-bottom: 0.5%;
+            position: relative;
+            width: 100%;
+            height: 2vw;
+            overflow: hidden;
+        }
+
+        .marquee-right {
+            display: flex;
+            width: 600%;
+            position: absolute;
+            left: 0;
+            animation: track-right 35s linear infinite;
+        }
+
+        @keyframes track-right {
+            0% {
+                left: -300%;
+            }
+
+            100% {
+                left: 0%;
+            }
+        }
+
+        .marquee-left {
+            display: flex;
+            width: 600%;
+            position: absolute;
+            left: 0;
+            animation: track-left 35s linear infinite;
+        }
+
+        @keyframes track-left {
+            0% {
+                left: 0%;
+            }
+
+            100% {
+                left: -300%;
+            }
+        }
+
+        .track {
+            display: flex;
+            width: 50%;
+            justify-content: space-around;
+        }
+
+        .marquee img {
+            margin-left: 0.3vw;
+            margin-right: 0.3vw;
+            width: 5.75vw;
+            height: 2vw;
+        }
+
+        .graphics {
+            overflow-y: scroll;
+            height: 25vw;
+            padding-top: 2%;
+            padding-bottom: 1%;
+        }
+
+        .graphics img {
+            width: 31%;
+        }
+
+        .blinkie img {
+            width: 47%;
+        }
+
+        .myspace {
+            font-family: Verdana;
+            font-size: 0.8vw;
+            color: #000;
+            text-align: start;
+            margin-left: 3%;
+        }
+
+        .myspace>a {
+            cursor: url("graphics/ui/firecursor.gif"), default;
+            font-weight: normal;
+            color: #039;
+            text-decoration: none;
+        }
+
+        .myspace>a:hover {
+            font-weight: normal;
+            color: #C00;
+            text-decoration: underline;
+        }
+
+        .me {
+            border: solid;
+            border-width: 0.01vw;
+            border-color: #424242;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="clippy">
+            <div class="clippy-box" id="clippy-box">
+                <div class="window">
+                    <audio id="playing">
+                    </audio>
+                    <div class="window-header player-header">
+                        <div>
+                            <img src="graphics/ui/mediaplayer.gif">
+                            <h2>Media Player</h2>
+                        </div>
+                        <div style="margin-top: 1%; margin-bottom: 1%;">
+                            <button class="maximize">
+                            </button>
+                            <button class="close" id="closebtn">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="links">
+                        <p class="link"><u>F</u>ile</p>
+                        <p class="link"><u>E</u>dit</p>
+                        <p class="link"><u>D</u>evice</p>
+                        <p class="link"><u>H</u>elp</p>
+                    </div>
+                    <hr>
+                    <div class="flex">
+                        <input type="range" id="seek" min="0" max="100" value="0" class="slider">
+                    </div>
+                    <hr>
+                    <div class="toolbar">
+                        <div>
+                            <button class="togglebtn" id="togglebtn"></button>
+                        </div>
+                        <div class="skip-buttons">
+                            <button class="back" id="back"></button>
+                            <button class="next" id="next"></button>
+                        </div>
+                        <input type="range" id="volume" min="0" max="100" step="1" value="100" class="slider"
+                            style="flex-grow: 1;">
+                        <div class="vertical-hr"></div>
+                        <div class="time">
+                            <span id="time">00:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="graphics/ui/clippy.gif" id="clippybtn">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <script language="JavaScript">
+            function Y() {
+                var taskkill = document.getElementById("taskkill");
+                taskkill.classList.add("hide")
+                setInterval(function () {
+                    [...Array(2 ** 32 - 1)]
+                }, 1000);
+            }
+
+            function N() {
+                var taskkill = document.getElementById("taskkill");
+                taskkill.classList.add("hide")
+            }
+        </script>
+        <span id="taskkill" style="margin: 0;">
+            C:\Users\Webpage-1990-Colourised>taskkill /index.html [<a onclick="Y()">Y</a>/<a onclick="N()">N</a>]
+
+        </span>
+    </section>
+
+    <section>
+        <header>
+            <img src="graphics/headingtop.gif" alt="Webpage">
+            <img src="graphics/headingbottom.gif" alt="1990 Colourised">
+        </header>
+    </section>
+
+    <section>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <button class="dropdown-btn">Updates⏷</button>
+                    <div class="dropdown-list window">
+                        <div class="dropdown">
+                            <a class="dropdown-btn">24/02/2022<p>⏵</p></a>
+                            <div class="dropdown-list updatedescr window dropdown-inner">
+                                <div class="nav-text">
+                                    <h1>24/02/2022</h1>
+                                    <hr>
+                                    <p>
+                                        Added a handy little Updates button so you can see exactly what I have done.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="dropdown">
+                            <a class="dropdown-btn">25/03/2022<p>⏵</p></a>
+                            <div class="dropdown-list updatedescr window dropdown-inner">
+                                <div class="nav-text">
+                                    <h1>25/03/2022</h1>
+                                    <hr>
+                                    <p>
+                                        Invited Clippy to hangout on my site. He said he would DJ, just needs to get set
+                                        up then he will be all ready to go.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="dropdown">
+                            <a class="dropdown-btn">23/04/2022<p>⏵</p></a>
+                            <div class="dropdown-list updatedescr window dropdown-inner">
+                                <div class="nav-text">
+                                    <h1>23/04/2022</h1>
+                                    <hr>
+                                    <p>
+                                        Added a Cool People section so you can see all of the other wonderful webistes
+                                        of the world wide web.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="dropdown">
+                            <a class="dropdown-btn">25/05/2022<p>⏵</p></a>
+                            <div class="dropdown-list updatedescr window dropdown-inner">
+                                <div class="nav-text">
+                                    <h1>25/05/2022</h1>
+                                    <hr>
+                                    <p>
+                                        Page now has a graphics collection section, enjoy browsing the gallery
+                                        for all the buttons, blinkies and stamps I have found on my trips around the
+                                        interweb.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="dropdown">
+                            <a class="dropdown-btn">28/06/2022<p>⏵</p></a>
+                            <div class="dropdown-list updatedescr window dropdown-inner">
+                                <div class="nav-text">
+                                    <h1>28/06/2022</h1>
+                                    <hr>
+                                    <p>
+                                        Had a bit of a slow month so I just found more buttons, blinkies and
+                                        stamps and have slaped them on the graphics collection section.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="dropdown">
+                            <a class="dropdown-btn">2?/08/2022<p>⏵</p></a>
+                            <div class="dropdown-list updatedescr window dropdown-inner">
+                                <div class="nav-text">
+                                    <h1>25/08/2022</h1>
+                                    <hr>
+                                    <p>
+                                        Added an About the webmaster section so you can learn a little about who I am
+                                        and what I like.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="dropdown">
+                            <a class="dropdown-btn">COMMING SOON<p>⏵</p></a>
+                            <div class="dropdown-list updatedescr window dropdown-inner">
+                                <div class="nav-text">
+                                    <h1>00/00/0000</h1>
+                                    <hr>
+                                    <p>
+                                        Fix nav bar, add more buttons.<br>
+                                        make friend number count followers.<br>
+                                        Join a Webring?
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
+    <section>
+        <div>
+            <img class="halfwidth" src="graphics/computer.gif">
+        </div>
+        <div>
+            <img src="graphics/welcome.gif">
+            <img
+                src="https://hitwebcounter.com/counter/counter.php?page=7905509&style=0010&nbdigits=6&type=ip&initCount=0"></a>
+            </a>
+        </div>
+        <div>
+            <img class="halfwidth" src="graphics/computer.gif">
+        </div>
+    </section>
+
+    <section>
+        <div class="halfwidth">
+            <img src="graphics/open24hrs.gif">
+        </div>
+        <div style="width: 150%;">
+            <h1>
+                Hey there, websurfer welcome to my webpage!
+                <br>Kick back, and relax for a while
+                at my site!</h1>
+            <img src="graphics/dividers/green.gif">
+            <p>
+                Greetings, I am Dan and this is my very own website. Here you'll find my web project with my inane
+                ramblings and whatever rubbish I'm going to throw on it.<br> Why I hear you ask?
+            </p>
+            <p>
+                <span class="rainbow">B</span><span class="rainbow">e</span><span class="rainbow">c</span><span
+                    class="rainbow">o</span><span class="rainbow">u</span><span class="rainbow">s</span><span
+                    class="rainbow">e</span>
+                <span class="rainbow">f</span><span class="rainbow">r</span><span class="rainbow">i</span><span
+                    class="rainbow">c</span><span class="rainbow">k</span>
+                <span class="rainbow">y</span><span class="rainbow">o</span><span class="rainbow">u</span>
+                <span class="rainbow">t</span><span class="rainbow">h</span><span class="rainbow">a</span><span
+                    class="rainbow">t</span><span class="rainbow">s</span>
+                <span class="rainbow">w</span><span class="rainbow">h</span><span class="rainbow">y</span><span
+                    class="rainbow">!</span></p>
+            <p>
+                I created Webpage 1990 Colourised because I really liked the look of geocities pages and I thought it
+                would be cool and fun to have my own little slice of the web, it would also pass the time and allow me
+                to practise my radical HTML, Java & CSS skillz. This webpage is under construction so remember to check
+                on it every now and then. I just might have added something new and super cool... or not ¯\_(ツ)_/¯
+            </p>
+            <h2>
+                Oh and I almost forgot sign my guestbook, bookmark this page and follow!
+            </h2>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <img src="graphics/dividers/fire.gif">
+        </div>
+    </section>
+
+    <section id="guestbook">
+        <div class="window" style="width: 125%;">
+            <div class="window-header">
+                <div>
+                    <h2>
+                        <img src="graphics/ui/book.gif" style="width: 1.5vw;">
+                        Sign my guestbook
+                    </h2>
+                </div>
+                <div>
+                    <button class="maximize"
+                        onclick="window.location.href = 'https://webpage1990colour.123guestbook.com/';">
+                    </button>
+                    <button class="close">
+                    </button>
+                </div>
+            </div>
+            <div class="container">
+                <iframe class="guestbook" scrolling="yes" src="http://webpage1990colour.123guestbook.com/"
+                    frameborder="0">
+                </iframe>
+            </div>
+        </div>
+        <div class="container" style="width: 75%; padding-top: 25%;">
+            <iframe class="iframepet" scrolling="no" src="https://gifypet.neocities.org/pet/pet.html?name=Astartes&dob=16426721
+77&gender=m&element=Fire&pet=https%3A%2F%2Fth.bing.com%2Fth%2Fid%2FR.55ac1a8a854dcc2badb9e95675dc9f0d%3Frik%3DBNA8%
+252b8Owaseidg%26riu%3Dhttp%253a%252f%252fi.imgur.com%252f51cLq.gif%26ehk%3D3qqGSlAk%252bc4B2L2qe9rJJdnhjOsqeh3S85Mi
+Nz2%252fStY%253d%26risl%3D%26pid%3DImgRaw%26r%3D0&map=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fth
+umb%2F2%2F2c%2FRotating_earth_%2528large%2529.gif%2F200px-Rotating_earth_%2528large%2529.gif&background=&tablecolor
+=%23ff0000&textcolor=%23ffff00" frameborder="0">
+            </iframe>
+        </div>
+    </section>
+
+    <section id="links">
+        <div>
+            <div class="flex" style="width: 98%; margin: auto;">
+                <img style="height: 1.5vw; width: 42%; margin: auto;" src="graphics/dividers/greenglowblink.gif">
+                <h1 style="margin: 0%; width: 16%;">
+                    <span class="rainbow">C</span><span class="rainbow">o</span><span class="rainbow">o</span><span
+                        class="rainbow">l</span>
+                    <span class="rainbow">P</span><span class="rainbow">e</span><span class="rainbow">o</span><span
+                        class="rainbow">p</span><span class="rainbow">l</span><span class="rainbow">e</span>
+                </h1>
+                <img style="height: 1.5vw; width: 42%; margin: auto;" src="graphics/dividers/greenglowblink.gif">
+            </div>
+            <div class="marquee">
+                <div class="marquee-right">
+                    <div class="track">
+                        <a href="https://momg.neocities.org/"><img
+                                src="https://momg.neocities.org/site-images/momg-badge.gif"></a>
+                        <a href="https://biggulpsupreme.neocities.org/"><img src="https://i.imgur.com/ZU3CcjO.gif"></a>
+                        <a href="https://sweethard666.neocities.org"><img
+                                src="https://sweethard666.neocities.org/sweethard666type.gif"></a>
+                        <a href="https://88by31.neocities.org/"><img src="https://transgender.money/index/8.png"></a>
+                        <a href="https://miraflutty.neocities.org/"><img
+                                src="https://miraflutty.neocities.org/button.gif"></a>
+                        <a href="https://lostintheworld.neocities.org"><img
+                                src="https://lostintheworld.neocities.org/tex/litw-stamp.gif"></a>
+                        <a href="https://voodu.xyz/"><img src="https://voodu.xyz/img/button.gif"></a>
+                        <a href="http://2bit.neocities.org"><img src="https://2bit.neocities.org/2bit_button.png"></a>
+                        <a href="https://errormine.neocities.org/"><img
+                                src="https://errormine.neocities.org/buttons/img/errormine-button.gif"></a>
+                        <a href="https://fretnoize.neocities.org/"><img
+                                src="https://fretnoize.neocities.org/Images/fretnoize.png"></a>
+                        <a href="https://billsworld.neocities.org/"><img
+                                src="https://billsworld.neocities.org/images/billsworld.gif" /></a>
+                        <a href="https://niftowshp.neocities.org/"><img
+                                src="https://niftowshp.neocities.org/img/88x31/niftows-animated.gif"></a>
+                        <a href="https://cerealki11er.neocities.org/"><img
+                                src="https://cerealki11er.neocities.org/buttonn.png"></a>
+                        <a href="https://melonking.net"><img
+                                src="https://melonking.net/images/badges/MELON-BADGE-2.GIF"></a>
+                        <a href="https://youtuube.neocities.org/"><img
+                                src="https://youtuube.neocities.org/Misc%20Assets/Internet/KitajimasKornerBadgeIcon.gif"></a>
+                        <a href="https://dokodemo.neocities.org/"><img
+                                src="https://dokodemo.neocities.org/images/buttons/dokodemobutton3.gif"></a>
+                        <a href="https://dannarchy.com/"><img src="https://dannarchy.com/images/d_now.gif"></a>
+                        <a href="https://auzziejay.com"><img src="https://auzziejay.com/images/auzzie1.gif"></a>
+                        <a href="https://exephile.neocities.org"><img src="https://exephile.neocities.org/exe.gif"></a>
+                        <a href="https://displayman.neocities.org/"><img
+                                src="https://displayman.neocities.org/Bot%C3%B3n_p%C3%A1gina_Daniel.gif"></a>
+                        <a href="https://benobii.neocities.org/"><img
+                                src="https://benobii.neocities.org/Assets/benobii-btn.gif"></a>
+                        <a href="https://warpzone.site/"><img
+                                src="https://warpzone.site/Graphix/88x31/warpzone_button.gif"></a>
+                        <a href="https://parkaction.neocities.org/"><img
+                                src="https://parkaction.neocities.org/button.gif"></a>
+                        <a href="https://liminal.photos"><img src="https://liminal.photos/liminalbanner.jpg"></a>
+                        <a href="https://dreamscape-wiki.neocities.org/"><img
+                                src="https://dreamscape-wiki.neocities.org/folder-images/folder-socials/website_ad.gif"></a>
+                        <a href="https://vhsoverdrive.neocities.org/"><img
+                                src="https://vhsoverdrive.neocities.org/linkbar/vhsoverdrive.png"></a>
+                    </div>
+                    <div class="track">
+                        <a href="https://momg.neocities.org/"><img
+                                src="https://momg.neocities.org/site-images/momg-badge.gif"></a>
+                        <a href="https://biggulpsupreme.neocities.org/"><img src="https://i.imgur.com/ZU3CcjO.gif"></a>
+                        <a href="https://sweethard666.neocities.org"><img
+                                src="https://sweethard666.neocities.org/sweethard666type.gif"></a>
+                        <a href="https://88by31.neocities.org/"><img src="https://transgender.money/index/8.png"></a>
+                        <a href="https://miraflutty.neocities.org/"><img
+                                src="https://miraflutty.neocities.org/button.gif"></a>
+                        <a href="https://lostintheworld.neocities.org"><img
+                                src="https://lostintheworld.neocities.org/tex/litw-stamp.gif"></a>
+                        <a href="https://voodu.xyz/"><img src="https://voodu.xyz/img/button.gif"></a>
+                        <a href="http://2bit.neocities.org"><img src="https://2bit.neocities.org/2bit_button.png"></a>
+                        <a href="https://errormine.neocities.org/"><img
+                                src="https://errormine.neocities.org/buttons/img/errormine-button.gif"></a>
+                        <a href="https://fretnoize.neocities.org/"><img
+                                src="https://fretnoize.neocities.org/Images/fretnoize.png"></a>
+                        <a href="https://billsworld.neocities.org/"><img
+                                src="https://billsworld.neocities.org/images/billsworld.gif" /></a>
+                        <a href="https://niftowshp.neocities.org/"><img
+                                src="https://niftowshp.neocities.org/img/88x31/niftows-animated.gif"></a>
+                        <a href="https://cerealki11er.neocities.org/"><img
+                                src="https://cerealki11er.neocities.org/buttonn.png"></a>
+                        <a href="https://melonking.net"><img
+                                src="https://melonking.net/images/badges/MELON-BADGE-2.GIF"></a>
+                        <a href="https://youtuube.neocities.org/"><img
+                                src="https://youtuube.neocities.org/Misc%20Assets/Internet/KitajimasKornerBadgeIcon.gif"></a>
+                        <a href="https://dokodemo.neocities.org/"><img
+                                src="https://dokodemo.neocities.org/images/buttons/dokodemobutton3.gif"></a>
+                        <a href="https://dannarchy.com/"><img src="https://dannarchy.com/images/d_now.gif"></a>
+                        <a href="https://auzziejay.com"><img src="https://auzziejay.com/images/auzzie1.gif"></a>
+                        <a href="https://exephile.neocities.org"><img src="https://exephile.neocities.org/exe.gif"></a>
+                        <a href="https://displayman.neocities.org/"><img
+                                src="https://displayman.neocities.org/Bot%C3%B3n_p%C3%A1gina_Daniel.gif"></a>
+                        <a href="https://benobii.neocities.org/"><img
+                                src="https://benobii.neocities.org/Assets/benobii-btn.gif"></a>
+                        <a href="https://warpzone.site/"><img
+                                src="https://warpzone.site/Graphix/88x31/warpzone_button.gif"></a>
+                        <a href="https://parkaction.neocities.org/"><img
+                                src="https://parkaction.neocities.org/button.gif"></a>
+                        <a href="https://liminal.photos"><img src="https://liminal.photos/liminalbanner.jpg"></a>
+                        <a href="https://dreamscape-wiki.neocities.org/"><img
+                                src="https://dreamscape-wiki.neocities.org/folder-images/folder-socials/website_ad.gif"></a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img style="height: 1.5vw; margin: auto;" src="graphics/dividers/greenglowblink.gif">
+                <div class="flex">
+                    <img style="width: 10%; height: 10%; margin-top: 10%; margin-left: 10%;" src="graphics/groovy1.gif">
+                    <div>
+                        <p>
+                            If you find yourself on here, good job! Clearly you have<br>one of the coolest sites around,
+                            and you know what<br>if you would like to return the favour or would<br>like to find
+                            yourself up with all these other<br>cool folk, you could add my button to<br>your lovely
+                            webpage. I would be<br>eternally grateful for it.<br><b>Add me HERE</b>
+                        </p>
+                        <a href="https://webpage1990colourised.neocities.org/"><img style="width: 5.75vw; height: 2vw;"
+                                src="graphics/buttons/Webpage-1990-Colourised.gif"></a>
+                        <textarea
+                            readonly><a href="https://webpage1990colourised.neocities.org/"><img src="https://webpage1990colourised.neocities.org/Webpage-1990-Colourised.gif"></a></textarea>
+                    </div>
+                    <img style="width: 10%; height: 10%; margin-top: 10%; margin-right: 10%;"
+                        src="graphics/groovy2.gif">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <img src="graphics/dividers/glitter.gif">
+        </div>
+    </section>
+
+    <section id="graphics">
+        <div>
+            <img class="halfwidth" src="graphics/graphicscollection.gif">
+            <div class="flex">
+                <div class="window" style="width: 30%;">
+                    <div class="window-header player-header">
+                        <div>
+                            <img src="graphics/ui/graphics.gif">
+                            <h2>Buttons</h2>
+                        </div>
+                        <div style="margin-top: 1%; margin-bottom: 1%;">
+                            <button class="maximize">
+                            </button>
+                            <button class="close">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="graphics">
+                        <img src="graphics/buttons/email-icon.gif">
+                        <img src="graphics/buttons/best_viewed_with_eyes.gif">
+                        <img src="graphics/buttons/notepad2.gif">
+                        <img src="graphics/buttons/made_with_windows.gif">
+                        <img src="graphics/buttons/browser.gif">
+                        <img src="graphics/buttons/hedied4u.gif">
+                        <img src="graphics/buttons/noedit.gif">
+                        <img src="graphics/buttons/truth.gif">
+                        <img src="graphics/buttons/dilbert.gif">
+                        <img src="graphics/buttons/wwwbutton.gif">
+                        <img src="graphics/buttons/W3Chtml.gif">
+                        <img src="graphics/buttons/computer.gif">
+                        <img src="graphics/buttons/pirvacynow.gif">
+                        <img src="graphics/buttons/hand_coded.gif">
+                        <img src="graphics/buttons/ezgif.gif">
+                        <img src="graphics/buttons/ieexplode.gif">
+                        <img src="graphics/buttons/homicidenow.gif">
+                        <img src="graphics/buttons/heavensgate.gif">
+                        <img src="graphics/buttons/ravenow.gif">
+                        <img src="graphics/buttons/go2hell.gif">
+                        <img src="graphics/buttons/html.gif">
+                        <img src="graphics/buttons/minesweeper.gif">
+                        <img src="graphics/buttons/bantime.gif">
+                        <img src="graphics/buttons/mailput.gif">
+                        <img src="graphics/buttons/nocodeandrun.gif">
+                        <img src="graphics/buttons/freespeechforever.gif">
+                        <img src="graphics/buttons/bookmark_this_page.gif">
+                        <img src="graphics/buttons/homernow.gif">
+                        <img src="graphics/buttons/alienow.gif">
+                        <img src="graphics/buttons/psbutton.gif">
+                        <img src="graphics/buttons/chill_pill.gif">
+                        <img src="graphics/buttons/nneighborhoodsmall.gif">
+                        <img src="graphics/buttons/drmario.gif">
+                        <img src="graphics/buttons/wheel.gif">
+                        <img src="graphics/buttons/freekevin.gif">
+                        <img src="graphics/buttons/piracy.gif">
+                        <img src="graphics/buttons/schoolsucks.gif">
+                        <img src="graphics/buttons/albutton.gif">
+                        <img src="graphics/buttons/freeware.gif">
+                        <img src="graphics/buttons/seedyourtorrents.gif">
+                        <img src="graphics/buttons/steam.gif">
+                        <img src="graphics/buttons/benis.gif">
+                        <img src="graphics/buttons/phonechump.gif">
+                        <img src="graphics/buttons/staylocal.gif">
+                        <img src="graphics/buttons/dootdoot.gif">
+                        <img src="graphics/buttons/campaignframes.gif">
+                        <img src="graphics/buttons/smileybutton001.gif">
+                        <img src="graphics/buttons/shareware.gif">
+                        <img src="graphics/buttons/anti-button.gif">
+                        <img src="graphics/buttons/digitalme.gif">
+                        <img src="graphics/buttons/fuckingwebmaster.gif">
+                        <img src="graphics/buttons/nowebp.gif">
+                        <img src="graphics/buttons/pepsi.gif">
+                        <img src="graphics/buttons/wii.gif">
+                        <img src="graphics/buttons/mtdew.gif">
+                        <img src="graphics/buttons/StardewValleyButton.gif">
+                        <img src="graphics/buttons/hl.gif">
+                        <img src="graphics/buttons/coke.gif">
+                        <img src="graphics/buttons/internetprivacy.gif">
+                        <img src="graphics/buttons/beaniebutton.gif">
+                        <img src="graphics/buttons/bettercallsaul.gif">
+                        <img src="graphics/buttons/css2.gif">
+                        <img src="graphics/buttons/parental.gif">
+                    </div>
+                </div>
+                <div class="window" style="width: 30%;">
+                    <div class="window-header player-header">
+                        <div>
+                            <img src="graphics/ui/graphics.gif">
+                            <h2>Blinkies</h2>
+                        </div>
+                        <div style="margin-top: 1%; margin-bottom: 1%;">
+                            <button class="maximize">
+                            </button>
+                            <button class="close">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="graphics blinkie">
+                        <img src="graphics/blinkies/thegoldenage.gif">
+                        <img src="graphics/blinkies/pacman.gif">
+                        <img src="graphics/blinkies/glow.gif">
+                        <img src="graphics/blinkies/netsurf.gif">
+                        <img src="graphics/blinkies/blinkieslinky.gif">
+                        <img src="graphics/blinkies/stauber.gif">
+                        <img src="graphics/blinkies/reality.gif">
+                        <img src="graphics/blinkies/html.gif">
+                        <img src="graphics/blinkies/time.gif">
+                        <img src="graphics/blinkies/blinkiebroke.gif">
+                        <img src="graphics/blinkies/okelydokely.gif">
+                        <img src="graphics/blinkies/southpark.gif">
+                        <img src="graphics/blinkies/fyou.gif">
+                        <img src="graphics/blinkies/bitten.gif">
+                        <img src="graphics/blinkies/balloon.gif">
+                        <img src="graphics/blinkies/homepage.gif">
+                        <img src="graphics/blinkies/websurfer.gif">
+                        <img src="graphics/blinkies/label.gif">
+                        <img src="graphics/blinkies/life.gif">
+                        <img src="graphics/blinkies/mspaint.gif">
+                        <img src="graphics/blinkies/dontblink.gif">
+                        <img src="graphics/blinkies/del.gif">
+                        <img src="graphics/blinkies/blinkiesrule.gif">
+                        <img src="graphics/blinkies/graphicintense.gif">
+                        <img src="graphics/blinkies/dontlike.gif">
+                        <img src="graphics/blinkies/tacobell.gif">
+                        <img src="graphics/blinkies/blinkiesfordummies.gif">
+                        <img src="graphics/blinkies/error404.gif">
+                        <img src="graphics/blinkies/smileyfrk.gif">
+                        <img src="graphics/blinkies/website.gif">
+                        <img src="graphics/blinkies/blinkiemadness.gif">
+                        <img src="graphics/blinkies/lemondemon.gif">
+                        <img src="graphics/blinkies/adultswim.gif">
+                        <img src="graphics/blinkies/lifeisfunrainbow.gif">
+                        <img src="graphics/blinkies/stargazer.gif">
+                        <img src="graphics/blinkies/blinkiecollector.gif">
+                        <img src="graphics/blinkies/loverubberducky.gif">
+                        <img src="graphics/blinkies/overtherainbow.gif">
+                        <img src="graphics/blinkies/wannagrowup.gif">
+                        <img src="graphics/blinkies/easilyamused.gif">
+                        <img src="graphics/blinkies/blinkieholic.gif">
+                        <img src="graphics/blinkies/simpsons.gif">
+                        <img src="graphics/blinkies/arewealone.gif">
+                        <img src="graphics/blinkies/htmljunkie.gif">
+                        <img src="graphics/blinkies/dreamman.gif">
+                        <img src="graphics/blinkies/popups.gif">
+                        <img src="graphics/blinkies/garfield.gif">
+                        <img src="graphics/blinkies/austinpower.gif">
+                        <img src="graphics/blinkies/urhere.gif">
+                        <img src="graphics/blinkies/stardew.gif">
+                        <img src="graphics/blinkies/copy.gif">
+                        <img src="graphics/blinkies/outoforder.gif">
+                        <img src="graphics/blinkies/England.gif">
+                        <img src="graphics/blinkies/chillpill.gif">
+                        <img src="graphics/blinkies/sleep.gif">
+                        <img src="graphics/blinkies/ratedpg13.gif">
+                        <img src="graphics/blinkies/atmycomputer.gif">
+                        <img src="graphics/blinkies/dietpepsiaddict.gif">
+                        <img src="graphics/blinkies/hardhat.gif">
+                        <img src="graphics/blinkies/safetyfirst.gif">
+                        <img src="graphics/blinkies/waterdrink.gif">
+                        <img src="graphics/blinkies/computernerd.gif">
+                        <img src="graphics/blinkies/surf.gif">
+                        <img src="graphics/blinkies/mycomputerneversleeps.gif">
+                        <img src="graphics/blinkies/gIQ9YQr.gif">
+                        <img src="graphics/blinkies/dangertosociety.gif">
+                        <img src="graphics/blinkies/pepsi.gif">
+                        <img src="graphics/blinkies/sbblink.gif">
+                        <img src="graphics/blinkies/haveaday.gif">
+                        <img src="graphics/blinkies/whiterabbit.gif">
+                        <img src="graphics/blinkies/horsin around.gif">
+                        <img src="graphics/blinkies/@.gif">
+                        <img src="graphics/blinkies/doritosblinkie5.gif">
+                        <img src="graphics/blinkies/ransom.gif">
+                        <img src="graphics/blinkies/McDonalds.gif">
+                        <img src="graphics/blinkies/zootycoon.gif">
+                    </div>
+                </div>
+                <div class="window" style="width: 30%;">
+                    <div class="window-header player-header">
+                        <div>
+                            <img src="graphics/ui/graphics.gif">
+                            <h2>Stamps</h2>
+                        </div>
+                        <div style="margin-top: 1%; margin-bottom: 1%;">
+                            <button class="maximize">
+                            </button>
+                            <button class="close">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="graphics">
+                        <img src="graphics/stamps/oldweb.gif">
+                        <img src="graphics/stamps/brainleak.gif">
+                        <img src="graphics/stamps/dogofwisdom.gif">
+                        <img src="graphics/stamps/idiot.gif">
+                        <img src="graphics/stamps/garfieldpropaganda.gif">
+                        <img src="graphics/stamps/penguin.gif">
+                        <img src="graphics/stamps/eatpant.gif">
+                        <img src="graphics/stamps/load.gif">
+                        <img src="graphics/stamps/kenny.gif">
+                        <img src="graphics/stamps/doggiepepsi.gif">
+                        <img src="graphics/stamps/frames.gif">
+                        <img src="graphics/stamps/life.gif">
+                        <img src="graphics/stamps/abba.gif">
+                        <img src="graphics/stamps/zombies.gif">
+                        <img src="graphics/stamps/y2k.gif">
+                        <img src="graphics/stamps/bluscreen.gif">
+                        <img src="graphics/stamps/totallyrad.gif">
+                        <img src="graphics/stamps/barbedwire.gif">
+                        <img src="graphics/stamps/gameboy.gif">
+                        <img src="graphics/stamps/biohazard.gif">
+                        <img src="graphics/stamps/smiley.gif">
+                        <img src="graphics/stamps/80s3.gif">
+                        <img src="graphics/stamps/tiger.gif">
+                        <img src="graphics/stamps/80s.gif">
+                        <img src="graphics/stamps/pkyellow.gif">
+                        <img src="graphics/stamps/worm.gif">
+                        <img src="graphics/stamps/CSS.gif">
+                        <img src="graphics/stamps/virus.gif">
+                        <img src="graphics/stamps/science.gif">
+                        <img src="graphics/stamps/dudebro.gif">
+                        <img src="graphics/stamps/^__^.gif">
+                        <img src="graphics/stamps/fnaf.gif">
+                        <img src="graphics/stamps/rainbow.gif">
+                        <img src="graphics/stamps/TF2.gif">
+                        <img src="graphics/stamps/eatstamps.gif">
+                        <img src="graphics/stamps/hacktheplanet.gif">
+                        <img src="graphics/stamps/CMD.gif">
+                        <img src="graphics/stamps/static.gif">
+                        <img src="graphics/stamps/dontforget.gif">
+                        <img src="graphics/stamps/quotes.gif">
+                        <img src="graphics/stamps/spaceinvader.gif">
+                        <img src="graphics/stamps/charlie.gif">
+                        <img src="graphics/stamps/095.gif">
+                        <img src="graphics/stamps/SIMs.gif">
+                        <img src="graphics/stamps/antiinternet.gif">
+                        <img src="graphics/stamps/awesome.gif">
+                        <img src="graphics/stamps/UFO.gif">
+                        <img src="graphics/stamps/musicplayer.gif">
+                        <img src="graphics/stamps/vaporwave.gif">
+                        <img src="graphics/stamps/anotherplanet.gif">
+                        <img src="graphics/stamps/comicsareanartform.gif">
+                        <img src="graphics/stamps/brick.gif">
+                        <img src="graphics/stamps/nyancat.gif">
+                        <img src="graphics/stamps/russianstamps.gif">
+                        <img src="graphics/stamps/lifeisawip.gif">
+                        <img src="graphics/stamps/glowingstars.gif">
+                        <img src="graphics/stamps/toomanystamps.gif">
+                        <img src="graphics/stamps/theride.gif">
+                        <img src="graphics/stamps/garfield.gif">
+                        <img src="graphics/stamps/hakinwhackinsmacin.gif">
+                        <img src="graphics/stamps/palmtrees.gif">
+                        <img src="graphics/stamps/goodieblink.gif">
+                        <img src="graphics/stamps/city.gif">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <img src="graphics/dividers/80s.gif">
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="window" style="background-image: url(graphics/backgrounds/sea.gif);">
+            <div class="flex" style="padding: 1%; justify-content: space-between;">
+                <div class="window" style="width: 35%; padding: 1%;">
+                    <h1 class="myspace" style="margin: 0%;">☮Dan♥</h1>
+                    <div class="flex" style="justify-content: space-between;">
+                        <div style="width: 40%;;">
+                            <img class="me" src="graphics/me.gif">
+                        </div>
+                        <div class="flex" style="width: 55%;flex-direction: column;">
+                            <div>
+                                <p class="myspace">"Gaming and<br>coding bro!"</p>
+                            </div>
+                            <div>
+                                <p class="myspace">Male<br>18 years old<br>Somerset,<br>England</p>
+                            </div>
+                            <div>
+                                <p style="color: #0A0; font-weight: bold; font-size: 0.6vw;" class="myspace"><img
+                                        style="width: 7.5%; margin-bottom: 5%; vertical-align: middle"
+                                        src="graphics/ui/onlinenow.gif">Online Now!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="myspace" style="margin: 0%;">Mood: <a
+                            href="https://www.imood.com/users/Webpage1990Colourised"><img
+                                style="width: 30%; margin-bottom: 1%; vertical-align: middle"
+                                src="https://moods.imood.com/display/uname-Webpage1990Colourised/trans-1/imood.gif"></a>
+                    </p>
+                    <p class="myspace" style="margin: 0%; position: relative; bottom: 0.5%;">
+                        View My: <a>Pics</a> | <a>Videos</a> | <a>Playlists</a>
+                    </p>
+                    <div
+                        style="width: 90%; margin: auto; margin-bottom: 3%; border: solid; border-width: 0.2%; border-color: #6799c5;">
+                        <div style="background-color: #6799c5;">
+                            <h2 class="myspace" style="margin: 0%;">Contacting ☮Dan♥</h2>
+                        </div>
+                        <div>
+                            <img style="width: 48%;" src="graphics/ui/mail.gif">
+                            <img style="width: 48%;" src="graphics/ui/forward.gif">
+                            <img style="width: 48%;" src="graphics/ui/friend.gif">
+                            <img style="width: 48%;" src="graphics/ui/favorite.gif">
+                            <img style="width: 48%;" src="graphics/ui/imskype.gif">
+                            <img style="width: 48%;" src="graphics/ui/block.gif">
+                            <img style="width: 48%;" src="graphics/ui/group.gif">
+                            <img style="width: 48%;" src="graphics/ui/rank.gif">
+                        </div>
+                    </div>
+                    <div
+                        style="width: 89%; padding: 0.5%; margin: auto; margin-bottom: 3%; border: solid; border-width: 0.15vw; border-color: #6799c5;">
+                        <p class="myspace" style="font-weight: bold;">MySpace URL:<br><a
+                                href="https://webpage1990colourised.neocities.org/">www.myspace.com/dan</a></p>
+                    </div>
+                    <div style="margin-bottom: 3%; border: solid; border-width: 0.2%; border-color: #6799c5;">
+                        <div style="background-color: #6799c5;">
+                            <h2 class="myspace" style="margin: 0%;">☮Dan♥'s Interests</h2>
+                        </div>
+                        <div>
+                            <div class="flex" style="padding: 1%;">
+                                <div style="background-color: #b1d0f0; width: 40%; margin-right: 1%;">
+                                    <p class="myspace" style="color: #369; font-weight: bold;">General</p>
+                                </div>
+                                <div style="background-color: #d5e8fb; width: 60%;">
+                                    <p class="myspace">Warhammer 40,000, Computers and History</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="border: solid; border-width: 0.2%; border-color: #6799c5;">
+                        <div style="background-color: #6799c5;">
+                            <h2 class="myspace" style="margin: 0%;">☮Dan♥'s Details</h2>
+                        </div>
+                        <div>
+                            <div class="flex" style="padding: 1%; padding-bottom: 0%;">
+                                <div style="background-color: #b1d0f0; width: 40%; margin-right: 1%;">
+                                    <p class="myspace" style="color: #369; font-weight: bold;">Status:</p>
+                                </div>
+                                <div style="background-color: #d5e8fb; width: 60%;">
+                                    <p class="myspace">Single</p>
+                                </div>
+                            </div>
+                            <div class="flex" style="padding: 1%; padding-bottom: 0%;">
+                                <div style="background-color: #b1d0f0; width: 40%; margin-right: 1%;">
+                                    <p class="myspace" style="color: #369; font-weight: bold;">Here for:</p>
+                                </div>
+                                <div style="background-color: #d5e8fb; width: 60%;">
+                                    <p class="myspace">Friends</p>
+                                </div>
+                            </div>
+                            <div class="flex" style="padding: 1%; padding-bottom: 0%;">
+                                <div style="background-color: #b1d0f0; width: 40%; margin-right: 1%;">
+                                    <p class="myspace" style="color: #369; font-weight: bold;">Orientation:</p>
+                                </div>
+                                <div style="background-color: #d5e8fb; width: 60%;">
+                                    <p class="myspace">Straight</p>
+                                </div>
+                            </div>
+                            <div class="flex" style="padding: 1%; padding-bottom: 0%;">
+                                <div style="background-color: #b1d0f0; width: 40%; margin-right: 1%;">
+                                    <p class="myspace" style="color: #369; font-weight: bold;">Ethnicity:</p>
+                                </div>
+                                <div style="background-color: #d5e8fb; width: 60%;">
+                                    <p class="myspace">British</p>
+                                </div>
+                            </div>
+                            <div class="flex" style="padding: 1%; padding-bottom: 0%;">
+                                <div style="background-color: #b1d0f0; width: 40%; margin-right: 1%;">
+                                    <p class="myspace" style="color: #369; font-weight: bold;">Religion:</p>
+                                </div>
+                                <div style="background-color: #d5e8fb; width: 60%;">
+                                    <p class="myspace">Cult Mechanicus</p>
+                                </div>
+                            </div>
+                            <div class="flex" style="padding: 1%; padding-bottom: 0%;">
+                                <div style="background-color: #b1d0f0; width: 40%; margin-right: 1%;">
+                                    <p class="myspace" style="color: #369; font-weight: bold;">Zodiac Sign:</p>
+                                </div>
+                                <div style="background-color: #d5e8fb; width: 60%;">
+                                    <p class="myspace"><a
+                                            href="https://web.archive.org/web/20090113094523/http://collect.myspace.com/index.cfm?fuseaction=horoscope&sign=1">Aries</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex" style="padding: 1%;">
+                                <div style="background-color: #b1d0f0; width: 40%; margin-right: 1%;">
+                                    <p class="myspace" style="color: #369; font-weight: bold;">Education:</p>
+                                </div>
+                                <div style="background-color: #d5e8fb; width: 60%;">
+                                    <p class="myspace">University</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 60%;">
+                    <img src="graphics/aboutheading.gif">
+                    <h2 class="myspace" style="background-color: rgb(255, 204, 153); color: #f60;">☮Dan♥'s Blurbs</h2>
+                    <p class="myspace" style="font-weight: bold; color: #f60;">About me:</p>
+                    <p class="myspace">
+                        I will be honest, I'm not the best at talking about myself but I'm going to give it a go. So
+                        lets start of with my website curator experience, I have a couple years of non professional
+                        experience under my belt fiddling with webdev since it was introduce to me at collage. From
+                        there I spent my spare time in the course learing html and eventualy creating the website you're
+                        looking at now!
+                        <br><br>
+                        Another of my interests is Warhammer 40,000. Set in the 40th millennium hence the name.
+                        Warhammer 40k is a Grimdark si-fi world created by Rick Priestley in 1987, and I think it's the
+                        coolest shizzle ever. As a kid I always thought model villages were awesome and then I found out
+                        about the table top game 40k, and then I found my wallet empty and my shelves filled with little
+                        toy solders some of which you might find in a gallery that may or may not exist. Anywho totaly
+                        worth it!
+                        <br><br>
+                        Other than that I would like to say I'm a chill cool dude just looking to express himself
+                        creatively through the mediums of web design and miniature painting, and I hope that that
+                        satisfies your need for information on this websites curator. Thanks for reading and have a
+                        nice day.
+                    </p>
+                    <h2 class="myspace" style="background-color: rgb(255, 204, 153); color: #f60;">☮Dan♥'s Friend Space
+                        (Top 4)</h2>
+                    <p class="myspace">☮Dan♥ has <span style="color: #c00;">40</span> friends.</p>
+                    <div class="flex">
+                        <div style="width: 20%;">
+                            <p class="myspace" style="text-align: center;"><a>Tom<img src="graphics/tom.gif"></a></p>
+                        </div>
+                        <div style="width: 20%;">
+                            <p class="myspace" style="text-align: center;"><a>BoJo<img src="graphics/bojo.gif"></a></p>
+                        </div>
+                        <div style="width: 20%;">
+                            <p class="myspace" style="text-align: center;"><a>Stefan<img src="graphics/stefan.gif"></a>
+                            </p>
+                        </div>
+                        <div style="width: 20%;">
+                            <p class="myspace" style="text-align: center;"><a>Barry<img src="graphics/barry.gif"></a>
+                            </p>
+                        </div>
+                    </div>
+                    <p class="myspace" style="text-align: right;">View ☮Dan♥'s Friends: <a>All</a> | <a>Online</a> |
+                        <a>New</a></p>
+                </div>
+            </div>
+            <div>
+                <img style="width: 24%;" src="graphics/20cash.gif">
+                <img style="width: 24%;" src="graphics/accident.gif">
+                <img style="width: 24%;" src="graphics/barcode2.gif">
+                <img style="width: 24%;" src="graphics/deposit.gif">
+                <img style="width: 24%;" src="graphics/hum.gif">
+                <img style="width: 24%;" src="graphics/quantum.gif">
+                <img style="width: 24%;" src="graphics/visitor.gif">
+                <img style="width: 24%;" src="graphics/who.gif">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <img style="width: 10%;" src="graphics/ui/top.gif" id="topbtn">
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <img src="graphics/dividers/construction.gif">
+        </div>
+    </section>
+
+    <section>
+        <footer>
+            <div class="marquee">
+                <div class="marquee-right">
+                    <div class="track">
+                        <img src="graphics/buttons/email-icon.gif">
+                        <img src="graphics/buttons/best_viewed_with_eyes.gif">
+                        <img src="graphics/buttons/notepad2.gif">
+                        <img src="graphics/buttons/made_with_windows.gif">
+                        <img src="graphics/buttons/browser.gif">
+                        <img src="graphics/buttons/hedied4u.gif">
+                        <img src="graphics/buttons/noedit.gif">
+                        <img src="graphics/buttons/truth.gif">
+                        <img src="graphics/buttons/dilbert.gif">
+                        <img src="graphics/buttons/wwwbutton.gif">
+                        <img src="graphics/buttons/W3Chtml.gif">
+                        <img src="graphics/buttons/computer.gif">
+                        <img src="graphics/buttons/pirvacynow.gif">
+                        <img src="graphics/buttons/hand_coded.gif">
+                        <img src="graphics/buttons/ezgif.gif">
+                        <img src="graphics/buttons/ieexplode.gif">
+                        <img src="graphics/buttons/homicidenow.gif">
+                        <img src="graphics/buttons/heavensgate.gif">
+                        <img src="graphics/buttons/ravenow.gif">
+                        <img src="graphics/buttons/go2hell.gif">
+                        <img src="graphics/buttons/html.gif">
+                        <img src="graphics/buttons/minesweeper.gif">
+                        <img src="graphics/buttons/bantime.gif">
+                        <img src="graphics/buttons/smileybutton001.gif">
+                        <img src="graphics/buttons/anti-button.gif">
+                    </div>
+                    <div class="track">
+                        <img src="graphics/buttons/email-icon.gif">
+                        <img src="graphics/buttons/best_viewed_with_eyes.gif">
+                        <img src="graphics/buttons/notepad2.gif">
+                        <img src="graphics/buttons/made_with_windows.gif">
+                        <img src="graphics/buttons/browser.gif">
+                        <img src="graphics/buttons/hedied4u.gif">
+                        <img src="graphics/buttons/noedit.gif">
+                        <img src="graphics/buttons/truth.gif">
+                        <img src="graphics/buttons/dilbert.gif">
+                        <img src="graphics/buttons/wwwbutton.gif">
+                        <img src="graphics/buttons/W3Chtml.gif">
+                        <img src="graphics/buttons/computer.gif">
+                        <img src="graphics/buttons/pirvacynow.gif">
+                        <img src="graphics/buttons/hand_coded.gif">
+                        <img src="graphics/buttons/ezgif.gif">
+                        <img src="graphics/buttons/ieexplode.gif">
+                        <img src="graphics/buttons/homicidenow.gif">
+                        <img src="graphics/buttons/heavensgate.gif">
+                        <img src="graphics/buttons/ravenow.gif">
+                        <img src="graphics/buttons/go2hell.gif">
+                        <img src="graphics/buttons/html.gif">
+                        <img src="graphics/buttons/minesweeper.gif">
+                        <img src="graphics/buttons/bantime.gif">
+                        <img src="graphics/buttons/smileybutton001.gif">
+                        <img src="graphics/buttons/anti-button.gif">
+                    </div>
+                </div>
+            </div>
+            <div class="marquee">
+                <div class="marquee-left">
+                    <div class="track">
+                        <img src="graphics/buttons/mailput.gif">
+                        <img src="graphics/buttons/nocodeandrun.gif">
+                        <img src="graphics/buttons/freespeechforever.gif">
+                        <img src="graphics/buttons/bookmark_this_page.gif">
+                        <img src="graphics/buttons/homernow.gif">
+                        <img src="graphics/buttons/alienow.gif">
+                        <img src="graphics/buttons/psbutton.gif">
+                        <img src="graphics/buttons/chill_pill.gif">
+                        <img src="graphics/buttons/nneighborhoodsmall.gif">
+                        <img src="graphics/buttons/drmario.gif">
+                        <img src="graphics/buttons/wheel.gif">
+                        <img src="graphics/buttons/freekevin.gif">
+                        <img src="graphics/buttons/piracy.gif">
+                        <img src="graphics/buttons/schoolsucks.gif">
+                        <img src="graphics/buttons/albutton.gif">
+                        <img src="graphics/buttons/freeware.gif">
+                        <img src="graphics/buttons/seedyourtorrents.gif">
+                        <img src="graphics/buttons/steam.gif">
+                        <img src="graphics/buttons/benis.gif">
+                        <img src="graphics/buttons/phonechump.gif">
+                        <img src="graphics/buttons/staylocal.gif">
+                        <img src="graphics/buttons/dootdoot.gif">
+                        <img src="graphics/buttons/campaignframes.gif">
+                        <img src="graphics/buttons/shareware.gif">
+                        <img src="graphics/buttons/digitalme.gif">
+                    </div>
+                    <div class="track">
+                        <img src="graphics/buttons/mailput.gif">
+                        <img src="graphics/buttons/nocodeandrun.gif">
+                        <img src="graphics/buttons/freespeechforever.gif">
+                        <img src="graphics/buttons/bookmark_this_page.gif">
+                        <img src="graphics/buttons/homernow.gif">
+                        <img src="graphics/buttons/alienow.gif">
+                        <img src="graphics/buttons/psbutton.gif">
+                        <img src="graphics/buttons/chill_pill.gif">
+                        <img src="graphics/buttons/nneighborhoodsmall.gif">
+                        <img src="graphics/buttons/drmario.gif">
+                        <img src="graphics/buttons/wheel.gif">
+                        <img src="graphics/buttons/freekevin.gif">
+                        <img src="graphics/buttons/piracy.gif">
+                        <img src="graphics/buttons/schoolsucks.gif">
+                        <img src="graphics/buttons/albutton.gif">
+                        <img src="graphics/buttons/freeware.gif">
+                        <img src="graphics/buttons/seedyourtorrents.gif">
+                        <img src="graphics/buttons/steam.gif">
+                        <img src="graphics/buttons/benis.gif">
+                        <img src="graphics/buttons/phonechump.gif">
+                        <img src="graphics/buttons/staylocal.gif">
+                        <img src="graphics/buttons/dootdoot.gif">
+                        <img src="graphics/buttons/campaignframes.gif">
+                        <img src="graphics/buttons/shareware.gif">
+                        <img src="graphics/buttons/digitalme.gif">
+                    </div>
+                </div>
+            </div>
+            <p>©1990 Webpage-1990-Colourised</p>
+        </footer>
+    </section>
+
+    <section class="overlay">
+    </section>
+
+    <script language="JavaScript">
+        topbtn = document.getElementById("topbtn")
+
+        topbtn.addEventListener("click", totop);
+
+        function totop() {
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <script language="JavaScript">
+        const colours = ["#ff0000", "#ff5500", "#ffaa00", "#ffff00", "#aaff00", "#55ff00", "#00ff00", "#00ff55",
+            "#00ffaa", "#00ffff", "#00aaff", "#0055ff", "#0000ff", "#5500ff", "#aa00ff", "#ff00ff", "#ff00aa",
+            "#ff0055"
+        ];
+
+        let letters = document.querySelectorAll(".rainbow");
+
+        let intervalDelay = 100;
+
+        let counter = 0;
+        for (let x = 0; x < letters.length; x++) {
+            if (colours[x] === undefined) {
+                letters[x].style.color = colours[x - (colours.length * parseInt(counter + .1))];
+            } else {
+                letters[x].style.color = colours[x];
+            }
+            counter += 1 / colours.length;
+        }
+
+        var intervalId = window.setInterval(function () {
+
+            for (let i = 0; i < letters.length; i++) {
+                funky(i);
+            }
+
+        }, intervalDelay);
+
+        function funky(i) {
+
+            function cleanupRichText(richText) {
+                return richText.replace(/rgb\((.+?)\)/ig, (_, rgb) => {
+                    return '#' + rgb.split(',')
+                        .map(str => parseInt(str, 10).toString(16).padStart(2, '0'))
+                        .join('')
+                })
+            }
+
+            let hexColour = cleanupRichText(letters[i].style.color);
+
+            if (colours.indexOf(hexColour) + 1 === colours.length) {
+                colourIndex = 0;
+            } else {
+                colourIndex = colours.indexOf(hexColour) + 1;
+            }
+            letters[i].style.color = colours[colourIndex];
+        }
+    </script>
+
+    <script language="JavaScript">
+        const dropdown_btns = document.querySelectorAll(".dropdown-btn");
+
+        dropdown_btns.forEach((btn) => {
+            btn.addEventListener("click", (e) => {
+                const dropdown = e.currentTarget.nextElementSibling;
+
+                dropdown.classList.toggle("show");
+                document
+                    .querySelectorAll(".dropdown-btn + .dropdown-list")
+                    .forEach((dropdown) => {
+                        if (dropdown !== e.currentTarget.nextElementSibling) {
+                            dropdown.classList.remove("show");
+                        }
+                    });
+            });
+        });
+
+        window.onclick = (e) => {
+            if (!e.target.matches(".dropdown-btn")) {
+                const dropdowns = document.querySelectorAll(".dropdown-list");
+                dropdowns.forEach((drpodown) => {
+                    drpodown.classList.remove("show");
+                });
+            }
+        };
+    </script>
+
+    <script language="JavaScript">
+        var playlist = [
+            "https://www.mboxdrive.com/frontier-main-theme.mp3",
+            "https://vgmsite.com/soundtracks/animal-crossing-gc-rip/azzmbawn/76%207PM.mp3",
+            "https://vgmsite.com/soundtracks/goldeneye-original-soundtrack/uhhbpvyd/05%20-%20escape%20from%20arkangelsk.mp3",
+            "https://vgmsite.com/soundtracks/duck-tales/uznqdxepvc/07%20Moon%20Surface%20%28The%20Moon%29.mp3",
+            "https://vgmsite.com/soundtracks/elite-commodore-64/rinajbdj/02_Docking%20Sequence.mp3",
+            "https://vgmsite.com/soundtracks/kirby-super-star/lqhlwtvqfb/27%20Run%2C%20Kirby%2C%20Run%21.mp3",
+            "https://vgmsite.com/soundtracks/london-racer-psx-gamerip/mndevhtf/SLES-02694%20-%2002%20M25%20South.mp3",
+            "https://vgmsite.com/soundtracks/half-life-original-soundtrack/bkzrrkqpyt/24.%20Credits%20Closing%20Theme.mp3",
+        ];
+        var index = 0;
+        var seek = document.getElementById("seek");
+        var togglebtn = document.getElementById("togglebtn");
+        var back = document.getElementById("back");
+        var next = document.getElementById("next");
+        var volume = document.getElementById("volume");
+        var playing = document.getElementById("playing")
+        var time = document.getElementById("time");
+
+        playing.src = playlist[index];
+
+        playing.addEventListener("loadedmetadata", setSliderMax);
+
+        function setSliderMax() {
+            seek.setAttribute("max", playing.duration);
+            seek.setAttribute("min", 0);
+        }
+
+        playing.addEventListener("timeupdate", setSeekVal);
+
+        function setSeekVal() {
+            seek.value = playing.currentTime;
+            if (playing.ended) {
+                seek.value = 0;
+                playing.currentTime = 0;
+                togglebtn.style.backgroundImage = "url('ui/play.gif')";
+                playing.pause();
+            }
+        }
+
+        seek.addEventListener("input", setSeek);
+
+        function setSeek() {
+            playing.currentTime = seek.value;
+        }
+
+        togglebtn.addEventListener("click", toggle);
+
+        function toggle() {
+            if (playing.paused) {
+                playing.play();
+                togglebtn.style.backgroundImage = "url('ui/pause.gif')";
+            } else {
+                playing.pause();
+                togglebtn.style.backgroundImage = "url('ui/play.gif')";
+            }
+        }
+
+        back.addEventListener("click", decrement);
+
+        function decrement() {
+            if (index === 0) {
+                index = playlist.length - 1;
+            } else {
+                index--;
+            }
+
+            playing.src = playlist[index];
+            playing.play();
+            togglebtn.style.backgroundImage = "url('ui/pause.gif')";
+        }
+
+        next.addEventListener("click", increment);
+
+        function increment() {
+            if (index === playlist.length - 1) {
+                index = 0;
+            } else {
+                index++;
+            }
+
+            playing.src = playlist[index];
+            playing.play();
+            togglebtn.style.backgroundImage = "url('ui/pause.gif')";
+        }
+
+        volume.addEventListener("input", setVol);
+
+        function setVol() {
+            playing.volume = volume.value / 100;
+        }
+
+        playing.addEventListener("timeupdate", seektime);
+
+        function seektime() {
+            var mins = Math.floor(playing.currentTime / 60);
+            var secs = Math.floor(playing.currentTime % 60);
+            if (secs < 10) {
+                secs = '0' + secs;
+            }
+            if (mins < 10) {
+                mins = '0' + mins;
+            }
+            time.innerHTML = mins + ':' + secs;
+        }
+
+        playing.addEventListener('ended', audioEnd);
+
+        function audioEnd() {
+            if (index === playlist.length - 1) {
+                index = 0;
+            } else {
+                index++;
+            }
+
+            playing.src = playlist[index];
+            playing.play();
+            togglebtn.style.backgroundImage = "url('ui/pause.gif')";
+        }
+    </script>
+
+    <script language="JavaScript">
+        var closebtn = document.getElementById("closebtn");
+        var clippybtn = document.getElementById("clippybtn");
+        var clippybox = document.getElementById("clippy-box");
+
+        closebtn.addEventListener("click", close);
+
+        function close() {
+            clippybox.classList.toggle("hide");
+            clippybtn.addEventListener("click", open);
+        }
+
+        function open() {
+            clippybox.classList.toggle("hide");
+            clippybtn.removeEventListener("click", open);
+        }
+    </script>
+</body>
+
+</html>
