@@ -184,7 +184,10 @@
 
         section>nav {
             width: 100%;
-            padding: 0.2%;
+            padding: 0.3%;
+            padding-left: 0%;
+            display: flex;
+            justify-content: space-evenly;
             background: -webkit-linear-gradient(left, #08216b, #a5cef7);
             border: solid;
             border-bottom-color: #424242;
@@ -193,10 +196,18 @@
             border-top-color: #fff;
         }
 
-        nav>ul {
-            list-style-type: none;
-            margin: 0%;
-            padding: 0%;
+        nav>a {
+            height: 100%;
+            position: relative;
+            bottom: 2%;
+        }
+
+        a>button {
+            height: 100%;
+        }
+
+        nav>button {
+            height: 99%;
         }
 
         section>div {
@@ -404,12 +415,13 @@
 
         .dropdown {
             position: relative;
+            width: 69%;
         }
 
         .dropdown-list {
             display: none;
             position: absolute;
-            width: 25%;
+            width: 40%;
             top: 90%;
             font-size: 1vw;
             font-family: "MS Sans Serif";
@@ -422,7 +434,7 @@
         .dropdown-list a {
             font-size: 1vw;
             font-family: "MS Sans Serif";
-            width: 85%;
+            width: 130%;
             padding-left: 10%;
             display: flex;
             justify-content: space-between;
@@ -446,14 +458,10 @@
         }
 
         .dropdown-inner {
-            width: 125%;
-            left: 95%;
+            width: 140%;
+            left: 140%;
             top: 0;
             z-index: 1;
-        }
-
-        .updatedescr {
-            width: 80%;
         }
 
         .dropdown .dropdown-list .dropdown:hover>.dropdown-list {
@@ -721,7 +729,7 @@
 
         .marquee-right {
             display: flex;
-            width: 600%;
+            width: 850%;
             position: absolute;
             left: 0;
             animation: track-right 35s linear infinite;
@@ -729,7 +737,7 @@
 
         @keyframes track-right {
             0% {
-                left: -300%;
+                left: -425%;
             }
 
             100% {
@@ -739,7 +747,7 @@
 
         .marquee-left {
             display: flex;
-            width: 600%;
+            width: 850%;
             position: absolute;
             left: 0;
             animation: track-left 35s linear infinite;
@@ -751,7 +759,7 @@
             }
 
             100% {
-                left: -300%;
+                left: -425%;
             }
         }
 
@@ -882,7 +890,6 @@
         </script>
         <span id="taskkill" style="margin: 0;">
             C:\Users\Webpage-1990-Colourised>taskkill /index.html [<a onclick="Y()">Y</a>/<a onclick="N()">N</a>]
-
         </span>
     </section>
 
@@ -895,111 +902,127 @@
 
     <section>
         <nav>
-            <ul>
-                <li class="dropdown">
-                    <button class="dropdown-btn">Updates⏷</button>
-                    <div class="dropdown-list window">
-                        <div class="dropdown">
-                            <a class="dropdown-btn">24/02/2022<p>⏵</p></a>
-                            <div class="dropdown-list updatedescr window dropdown-inner">
-                                <div class="nav-text">
-                                    <h1>24/02/2022</h1>
-                                    <hr>
-                                    <p>
-                                        Added a handy little Updates button so you can see exactly what I have done.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="dropdown">
-                            <a class="dropdown-btn">25/03/2022<p>⏵</p></a>
-                            <div class="dropdown-list updatedescr window dropdown-inner">
-                                <div class="nav-text">
-                                    <h1>25/03/2022</h1>
-                                    <hr>
-                                    <p>
-                                        Invited Clippy to hangout on my site. He said he would DJ, just needs to get set
-                                        up then he will be all ready to go.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="dropdown">
-                            <a class="dropdown-btn">23/04/2022<p>⏵</p></a>
-                            <div class="dropdown-list updatedescr window dropdown-inner">
-                                <div class="nav-text">
-                                    <h1>23/04/2022</h1>
-                                    <hr>
-                                    <p>
-                                        Added a Cool People section so you can see all of the other wonderful webistes
-                                        of the world wide web.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="dropdown">
-                            <a class="dropdown-btn">25/05/2022<p>⏵</p></a>
-                            <div class="dropdown-list updatedescr window dropdown-inner">
-                                <div class="nav-text">
-                                    <h1>25/05/2022</h1>
-                                    <hr>
-                                    <p>
-                                        Page now has a graphics collection section, enjoy browsing the gallery
-                                        for all the buttons, blinkies and stamps I have found on my trips around the
-                                        interweb.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="dropdown">
-                            <a class="dropdown-btn">28/06/2022<p>⏵</p></a>
-                            <div class="dropdown-list updatedescr window dropdown-inner">
-                                <div class="nav-text">
-                                    <h1>28/06/2022</h1>
-                                    <hr>
-                                    <p>
-                                        Had a bit of a slow month so I just found more buttons, blinkies and
-                                        stamps and have slaped them on the graphics collection section.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="dropdown">
-                            <a class="dropdown-btn">25/08/2022<p>⏵</p></a>
-                            <div class="dropdown-list updatedescr window dropdown-inner">
-                                <div class="nav-text">
-                                    <h1>25/08/2022</h1>
-                                    <hr>
-                                    <p>
-                                        Added an About the webmaster section so you can learn a little about who I am
-                                        and what I like.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="dropdown">
-                            <a class="dropdown-btn">COMMING SOON<p>⏵</p></a>
-                            <div class="dropdown-list updatedescr window dropdown-inner">
-                                <div class="nav-text">
-                                    <h1>00/00/0000</h1>
-                                    <hr>
-                                    <p>
-                                        Fix nav bar, add more buttons.<br>
-                                        make friend number count followers.<br>
-                                        Join a Webring?
-                                    </p>
-                                </div>
+            <a href="#guestbook"><button>guestbook</button></a>
+            <a href="#links"><button>links</button></a>
+            <a href="#graphics"><button>graphics</button></a>
+            <a href="#about"><button>about</button></a>
+            <div class="dropdown">
+                <button class="dropdown-btn">Updates⏷</button>
+                <div class="dropdown-list window">
+                    <div class="dropdown">
+                        <a class="dropdown-btn">24/02/2022<p>⏵</p></a>
+                        <div class="dropdown-list window dropdown-inner">
+                            <div class="nav-text">
+                                <h1>24/02/2022</h1>
+                                <hr>
+                                <p>
+                                    Added a handy little Updates button so you can see exactly what I have done.
+                                </p>
                             </div>
                         </div>
                     </div>
-                </li>
-            </ul>
+                    <hr>
+                    <div class="dropdown">
+                        <a class="dropdown-btn">25/03/2022<p>⏵</p></a>
+                        <div class="dropdown-list window dropdown-inner">
+                            <div class="nav-text">
+                                <h1>25/03/2022</h1>
+                                <hr>
+                                <p>
+                                    Invited Clippy to hangout on my site. He said he would DJ, just needs to get set
+                                    up then he will be all ready to go.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="dropdown">
+                        <a class="dropdown-btn">23/04/2022<p>⏵</p></a>
+                        <div class="dropdown-list window dropdown-inner">
+                            <div class="nav-text">
+                                <h1>23/04/2022</h1>
+                                <hr>
+                                <p>
+                                    Added a Cool People section so you can see all of the other wonderful webistes
+                                    of the world wide web.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="dropdown">
+                        <a class="dropdown-btn">25/05/2022<p>⏵</p></a>
+                        <div class="dropdown-list window dropdown-inner">
+                            <div class="nav-text">
+                                <h1>25/05/2022</h1>
+                                <hr>
+                                <p>
+                                    Page now has a graphics collection section, enjoy browsing the gallery
+                                    for all the buttons, blinkies and stamps I have found on my trips around the
+                                    interweb.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="dropdown">
+                        <a class="dropdown-btn">28/06/2022<p>⏵</p></a>
+                        <div class="dropdown-list window dropdown-inner">
+                            <div class="nav-text">
+                                <h1>28/06/2022</h1>
+                                <hr>
+                                <p>
+                                    Had a bit of a slow month so I just found more buttons, blinkies and
+                                    stamps and have slaped them on the graphics collection section.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="dropdown">
+                        <a class="dropdown-btn">25/08/2022<p>⏵</p></a>
+                        <div class="dropdown-list window dropdown-inner">
+                            <div class="nav-text">
+                                <h1>25/08/2022</h1>
+                                <hr>
+                                <p>
+                                    Added an About the webmaster section so you can learn a little about who I am
+                                    and what I like.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="dropdown">
+                        <a class="dropdown-btn">09/02/2023<p>⏵</p></a>
+                        <div class="dropdown-list window dropdown-inner">
+                            <div class="nav-text">
+                                <h1>09/02/2023</h1>
+                                <hr>
+                                <p>
+                                    Hello all, it's been a hot minute but I'm back and with a update for yall. I have
+                                    manged to get the navbar working how I want it, also working on a gallery.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="dropdown">
+                        <a class="dropdown-btn">COMMING SOON<p>⏵</p></a>
+                        <div class="dropdown-list window dropdown-inner">
+                            <div class="nav-text">
+                                <h1>00/00/0000</h1>
+                                <hr>
+                                <p>
+                                    Add image gallery.<br>
+                                    make friend number count followers.<br>
+                                    Join a Webring?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </nav>
     </section>
 
@@ -1137,7 +1160,7 @@ umb%2F2%2F2c%2FRotating_earth_%2528large%2529.gif%2F200px-Rotating_earth_%2528la
                         <a href="https://youtuube.neocities.org/"><img
                                 src="https://youtuube.neocities.org/Misc%20Assets/Internet/KitajimasKornerBadgeIcon.gif"></a>
                         <a href="https://dokodemo.neocities.org/"><img
-                                src="https://dokodemo.neocities.org/images/buttons/dokodemobutton3.gif"></a>
+                                src="https://dokode.moe/media/88x31sites/dokodemobutton3.gif"></a>
                         <a href="https://dannarchy.com/"><img src="https://dannarchy.com/images/d_now.gif"></a>
                         <a href="https://auzziejay.com"><img src="https://auzziejay.com/images/auzzie1.gif"></a>
                         <a href="https://exephile.neocities.org"><img src="https://exephile.neocities.org/exe.gif"></a>
@@ -1154,6 +1177,28 @@ umb%2F2%2F2c%2FRotating_earth_%2528large%2529.gif%2F200px-Rotating_earth_%2528la
                                 src="https://dreamscape-wiki.neocities.org/folder-images/folder-socials/website_ad.gif"></a>
                         <a href="https://vhsoverdrive.neocities.org/"><img
                                 src="https://vhsoverdrive.neocities.org/linkbar/vhsoverdrive.png"></a>
+                        <a href="https://aegi.neocities.org/index.html"><img
+                                src="https://aegi.neocities.org/images/aegi_button_2.gif"></a>
+                        <a href="https://time-travelling-birb.neocities.org/"><img
+                                src="https://time-travelling-birb.neocities.org/images/TTB-button1.gif"></a>
+                        <a href="https://rksmith.neocities.org/"><img
+                                src="https://rksmith.neocities.org/banners/rksmith_banner.gif"></a>
+                        <a href="https://capstasher.neocities.org/index.html"><img
+                                src="https://capstasher.neocities.org/csc_88x31.png"></a>
+                        <a href="https://familyguymadness.neocities.org/"><img
+                                src="https://familyguymadness.neocities.org/WOAHASSAHOY.gif"></a>
+                        <a href="https://dimden.dev/"><img src="https://dimden.dev/services/images/88x31.gif"></a>
+                        <a href="https://pyroplayers.neocities.org/"><img
+                                src="https://pyroplayers.neocities.org/button/PPM_button.gif"></a>
+                        <a href="https://thewizardtower.neocities.org/"><img
+                                src="https://thewizardtower.neocities.org/wizardlairbutton.gif"></a>
+                        <a href='https://meyyebs.neocities.org/'><img
+                                src='https://meyyebs.neocities.org/img/STICKYHANDS-88x31-1.gif'></a>
+                        <a href='https://satyrs.eu/'><img src='https://satyrs.eu/sitebutton_en.png'></a>
+                        <a href='https://skullmund.neocities.org/'><img
+                                src='https://skullmund.neocities.org/skullmund.gif'></a>
+                        <a href='https://boxy.neocities.org/'><img
+                                src='https://boxy.neocities.org/images/ggWebp.webp'></a>
                     </div>
                     <div class="track">
                         <a href="https://momg.neocities.org/"><img
@@ -1183,7 +1228,7 @@ umb%2F2%2F2c%2FRotating_earth_%2528large%2529.gif%2F200px-Rotating_earth_%2528la
                         <a href="https://youtuube.neocities.org/"><img
                                 src="https://youtuube.neocities.org/Misc%20Assets/Internet/KitajimasKornerBadgeIcon.gif"></a>
                         <a href="https://dokodemo.neocities.org/"><img
-                                src="https://dokodemo.neocities.org/images/buttons/dokodemobutton3.gif"></a>
+                                src="https://dokode.moe/media/88x31sites/dokodemobutton3.gif"></a>
                         <a href="https://dannarchy.com/"><img src="https://dannarchy.com/images/d_now.gif"></a>
                         <a href="https://auzziejay.com"><img src="https://auzziejay.com/images/auzzie1.gif"></a>
                         <a href="https://exephile.neocities.org"><img src="https://exephile.neocities.org/exe.gif"></a>
@@ -1198,6 +1243,24 @@ umb%2F2%2F2c%2FRotating_earth_%2528large%2529.gif%2F200px-Rotating_earth_%2528la
                         <a href="https://liminal.photos"><img src="https://liminal.photos/liminalbanner.jpg"></a>
                         <a href="https://dreamscape-wiki.neocities.org/"><img
                                 src="https://dreamscape-wiki.neocities.org/folder-images/folder-socials/website_ad.gif"></a>
+                        <a href="https://aegi.neocities.org/index.html"><img
+                                src="https://aegi.neocities.org/images/aegi_button_2.gif"></a>
+                        <a href="https://rksmith.neocities.org/"><img
+                                src="https://rksmith.neocities.org/banners/rksmith_banner.gif"></a>
+                        <a href="https://capstasher.neocities.org/index.html"><img
+                                src="https://capstasher.neocities.org/csc_88x31.png"></a>
+                        <a href="https://familyguymadness.neocities.org/"><img
+                                src="https://familyguymadness.neocities.org/WOAHASSAHOY.gif"></a>
+                        <a href="https://dimden.dev/"><img src="https://dimden.dev/services/images/88x31.gif"></a>
+                        <a href="https://pyroplayers.neocities.org/"><img
+                                src="https://pyroplayers.neocities.org/button/PPM_button.gif"></a>
+                        <a href="https://thewizardtower.neocities.org/"><img
+                                src="https://thewizardtower.neocities.org/wizardlairbutton.gif"></a>
+                        <a href='https://meyyebs.neocities.org/'><img
+                                src='https://meyyebs.neocities.org/img/STICKYHANDS-88x31-1.gif'></a>
+                        <a href='https://satyrs.eu/'><img src='https://satyrs.eu/sitebutton_en.png'></a>
+                        <a href='https://skullmund.neocities.org/'><img
+                                src='https://skullmund.neocities.org/skullmund.gif'></a>
                     </div>
                 </div>
             </div>
@@ -1311,6 +1374,18 @@ umb%2F2%2F2c%2FRotating_earth_%2528large%2529.gif%2F200px-Rotating_earth_%2528la
                         <img src="graphics/buttons/bettercallsaul.gif">
                         <img src="graphics/buttons/css2.gif">
                         <img src="graphics/buttons/parental.gif">
+                        <img src="graphics/buttons/theonion.gif">
+                        <img src="graphics/buttons/imissxp.gif">
+                        <img src="graphics/buttons/microshaft.gif">
+                        <img src="graphics/buttons/myspace.gif">
+                        <img src="graphics/buttons/Ebay.gif">
+                        <img src="graphics/buttons/aimlink.gif">
+                        <img src="graphics/buttons/geo88x31ee.gif">
+                        <img src="graphics/buttons/gethtmlnow.gif">
+                        <img src="graphics/buttons/analien.gif">
+                        <img src="graphics/buttons/hatemac.gif">
+                        <img src="graphics/buttons/graphicdesign.gif">
+                        <img src="graphics/buttons/killerwebsitesfish.gif">
                     </div>
                 </div>
                 <div class="window" style="width: 30%;">
@@ -1544,7 +1619,7 @@ umb%2F2%2F2c%2FRotating_earth_%2528large%2529.gif%2F200px-Rotating_earth_%2528la
                     <div
                         style="width: 89%; padding: 0.5%; margin: auto; margin-bottom: 3%; border: solid; border-width: 0.15vw; border-color: #6799c5;">
                         <p class="myspace" style="font-weight: bold;">MySpace URL:<br><a
-                                href="https://webpage1990colourised.neocities.org/">www.myspace.com/dan</a></p>
+                                href="https://neocities.org/site/webpage1990colourised">www.myspace.com/dan</a></p>
                     </div>
                     <div style="margin-bottom: 3%; border: solid; border-width: 0.2%; border-color: #6799c5;">
                         <div style="background-color: #6799c5;">
@@ -1728,6 +1803,18 @@ umb%2F2%2F2c%2FRotating_earth_%2528large%2529.gif%2F200px-Rotating_earth_%2528la
                         <img src="graphics/buttons/bantime.gif">
                         <img src="graphics/buttons/smileybutton001.gif">
                         <img src="graphics/buttons/anti-button.gif">
+                        <img src="graphics/buttons/fuckingwebmaster.gif">
+                        <img src="graphics/buttons/nowebp.gif">
+                        <img src="graphics/buttons/pepsi.gif">
+                        <img src="graphics/buttons/hl.gif">
+                        <img src="graphics/buttons/internetprivacy.gif">
+                        <img src="graphics/buttons/beaniebutton.gif">
+                        <img src="graphics/buttons/parental.gif">
+                        <img src="graphics/buttons/imissxp.gif">
+                        <img src="graphics/buttons/myspace.gif">
+                        <img src="graphics/buttons/Ebay.gif">
+                        <img src="graphics/buttons/gethtmlnow.gif">
+                        <img src="graphics/buttons/graphicdesign.gif">
                     </div>
                     <div class="track">
                         <img src="graphics/buttons/email-icon.gif">
@@ -1755,6 +1842,18 @@ umb%2F2%2F2c%2FRotating_earth_%2528large%2529.gif%2F200px-Rotating_earth_%2528la
                         <img src="graphics/buttons/bantime.gif">
                         <img src="graphics/buttons/smileybutton001.gif">
                         <img src="graphics/buttons/anti-button.gif">
+                        <img src="graphics/buttons/fuckingwebmaster.gif">
+                        <img src="graphics/buttons/nowebp.gif">
+                        <img src="graphics/buttons/pepsi.gif">
+                        <img src="graphics/buttons/hl.gif">
+                        <img src="graphics/buttons/internetprivacy.gif">
+                        <img src="graphics/buttons/beaniebutton.gif">
+                        <img src="graphics/buttons/parental.gif">
+                        <img src="graphics/buttons/imissxp.gif">
+                        <img src="graphics/buttons/myspace.gif">
+                        <img src="graphics/buttons/Ebay.gif">
+                        <img src="graphics/buttons/gethtmlnow.gif">
+                        <img src="graphics/buttons/graphicdesign.gif">
                     </div>
                 </div>
             </div>
@@ -1786,6 +1885,18 @@ umb%2F2%2F2c%2FRotating_earth_%2528large%2529.gif%2F200px-Rotating_earth_%2528la
                         <img src="graphics/buttons/campaignframes.gif">
                         <img src="graphics/buttons/shareware.gif">
                         <img src="graphics/buttons/digitalme.gif">
+                        <img src="graphics/buttons/wii.gif">
+                        <img src="graphics/buttons/mtdew.gif">
+                        <img src="graphics/buttons/StardewValleyButton.gif">
+                        <img src="graphics/buttons/coke.gif">
+                        <img src="graphics/buttons/bettercallsaul.gif">
+                        <img src="graphics/buttons/css2.gif">
+                        <img src="graphics/buttons/theonion.gif">
+                        <img src="graphics/buttons/microshaft.gif">
+                        <img src="graphics/buttons/aimlink.gif">
+                        <img src="graphics/buttons/geo88x31ee.gif">
+                        <img src="graphics/buttons/hatemac.gif">
+                        <img src="graphics/buttons/killerwebsitesfish.gif">
                     </div>
                     <div class="track">
                         <img src="graphics/buttons/mailput.gif">
@@ -1813,6 +1924,18 @@ umb%2F2%2F2c%2FRotating_earth_%2528large%2529.gif%2F200px-Rotating_earth_%2528la
                         <img src="graphics/buttons/campaignframes.gif">
                         <img src="graphics/buttons/shareware.gif">
                         <img src="graphics/buttons/digitalme.gif">
+                        <img src="graphics/buttons/wii.gif">
+                        <img src="graphics/buttons/mtdew.gif">
+                        <img src="graphics/buttons/StardewValleyButton.gif">
+                        <img src="graphics/buttons/coke.gif">
+                        <img src="graphics/buttons/bettercallsaul.gif">
+                        <img src="graphics/buttons/css2.gif">
+                        <img src="graphics/buttons/theonion.gif">
+                        <img src="graphics/buttons/microshaft.gif">
+                        <img src="graphics/buttons/aimlink.gif">
+                        <img src="graphics/buttons/geo88x31ee.gif">
+                        <img src="graphics/buttons/hatemac.gif">
+                        <img src="graphics/buttons/killerwebsitesfish.gif">
                     </div>
                 </div>
             </div>
