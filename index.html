@@ -187,7 +187,6 @@
             padding: 0.3%;
             padding-left: 0%;
             display: flex;
-            justify-content: space-evenly;
             background: -webkit-linear-gradient(left, #08216b, #a5cef7);
             border: solid;
             border-bottom-color: #424242;
@@ -198,16 +197,14 @@
 
         nav>a {
             height: 100%;
+            margin-left: 0.25%;
+            margin-right: 0.25%;
             position: relative;
             bottom: 2%;
         }
 
         a>button {
             height: 100%;
-        }
-
-        nav>button {
-            height: 99%;
         }
 
         section>div {
@@ -415,7 +412,11 @@
 
         .dropdown {
             position: relative;
-            width: 69%;
+            width: 60%;
+        }
+
+        .dropdown-btn {
+            height: 99%;
         }
 
         .dropdown-list {
@@ -907,7 +908,7 @@
             <a href="#graphics"><button>graphics</button></a>
             <a href="#about"><button>about</button></a>
             <div class="dropdown">
-                <button class="dropdown-btn">Updates⏷</button>
+                <a><button class="dropdown-btn">Updates⏷</button></a>
                 <div class="dropdown-list window">
                     <div class="dropdown">
                         <a class="dropdown-btn">24/02/2022<p>⏵</p></a>
