@@ -25,10 +25,16 @@
 
         .sidebar {
             background: silver;
+            border-top: 0.2vw solid #fff;
+            border-bottom: 0.2vw solid #424242;
+            padding-bottom: 20%;
         }
 
         .tool-options {
-            margin-left: 10%;
+            width: 60%;
+            height: 25%;
+            margin-top: 5%;
+            margin-left: 20%;
             margin-right: 10%;
             border: 0.1vw solid #fff;
             border-top-color: #424242;
@@ -37,6 +43,40 @@
 
         .bottombar {
             background: silver;
+            border-top: 0.2vw solid #fff;
+            margin-right: 1%;
+            padding-top: 1%;
+            padding-bottom: 1%;
+        }
+
+        .tools {
+            position: relative;
+            top: -0.1vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .tool {
+            background: no-repeat;
+            background-color: silver;
+            background-size: 75%;
+            background-position: top 45% left 45%;
+            width: 1.5vw;
+            height: 1.5vw;
+        }
+
+        .canvas {
+            background-color: #fff;
+            margin: 1%;
+            height: 95%;
+            margin-right: 10%;
+        }
+
+        .text {
+            font-family: "MS Sans Serif";
+            font-size: 1vw;
+            color: #000000;
         }
     </style>
 </head>
@@ -49,7 +89,7 @@
     </section>
     <section>
         <div class="window" style="width: 30%; background-color: rgb(255, 0, 77);">
-            <div class="window-header player-header">
+            <div class="window-header alt-header">
                 <div>
                     <img src="graphics/ui/picoCAD.gif">
                     <h2>picoCAD</h2>
@@ -73,8 +113,8 @@
         </div>
     </section>
     <section>
-        <div class="window" style="width: 40%; background-color: rgb(128, 128, 128);">
-            <div class="window-header player-header">
+        <div class="window" style="width: 40%; background-color: silver;">
+            <div class="window-header">
                 <div>
                     <img src="graphics/ui/graphics.gif">
                     <h2>Paint</h2>
@@ -95,63 +135,117 @@
                     <p class="link"><u>C</u>olurs</p>
                     <p class="link"><u>H</u>elp</p>
                 </div>
-                <hr>
             </div>
-            <div class="flex">
+            <div class="flex" style="margin-right: 1%;">
                 <div class="sidebar" style="width: 100%;">
-                    <div>
-                        <div>
-                            <button></button>
-                            <button></button>
+                    <div class="tools">
+                        <div class="flex">
+                            <div>
+                                <button class="tool" style="background-image: url('Unused/star.png');"></button>
+                            </div>
+                            <div>
+                                <button class="tool" style="background-image: url('Unused/crop.png');"></button>
+                            </div>
                         </div>
-                        <div>
-                            <button></button>
-                            <button></button>
+                        <div class="flex">
+                            <div>
+                                <button class="tool" style="background-image: url('Unused/eraser.png');"></button>
+                            </div>
+                            <div>
+                                <button class="tool" style="background-image: url('Unused/fill.png');"></button>
+                            </div>
                         </div>
-                        <div>
-                            <button></button>
-                            <button></button>
+                        <div class="flex">
+                            <div>
+                                <button class="tool" style="background-image: url('Unused/eyedropper.png');"></button>
+                            </div>
+                            <div>
+                                <button class="tool" style="background-image: url('Unused/zoom.png');"></button>
+                            </div>
                         </div>
-                        <div>
-                            <button></button>
-                            <button></button>
+                        <div class="flex">
+                            <div>
+                                <button class="tool" style="background-image: url('Unused/pencil.png');"></button>
+                            </div>
+                            <div>
+                                <button class="tool" style="background-image: url('Unused/paintbrush.png');"></button>
+                            </div>
                         </div>
-                        <div>
-                            <button></button>
-                            <button></button>
+                        <div class="flex">
+                            <div>
+                                <button class="tool" style="background-image: url('Unused/draw.png');"></button>
+                            </div>
+                            <div>
+                                <button class="tool" style="background-image: url('Unused/text.png');"></button>
+                            </div>
                         </div>
-                        <div>
-                            <button></button>
-                            <button></button>
+                        <div class="flex">
+                            <div>
+                                <button class="tool" style="background-image: url('Unused/line.png');"></button>
+                            </div>
+                            <div>
+                                <button class="tool" style="background-image: url('Unused/wiggleline.png');"></button>
+                            </div>
                         </div>
-                        <div>
-                            <button></button>
-                            <button></button>
+                        <div class="flex">
+                            <div>
+                                <button class="tool" style="background-image: url('Unused/square.png');"></button>
+                            </div>
+                            <div>
+                                <button class="tool" style="background-image: url('Unused/IDK.png');"></button>
+                            </div>
                         </div>
-                        <div>
-                            <button></button>
-                            <button></button>
+                        <div class="flex">
+                            <div>
+                                <button class="tool" style="background-image: url('Unused/circle.png');"></button>
+                            </div>
+                            <div>
+                                <button class="tool" style="background-image: url('Unused/roundsquare.png');"></button>
+                            </div>
                         </div>
                     </div>
                     <div class="tool-options">
-                        <br>
                     </div>
                 </div>
-                <div style="background-color: #fff; margin: 1%;">
-                    <div>
-                        <img style="width: 30%;" src="Unused/Triangle dude.png">
-                    </div>
-                    <div>
-                        <img style="width: 40%;" src="Unused/SquigleBoi.png">
-                        <img style="width: 40%;" src="Unused/CommieBot.png">
+                <div
+                    style="border: solid; border-width: 0.2vw; border-color: #424242; border-bottom-color: #fff; border-right-color: #fff; background-color: #808080;">
+                    <div class="canvas">
+                        <div>
+                            <img style="width: 30%;" src="Unused/Triangle dude.png">
+                        </div>
+                        <div>
+                            <img style="width: 40%;" src="Unused/SquigleBoi.png">
+                            <img style="width: 40%;" src="Unused/CommieBot.png">
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="bottombar">
+                <div>
+                    <div style="border: 0.1vw solid #fff; border-top-color: #424242; border-left-color: #424242; width: 1vw; height: 1vw;"></div>
+                        
+                    </div>
+                </div>
                 <hr>
-                <br>
+                <div class="flex" style="margin-top: 1%;">
+                    <div
+                        style="border: 0.1vw solid #fff; border-top-color: #424242; border-left-color: #424242; width: 50%; margin-left: 1%;">
+                        <p class="text">For help, </p>
+                    </div>
+                    <div
+                        style="border: 0.1vw solid #fff; border-top-color: #424242; border-left-color: #424242; width: 24%; margin-left: 1%; margin-right: 1%;">
+                        <p></p>
+                    </div>
+                    <div
+                        style="border: 0.1vw solid #fff; border-top-color: #424242; border-left-color: #424242; width: 24%;">
+                        <p></p>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
+
+    <section class="overlay">
     </section>
 
     <script language="JavaScript">
