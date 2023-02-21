@@ -16,6 +16,27 @@
     <style>
         body {
             background-image: url("graphics/backgrounds/servers.gif");
+            overflow-y: hidden;
+        }
+
+        .topbar {
+            background: silver;
+        }
+
+        .sidebar {
+            background: silver;
+        }
+
+        .tool-options {
+            margin-left: 10%;
+            margin-right: 10%;
+            border: 0.1vw solid #fff;
+            border-top-color: #424242;
+            border-left-color: #424242;
+        }
+
+        .bottombar {
+            background: silver;
         }
     </style>
 </head>
@@ -27,7 +48,7 @@
         </div>
     </section>
     <section>
-        <div class="window"  style="width: 30%; background-color: rgb(255, 0, 77);">
+        <div class="window" style="width: 30%; background-color: rgb(255, 0, 77);">
             <div class="window-header player-header">
                 <div>
                     <img src="graphics/ui/picoCAD.gif">
@@ -46,13 +67,13 @@
                 </div>
                 <img src="Unused/crisps.gif">
                 <div style="background-color: rgb(255, 0, 77);">
-                    <p><a id="CRISPS">CRISPS</a> <a id="EGG">EGG</a> <a id="IFV">IFV</a></p>
+                    <p><a id="CRISPS">CRISPS</a></p>
                 </div>
             </div>
         </div>
     </section>
     <section>
-        <div class="window" style="width: 40%; background-color: rgb(255, 255, 255);">
+        <div class="window" style="width: 40%; background-color: rgb(128, 128, 128);">
             <div class="window-header player-header">
                 <div>
                     <img src="graphics/ui/graphics.gif">
@@ -65,22 +86,70 @@
                     </button>
                 </div>
             </div>
-            <div>
-                <div style="background-color: rgb(192, 192, 192);">
-                    <br>
-                    <br>
+            <div class="topbar">
+                <div class="links">
+                    <p class="link"><u>F</u>ile</p>
+                    <p class="link"><u>E</u>dit</p>
+                    <p class="link"><u>V</u>iew</p>
+                    <p class="link"><u>I</u>mage</p>
+                    <p class="link"><u>C</u>olurs</p>
+                    <p class="link"><u>H</u>elp</p>
                 </div>
-                <div>
-                    <img style="width: 30%;" src="Unused/Triangle dude.png">
+                <hr>
+            </div>
+            <div class="flex">
+                <div class="sidebar" style="width: 100%;">
+                    <div>
+                        <div>
+                            <button></button>
+                            <button></button>
+                        </div>
+                        <div>
+                            <button></button>
+                            <button></button>
+                        </div>
+                        <div>
+                            <button></button>
+                            <button></button>
+                        </div>
+                        <div>
+                            <button></button>
+                            <button></button>
+                        </div>
+                        <div>
+                            <button></button>
+                            <button></button>
+                        </div>
+                        <div>
+                            <button></button>
+                            <button></button>
+                        </div>
+                        <div>
+                            <button></button>
+                            <button></button>
+                        </div>
+                        <div>
+                            <button></button>
+                            <button></button>
+                        </div>
+                    </div>
+                    <div class="tool-options">
+                        <br>
+                    </div>
                 </div>
-                <div>
-                    <img style="width: 40%;" src="Unused/SquigleBoi.png">
-                    <img style="width: 40%;" src="Unused/CommieBot.png">
+                <div style="background-color: #fff; margin: 1%;">
+                    <div>
+                        <img style="width: 30%;" src="Unused/Triangle dude.png">
+                    </div>
+                    <div>
+                        <img style="width: 40%;" src="Unused/SquigleBoi.png">
+                        <img style="width: 40%;" src="Unused/CommieBot.png">
+                    </div>
                 </div>
-                <div style="background-color: rgb(192, 192, 192);">
-                    <br>
-                    <br>
-                </div>
+            </div>
+            <div class="bottombar">
+                <hr>
+                <br>
             </div>
         </div>
     </section>
