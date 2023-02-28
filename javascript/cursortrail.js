@@ -23,7 +23,6 @@ const trail = () => {
     setTimeout(trail, 0);
 };
 initTrail();
-console.log(coordsStore)
 document.onmousemove = (e) => void(coordsStore[0] = {
     x: e.pageX + 12,
     y: e.pageY + 12
