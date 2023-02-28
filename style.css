@@ -596,7 +596,7 @@ footer>p {
 }
 
 .togglebtn {
-    background: url(graphics/ui/play.gif) no-repeat;
+    background: url(graphics/ui/mediaplayer/play.gif) no-repeat;
     background-size: 75%;
     background-position: top 40% left 40%;
     width: 1.5vw;
@@ -610,7 +610,7 @@ footer>p {
 }
 
 .back {
-    background: url(graphics/ui/backskip.gif) no-repeat;
+    background: url(graphics/ui/mediaplayer/backskip.gif) no-repeat;
     background-color: silver;
     background-size: 75%;
     background-position: top 40% left 40%;
@@ -619,7 +619,7 @@ footer>p {
 }
 
 .next {
-    background: url(graphics/ui/forwardskip.gif) no-repeat;
+    background: url(graphics/ui/mediaplayer/forwardskip.gif) no-repeat;
     background-color: silver;
     background-size: 75%;
     background-position: top 40% left 40%;
@@ -642,6 +642,9 @@ footer>p {
     border-style: solid;
     border-width: 2px;
     border-color: rgb(136, 140, 143) rgb(255, 255, 255) rgb(255, 255, 255) rgb(136, 140, 143);
+    font-size: 1vw;
+    font-family: "MS Sans Serif";
+    color: #212529;;
 }
 
 .time::before {
@@ -754,4 +757,128 @@ footer>p {
     border: solid;
     border-width: 0.01vw;
     border-color: #424242;
+}
+
+.pics {
+    background-image: url("graphics/backgrounds/servers.gif");
+    overflow-y: hidden;
+}
+
+.sidebar {
+    background: silver;
+    border-top: 0.15vw solid #fff;
+    border-bottom: 0.15vw solid #424242;
+    padding-bottom: 20%;
+    width: 13%;
+}
+
+.tools {
+    position: relative;
+    top: -0.1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tool {
+    border-width: 0.15vw;
+    background: no-repeat;
+    background-color: silver;
+    background-size: 75%;
+    background-position: top 45% left 45%;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+.tool-options {
+    width: 60%;
+    height: 25%;
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 10%;
+    border: 0.15vw solid #fff;
+    border-top-color: #424242;
+    border-left-color: #424242;
+}
+
+.outer-canvas {
+    border: solid;
+    border-width: 0.15vw;
+    border-color: #424242;
+    border-bottom-color: #fff;
+    border-right-color: #fff;
+    background-color: #808080;
+    width: 87%;
+}
+
+.canvas {
+    position: relative;
+    background-color: #fff;
+    margin: 1%;
+    height: 95%;
+    margin-right: 10%;
+}
+
+.handle {
+    position: absolute;
+    height: 0.1vw;
+    width: 0.1vw;
+    background-color: #fff;
+    border: solid;
+    border-width: 0.1vw;
+    border-color: #424242;
+    border-bottom: 0;
+    border-right: 0
+}
+
+.bottombar {
+    background: silver;
+    border-top: 0.15vw solid #fff;
+    margin-right: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.selection-box {
+    position: relative;
+    margin-right: 0.25%;
+    border: 0.1vw solid #fff;
+    border-top-color: #424242;
+    border-left-color: #424242;
+    width: 1.5vw;
+    height: 1.5vw;
+    background-image: url(graphics/ui/paint/checker.gif);
+}
+
+.selection {
+    width: 0.5vw;
+    height: 0.5vw;
+    position: absolute;
+    border: solid;
+    border-width: 0.15vw;
+    border-color: #fff;
+    border-bottom-color: #424242;
+    border-right-color: #424242;
+}
+
+.colour {
+    border: 0.1vw solid #fff;
+    border-top-color: #424242;
+    border-left-color: #424242;
+    width: 0.67vw;
+    height: 0.67vw;
+}
+
+.stuatus {
+    border: 0.15vw solid #fff;
+    border-top-color: #424242;
+    border-left-color: #424242;
+}
+
+.text {
+    text-align: start;
+    padding-left: 1%;
+    font-family: "MS Sans Serif";
+    font-size: 0.85vw;
+    color: #000000;
 }
