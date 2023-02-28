@@ -33,7 +33,7 @@ function setSeekVal() {
     if (playing.ended) {
         seek.value = 0;
         playing.currentTime = 0;
-        togglebtn.style.backgroundImage = "url('graphics/ui/play.gif')";
+        togglebtn.style.backgroundImage = "url('graphics/ui/mediaplayer/play.gif')";
         playing.pause();
     }
 }
@@ -49,10 +49,10 @@ togglebtn.addEventListener("click", toggle);
 function toggle() {
     if (playing.paused) {
         playing.play();
-        togglebtn.style.backgroundImage = "url('graphics/ui/pause.gif')";
+        togglebtn.style.backgroundImage = "url('graphics/ui/mediaplayer/pause.gif')";
     } else {
         playing.pause();
-        togglebtn.style.backgroundImage = "url('graphics/ui/play.gif')";
+        togglebtn.style.backgroundImage = "url('graphics/ui/mediaplayer/play.gif')";
     }
 }
 
@@ -67,7 +67,7 @@ function decrement() {
 
     playing.src = playlist[index];
     playing.play();
-    togglebtn.style.backgroundImage = "url('graphics/ui/pause.gif')";
+    togglebtn.style.backgroundImage = "url('graphics/ui/mediaplayer/pause.gif')";
 }
 
 next.addEventListener("click", increment);
@@ -81,7 +81,7 @@ function increment() {
 
     playing.src = playlist[index];
     playing.play();
-    togglebtn.style.backgroundImage = "url('graphics/ui/pause.gif')";
+    togglebtn.style.backgroundImage = "url('graphics/ui/mediaplayer/pause.gif')";
 }
 
 volume.addEventListener("input", setVol);
@@ -115,5 +115,5 @@ function audioEnd() {
 
     playing.src = playlist[index];
     playing.play();
-    togglebtn.style.backgroundImage = "url('graphics/ui/pause.gif')";
+    togglebtn.style.backgroundImage = "url('graphics/ui/mediaplayer/pause.gif')";
 }
