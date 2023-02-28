@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <meta name="description" content="My home on the web.">
+    <meta name="keywords" content="1990, website">
+    <meta name="author" content="Daniel Miller">
+    <title>Webpage-1990-Colourised</title>
+    <link rel="shortcut icon" href="graphics/computer.gif">
+    <link rel="stylesheet" href="style.css">
+    <script language="JavaScript" src="javascript/titlescroll.js"></script>
+    <script language="JavaScript" src="javascript/cursortrail.js"></script>
+</head>
+
+<body class="pics">
+    <section>
+        <div style="display: inline; position: fixed; margin: 0%; width: 15%; top: 0; left: 0;">
+            <a href="index.html"><img src="graphics/ui/home.gif"></a>
+        </div>
+    </section>
+
+    <section>
+        <div class="window" style="width: 20%; position: fixed ; top: 1%; left: 75%;">
+            <audio id="playing">
+            </audio>
+            <div class="window-header alt-header">
+                <div>
+                    <img src="graphics/ui/mediaplayer.gif">
+                    <h2>Media Player</h2>
+                </div>
+                <div style="margin-top: 1%; margin-bottom: 1%;">
+                    <button class="maximize">
+                    </button>
+                    <button class="close" id="closebtn">
+                    </button>
+                </div>
+            </div>
+            <div class="links">
+                <p class="link"><u>F</u>ile</p>
+                <p class="link"><u>E</u>dit</p>
+                <p class="link"><u>D</u>evice</p>
+                <p class="link"><u>H</u>elp</p>
+            </div>
+            <hr>
+            <div class="flex">
+                <input type="range" id="seek" min="0" max="100" value="0" class="slider">
+            </div>
+            <hr>
+            <div class="toolbar">
+                <div>
+                    <button class="togglebtn" id="togglebtn"></button>
+                </div>
+                <div class="skip-buttons">
+                    <button class="back" id="back"></button>
+                    <button class="next" id="next"></button>
+                </div>
+                <input type="range" id="volume" min="0" max="100" step="1" value="100" class="slider"
+                    style="flex-grow: 1;">
+                <div class="vertical-hr"></div>
+                <div class="time">
+                    <span id="time">00:00</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="window" style="width: 27%; position: fixed ; top: 2%; left: 15%;">
+            <div class="window-header">
+                <div>
+                    <img src="graphics/ui/graphics.gif">
+                    <h2>Doodles.gif - Paint</h2>
+                </div>
+                <div style="margin-top: 1%; margin-bottom: 1%;">
+                    <button class="maximize">
+                    </button>
+                    <button class="close">
+                    </button>
+                </div>
+            </div>
+            <div>
+                <div class="links">
+                    <p class="link"><u>F</u>ile</p>
+                    <p class="link"><u>E</u>dit</p>
+                    <p class="link"><u>V</u>iew</p>
+                    <p class="link"><u>I</u>mage</p>
+                    <p class="link"><u>C</u>olurs</p>
+                    <p class="link"><u>H</u>elp</p>
+                </div>
+            </div>
+            <div class="flex" style="margin-right: 1%;">
+                <div class="sidebar">
+                    <div class="tools">
+                        <div class="flex">
+                            <div>
+                                <button class="tool"
+                                    style="background-image: url('graphics/ui/paint/freeform.gif');"></button>
+                            </div>
+                            <div>
+                                <button class="tool"
+                                    style="background-image: url('graphics/ui/paint/select.gif');"></button>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div>
+                                <button class="tool"
+                                    style="background-image: url('graphics/ui/paint/eraser.gif');"></button>
+                            </div>
+                            <div>
+                                <button class="tool"
+                                    style="background-image: url('graphics/ui/paint/fill.gif');"></button>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div>
+                                <button class="tool"
+                                    style="background-image: url('graphics/ui/paint/eyedropper.gif');"></button>
+                            </div>
+                            <div>
+                                <button class="tool"
+                                    style="background-image: url('graphics/ui/paint/magnifier.gif');"></button>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div>
+                                <button class="tool"
+                                    style="background-image: url('graphics/ui/paint/pencil.gif');"></button>
+                            </div>
+                            <div>
+                                <button class="tool"
+                                    style="background-image: url('graphics/ui/paint/brush.gif');"></button>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div>
+                                <button class="tool"
+                                    style="background-image: url('graphics/ui/paint/airbrush.gif');"></button>
+                            </div>
+                            <div>
+                                <button class="tool"
+                                    style="background-image: url('graphics/ui/paint/text.gif');"></button>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div>
+                                <button class="tool"
+                                    style="background-image: url('graphics/ui/paint/line.gif');"></button>
+                            </div>
+                            <div>
+                                <button class="tool"
+                                    style="background-image: url('graphics/ui/paint/curve.gif');"></button>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div>
+                                <button class="tool"
+                                    style="background-image: url('graphics/ui/paint/rectangle.gif');"></button>
+                            </div>
+                            <div>
+                                <button class="tool"
+                                    style="background-image: url('graphics/ui/paint/polygon.gif');"></button>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div>
+                                <button class="tool"
+                                    style="background-image: url('graphics/ui/paint/ellipse.gif');"></button>
+                            </div>
+                            <div>
+                                <button class="tool"
+                                    style="background-image: url('graphics/ui/paint/roundedrectangle.gif');"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tool-options">
+                    </div>
+                </div>
+                <div class="outer-canvas">
+                    <div class="canvas">
+                        <div id="canvas" style="position: absolute; width: 100%; height: 100%;"></div>
+                        <div class="handle" style="top: -0.15vw; left: -0.15vw;">
+                        </div>
+                        <div class="handle" style="top: -0.15vw; left: 50%;">
+                        </div>
+                        <div class="handle" style="top: -0.15vw; right: -0.15vw;">
+                        </div>
+                        <div class="handle" style="top: 50%; left: -0.15vw;">
+                        </div>
+                        <div class="handle" style="bottom: -0.15vw; left: -0.15vw;">
+                        </div>
+                        <div class="handle" style="top: 50%; right: -0.15vw; background-color: #000000;">
+                        </div>
+                        <div class="handle" style="bottom: -0.15vw; left: 50%; background-color: #000000;">
+                        </div>
+                        <div class="handle" style="bottom: -0.15vw; right: -0.15vw; background-color: #000000;">
+                        </div>
+                        <div>
+                            <img style="width: 30%;" src="graphics/Triangle dude.gif">
+                        </div>
+                        <div>
+                            <img style="width: 40%;" src="graphics/SquigleBoi.gif">
+                            <img style="width: 40%;" src="graphics/CommieBot.gif">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottombar">
+                <div style="display: flex; margin-left: 2%;">
+                    <div class="selection-box">
+                        <div class="selection" style="bottom: 15%; right: 15%; background-color: #fff;">
+                        </div>
+                        <div class="selection" style="top: 15%; left: 15%; background-color: #000000;">
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; justify-content: space-between;">
+                        <div style="display: flex; width: 107%; justify-content: space-between;">
+                            <div class="colour" style="background-color: #000000;">
+                            </div>
+                            <div class="colour" style="background-color: #808080;">
+                            </div>
+                            <div class="colour" style="background-color: #880015;">
+                            </div>
+                            <div class="colour" style="background-color: #808000;">
+                            </div>
+                            <div class="colour" style="background-color: #22b14c;">
+                            </div>
+                            <div class="colour" style="background-color: #008080;">
+                            </div>
+                            <div class="colour" style="background-color: #3f48cc;">
+                            </div>
+                            <div class="colour" style="background-color: #a349a4;">
+                            </div>
+                            <div class="colour" style="background-color: #808040;">
+                            </div>
+                            <div class="colour" style="background-color: #004000;">
+                            </div>
+                            <div class="colour" style="background-color: #0080ff;">
+                            </div>
+                            <div class="colour" style="background-color: #004080;">
+                            </div>
+                            <div class="colour" style="background-color: #0000ff;">
+                            </div>
+                            <div class="colour" style="background-color: #804000;">
+                            </div>
+                        </div>
+                        <div style="display: flex; width: 107%; justify-content: space-between;">
+                            <div class="colour" style="background-color: #fff;">
+                            </div>
+                            <div class="colour" style="background-color: #c3c3c3;">
+                            </div>
+                            <div class="colour" style="background-color: #ed1c24;">
+                            </div>
+                            <div class="colour" style="background-color: #fff200;">
+                            </div>
+                            <div class="colour" style="background-color: #b5e61d;">
+                            </div>
+                            <div class="colour" style="background-color: #00ffff;">
+                            </div>
+                            <div class="colour" style="background-color: #7092be;">
+                            </div>
+                            <div class="colour" style="background-color: #ffaec9;">
+                            </div>
+                            <div class="colour" style="background-color: #ffff80;">
+                            </div>
+                            <div class="colour" style="background-color: #00ff80;">
+                            </div>
+                            <div class="colour" style="background-color: #80ffff;">
+                            </div>
+                            <div class="colour" style="background-color: #8080ff;">
+                            </div>
+                            <div class="colour" style="background-color: #ff0080;">
+                            </div>
+                            <div class="colour" style="background-color: #ff8000;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="flex" style="margin: 1%; margin-left: 0%;">
+                <div class="stuatus" style="width: 50%; margin-left: 1%; text-align: start;">
+                    <p class="text">For help, <img style="width: 70%; position: relative; top: 0.2vw;"
+                            src="graphics/scream.gif"></p>
+                </div>
+                <div class="stuatus" style="width: 25%; margin-left: 1%; margin-right: 1%;">
+                    <p class="text" style="padding-top: 6%;"><span id="pos" class="text"></span></p>
+                </div>
+                <div class="stuatus" style="width: 25%;">
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="window"
+            style="width: 20%; overflow: visible; position: fixed ; top: 30%; left: 60%;">
+            <div class="window-header alt-header">
+                <div>
+                    <img src="graphics/ui/picoCAD/picoCAD.gif">
+                    <h2>picoCAD</h2>
+                </div>
+                <div style="margin-top: 1%; margin-bottom: 1%;">
+                    <button class="maximize">
+                    </button>
+                    <button class="close">
+                    </button>
+                </div>
+            </div>
+            <div style="background-color: #83769c;">
+                <div style="background-color: #ff004d; height: 2vw;">
+                    <br>
+                    <br>
+                </div>
+                <div class="window"
+                    style="width: 150%; margin-top: 15%; margin-bottom: 15%; position: relative; left: -30%;">
+                    <div class="window-header alt-header">
+                        <div>
+                            <h2>picoCAD.exe - Application Error</h2>
+                        </div>
+                        <div style="margin-top: 1%; margin-bottom: 1%;">
+                            <button class="close">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div style="width: 15%;">
+                            <img style="margin: 20%; margin-bottom: 0;" src="graphics/ui/error.gif">
+                        </div>
+                        <div>
+                            <p class="wintext" style="margin-top: 3%;">The application failed to initialize properly
+                                (0xc0000005). Click OK to terminate the application.</p>
+                        </div>
+                    </div>
+                    <button style="margin-bottom: 2%; width: 5vw;">OK</button>
+                </div>
+                <div style="background-color: #ff004d; height: 2vw;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="overlay">
+    </section>
+
+    <script language="JavaScript" src="javascript/cursorpos.js"></script>
+    <script language="JavaScript" src="javascript/mediaplayer.js"></script>
+
+</body>
+
+</html>
