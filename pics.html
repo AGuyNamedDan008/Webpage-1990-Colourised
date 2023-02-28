@@ -19,34 +19,12 @@
             overflow-y: hidden;
         }
 
-        .topbar {
-            background: silver;
-        }
-
         .sidebar {
             background: silver;
-            border-top: 0.2vw solid #fff;
-            border-bottom: 0.2vw solid #424242;
+            border-top: 0.15vw solid #fff;
+            border-bottom: 0.15vw solid #424242;
             padding-bottom: 20%;
-        }
-
-        .tool-options {
-            width: 60%;
-            height: 25%;
-            margin-top: 5%;
-            margin-left: 20%;
-            margin-right: 10%;
-            border: 0.1vw solid #fff;
-            border-top-color: #424242;
-            border-left-color: #424242;
-        }
-
-        .bottombar {
-            background: silver;
-            border-top: 0.2vw solid #fff;
-            margin-right: 1%;
-            padding-top: 1%;
-            padding-bottom: 1%;
+            width: 13%;
         }
 
         .tools {
@@ -58,6 +36,7 @@
         }
 
         .tool {
+            border-width: 0.15vw;
             background: no-repeat;
             background-color: silver;
             background-size: 75%;
@@ -66,16 +45,96 @@
             height: 1.5vw;
         }
 
+        .tool-options {
+            width: 60%;
+            height: 25%;
+            margin-top: 5%;
+            margin-left: 20%;
+            margin-right: 10%;
+            border: 0.15vw solid #fff;
+            border-top-color: #424242;
+            border-left-color: #424242;
+        }
+
+        .outer-canvas {
+            border: solid;
+            border-width: 0.15vw;
+            border-color: #424242;
+            border-bottom-color: #fff;
+            border-right-color: #fff;
+            background-color: #808080;
+            width: 87%;
+        }
+
         .canvas {
+            position: relative;
             background-color: #fff;
             margin: 1%;
             height: 95%;
             margin-right: 10%;
         }
 
+        .handle {
+            position: absolute;
+            height: 0.1vw;
+            width: 0.1vw;
+            background-color: #fff;
+            border: solid;
+            border-width: 0.1vw;
+            border-color: #424242;
+            border-bottom: 0;
+            border-right: 0
+        }
+
+        .bottombar {
+            background: silver;
+            border-top: 0.15vw solid #fff;
+            margin-right: 1%;
+            padding-top: 1%;
+            padding-bottom: 1%;
+        }
+
+        .selection-box {
+            position: relative;
+            margin-right: 0.25%;
+            border: 0.1vw solid #fff;
+            border-top-color: #424242;
+            border-left-color: #424242;
+            width: 1.5vw;
+            height: 1.5vw;
+            background-image: url(graphics/ui/paint/checker.png);
+        }
+
+        .selection {
+            width: 0.5vw;
+            height: 0.5vw;
+            position: absolute;
+            border: solid;
+            border-width: 0.15vw;
+            border-color: #fff;
+            border-bottom-color: #424242;
+            border-right-color: #424242;
+        }
+
+        .colour {
+            border: 0.1vw solid #fff;
+            border-top-color: #424242;
+            border-left-color: #424242;
+            width: 0.67vw;
+            height: 0.67vw;
+        }
+
+        .stuatus {
+            border: 0.15vw solid #fff;
+            border-top-color: #424242;
+            border-left-color: #424242;
+        }
+
         .text {
+            text-align: start;
+            padding-left: 1%;
             font-family: "MS Sans Serif";
-            font-size: 1vw;
+            font-size: 0.7vw;
             color: #000000;
         }
     </style>
@@ -88,7 +147,7 @@
         </div>
     </section>
     <section>
-        <div class="window" style="width: 40%; background-color: silver;">
+        <div class="window" style="width: 27%; position: fixed ; top: 2%; left: 15%;">
             <div class="window-header">
                 <div>
                     <img src="graphics/ui/graphics.gif">
@@ -101,7 +160,7 @@
                     </button>
                 </div>
             </div>
-            <div class="topbar">
+            <div>
                 <div class="links">
                     <p class="link"><u>F</u>ile</p>
                     <p class="link"><u>E</u>dit</p>
@@ -112,30 +171,30 @@
                 </div>
             </div>
             <div class="flex" style="margin-right: 1%;">
-                <div class="sidebar" style="width: 100%;">
+                <div class="sidebar">
                     <div class="tools">
                         <div class="flex">
                             <div>
-                                <button class="tool" style="background-image: url('Unused/star.png');"></button>
+                                <button class="tool" style="background-image: url('graphics/ui/paint/freeform.gif');"></button>
                             </div>
                             <div>
-                                <button class="tool" style="background-image: url('Unused/crop.png');"></button>
-                            </div>
-                        </div>
-                        <div class="flex">
-                            <div>
-                                <button class="tool" style="background-image: url('Unused/eraser.png');"></button>
-                            </div>
-                            <div>
-                                <button class="tool" style="background-image: url('Unused/fill.png');"></button>
+                                <button class="tool" style="background-image: url('graphics/ui/paint/select.gif');"></button>
                             </div>
                         </div>
                         <div class="flex">
                             <div>
-                                <button class="tool" style="background-image: url('Unused/eyedropper.png');"></button>
+                                <button class="tool" style="background-image: url('graphics/ui/paint/eraser.gif');"></button>
                             </div>
                             <div>
-                                <button class="tool" style="background-image: url('Unused/zoom.png');"></button>
+                                <button class="tool" style="background-image: url('graphics/ui/paint/fill.gif');"></button>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div>
+                                <button class="tool" style="background-image: url('graphics/ui/paint/eyedropper.gif');"></button>
+                            </div>
+                            <div>
+                                <button class="tool" style="background-image: url('Unused/magnifier.png');"></button>
                             </div>
                         </div>
                         <div class="flex">
@@ -143,12 +202,12 @@
                                 <button class="tool" style="background-image: url('Unused/pencil.png');"></button>
                             </div>
                             <div>
-                                <button class="tool" style="background-image: url('Unused/paintbrush.png');"></button>
+                                <button class="tool" style="background-image: url('graphics/ui/paint/brush.gif');"></button>
                             </div>
                         </div>
                         <div class="flex">
                             <div>
-                                <button class="tool" style="background-image: url('Unused/draw.png');"></button>
+                                <button class="tool" style="background-image: url('graphics/ui/paint/airbrush.gif');"></button>
                             </div>
                             <div>
                                 <button class="tool" style="background-image: url('Unused/text.png');"></button>
@@ -159,59 +218,125 @@
                                 <button class="tool" style="background-image: url('Unused/line.png');"></button>
                             </div>
                             <div>
-                                <button class="tool" style="background-image: url('Unused/wiggleline.png');"></button>
+                                <button class="tool" style="background-image: url('graphics/ui/paint/curve.gif');"></button>
                             </div>
                         </div>
                         <div class="flex">
                             <div>
-                                <button class="tool" style="background-image: url('Unused/square.png');"></button>
+                                <button class="tool" style="background-image: url('Unused/rectangle.png');"></button>
                             </div>
                             <div>
-                                <button class="tool" style="background-image: url('Unused/IDK.png');"></button>
+                                <button class="tool" style="background-image: url('Unused/polygon.png');"></button>
                             </div>
                         </div>
                         <div class="flex">
                             <div>
-                                <button class="tool" style="background-image: url('Unused/circle.png');"></button>
+                                <button class="tool" style="background-image: url('Unused/ellipse.png');"></button>
                             </div>
                             <div>
-                                <button class="tool" style="background-image: url('Unused/roundsquare.png');"></button>
+                                <button class="tool" style="background-image: url('Unused/roundedrectangle.png');"></button>
                             </div>
                         </div>
                     </div>
                     <div class="tool-options">
                     </div>
                 </div>
-                <div
-                    style="border: solid; border-width: 0.2vw; border-color: #424242; border-bottom-color: #fff; border-right-color: #fff; background-color: #808080;">
+                <div class="outer-canvas">
                     <div class="canvas">
+                        <div id="canvas" style="position: absolute; width: 100%; height: 100%;"></div>
+                        <div class="handle" style="top: -0.15vw; left: -0.15vw;">
+                        </div>
+                        <div class="handle" style="top: -0.15vw; left: 50%;">
+                        </div>
+                        <div class="handle" style="top: -0.15vw; right: -0.15vw;">
+                        </div>
+                        <div class="handle" style="top: 50%; left: -0.15vw;">
+                        </div>
+                        <div class="handle" style="bottom: -0.15vw; left: -0.15vw;">
+                        </div>
+                        <div class="handle" style="top: 50%; right: -0.15vw; background-color: #000000;">
+                        </div>
+                        <div class="handle" style="bottom: -0.15vw; left: 50%; background-color: #000000;">
+                        </div>
+                        <div class="handle" style="bottom: -0.15vw; right: -0.15vw; background-color: #000000;">
+                        </div>
                         <div>
                             <img style="width: 30%;" src="Unused/Triangle dude.png">
                         </div>
                         <div>
                             <img style="width: 40%;" src="Unused/SquigleBoi.png">
-                            <img style="width: 40%;" src="Unused/CommieBot.png">
+                            <img style="width: 40%;" src="graphics/CommieBot.gif">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="bottombar">
-                <div style="display: flex;">
-                    <div
-                        style="border: 0.1vw solid #fff; border-top-color: #424242; border-left-color: #424242; width: 1vw; height: 1vw; background-image: url(Unused/checker.png);">
+                <div style="display: flex; margin-left: 2%;">
+                    <div class="selection-box">
+                        <div class="selection" style="bottom: 15%; right: 15%; background-color: #fff;">
+                        </div>
+                        <div class="selection" style="top: 15%; left: 15%; background-color: #000000;">
+                        </div>
                     </div>
-                    <div style="display: flex; flex-direction: column;">
-                        <div class="flex">
-                            <div
-                                style="border: 0.1vw solid #fff; border-top-color: #424242; border-left-color: #424242; width: 0.5vw; height: 0.5vw; background-color: #000000;">
+                    <div style="display: flex; flex-direction: column; justify-content: space-between;">
+                        <div style="display: flex; width: 107%; justify-content: space-between;">
+                            <div class="colour" style="background-color: #000000;">
                             </div>
-                            <div
-                                style="border: 0.1vw solid #fff; border-top-color: #424242; border-left-color: #424242; width: 0.5vw; height: 0.5vw; background-color: #808080;">
+                            <div class="colour" style="background-color: #808080;">
+                            </div>
+                            <div class="colour" style="background-color: rgb(136, 0, 21);">
+                            </div>
+                            <div class="colour" style="background-color: rgb(128, 128, 0);">
+                            </div>
+                            <div class="colour" style="background-color: rgb(34, 177, 76);">
+                            </div>
+                            <div class="colour" style="background-color: rgb(0, 128, 128);">
+                            </div>
+                            <div class="colour" style="background-color: rgb(63, 72, 204);">
+                            </div>
+                            <div class="colour" style="background-color: rgb(163, 73, 164);">
+                            </div>
+                            <div class="colour" style="background-color: rgb(128, 128, 64);">
+                            </div>
+                            <div class="colour" style="background-color: rgb(0, 64, 0);">
+                            </div>
+                            <div class="colour" style="background-color: rgb(0, 128, 255);">
+                            </div>
+                            <div class="colour" style="background-color: rgb(0, 64, 128);">
+                            </div>
+                            <div class="colour" style="background-color: rgb(0, 0, 255);">
+                            </div>
+                            <div class="colour" style="background-color: rgb(128, 64, 0);">
                             </div>
                         </div>
-                        <div class="flex">
-                            <div
-                                style="border: 0.1vw solid #fff; border-top-color: #424242; border-left-color: #424242; width: 0.5vw; height: 0.5vw; background-color: #fff;">
+                        <div style="display: flex; width: 107%; justify-content: space-between;">
+                            <div class="colour" style="background-color: #fff;">
+                            </div>
+                            <div class="colour" style="background-color: rgb(195, 195, 195);">
+                            </div>
+                            <div class="colour" style="background-color: rgb(237, 28, 36);">
+                            </div>
+                            <div class="colour" style="background-color: rgb(255, 242, 0);">
+                            </div>
+                            <div class="colour" style="background-color: rgb(181, 230, 29);">
+                            </div>
+                            <div class="colour" style="background-color: rgb(0, 255, 255);">
+                            </div>
+                            <div class="colour" style="background-color: rgb(112, 146, 190);">
+                            </div>
+                            <div class="colour" style="background-color: rgb(255, 174, 201);">
+                            </div>
+                            <div class="colour" style="background-color: rgb(255, 255, 128);">
+                            </div>
+                            <div class="colour" style="background-color: rgb(0, 255, 128);">
+                            </div>
+                            <div class="colour" style="background-color: rgb(128, 255, 255);">
+                            </div>
+                            <div class="colour" style="background-color: rgb(128, 128, 255);">
+                            </div>
+                            <div class="colour" style="background-color: rgb(255, 0, 128);">
+                            </div>
+                            <div class="colour" style="background-color: rgb(255, 128, 0);">
                             </div>
                         </div>
                     </div>
@@ -219,17 +344,14 @@
             </div>
             <hr>
             <div class="flex" style="margin: 1%; margin-left: 0%;">
-                <div
-                    style="border: 0.1vw solid #fff; border-top-color: #424242; border-left-color: #424242; width: 50%; margin-left: 1%;">
-                    <p class="text">For help, </p>
+                <div class="stuatus" style="width: 50%; margin-left: 1%; text-align: start;">
+                    <p class="text">For help, <img style="width: 70%; position: relative; top: 0.2vw;"
+                            src="graphics/scream.gif"></p>
                 </div>
-                <div
-                    style="border: 0.1vw solid #fff; border-top-color: #424242; border-left-color: #424242; width: 24%; margin-left: 1%; margin-right: 1%;">
-                    <p></p>
+                <div class="stuatus" style="width: 25%; margin-left: 1%; margin-right: 1%;">
+                    <p class="text" style="padding-top: 6%;"><span id="pos" class="text"></span></p>
                 </div>
-                <div
-                    style="border: 0.1vw solid #fff; border-top-color: #424242; border-left-color: #424242; width: 24%;">
-                    <p></p>
+                <div class="stuatus" style="width: 25%;">
                 </div>
             </div>
         </div>
@@ -237,7 +359,8 @@
     </section>
 
     <section>
-        <div class="window" style="width: 30%; background-color: rgb(255, 0, 77);">
+        <div class="window"
+            style="width: 20%; background-color: rgb(255, 0, 77); overflow: visible; position: fixed ; top: 30%; left: 60%;">
             <div class="window-header alt-header">
                 <div>
                     <img src="graphics/ui/picoCAD.gif">
@@ -250,13 +373,37 @@
                     </button>
                 </div>
             </div>
-            <div>
+            <div style="background-color: #83769c;">
                 <div style="background-color: rgb(255, 0, 77);">
-                    <p>picoCAD</p>
+                    <br>
+                    <br>
                 </div>
-                <img src="Unused/crisps.gif">
+                <div class="window"
+                    style="width: 150%; margin-top: 20%; margin-bottom: 20%; position: relative; left: -30%;">
+                    <div class="window-header alt-header">
+                        <div>
+                            <h2>picoCAD.exe - Application Error</h2>
+                        </div>
+                        <div style="margin-top: 1%; margin-bottom: 1%;">
+                            <button class="close">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div style="width: 15%;">
+                            <img style="margin: 20%; margin-bottom: 0;" src="unused/error.png">
+                        </div>
+                        <div>
+                            <p class="wintext" style="margin-top: 3%;">The application failed to initialize properly
+                                (0xc0000005). Click OK to
+                                terminate the application.</p>
+                        </div>
+                    </div>
+                    <button style="margin-bottom: 2%; width: 5vw;">OK</button>
+                </div>
                 <div style="background-color: rgb(255, 0, 77);">
-                    <p><a id="CRISPS">CRISPS</a></p>
+                    <br>
+                    <br>
                 </div>
             </div>
         </div>
@@ -265,7 +412,7 @@
     <section class="overlay">
     </section>
 
-    <script language="JavaScript">
+    <script language="JavaScript" src="javascript/cursorpos.js">
 
     </script>
 

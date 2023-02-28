@@ -317,6 +317,14 @@ footer>p {
     font-family: "MS Sans Serif";
 }
 
+.wintext{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-size: 1vw;
+    font-family: "MS Sans Serif";
+    color: #212529;;
+}
+
 .overlay {
     width: 100vw;
     height: 100vh;
