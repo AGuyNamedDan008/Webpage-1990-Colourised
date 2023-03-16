@@ -16,58 +16,7 @@
 
 <body class="pics">
     <section>
-        <div style="display: inline; position: fixed; margin: 0%; width: 15%; top: 0; left: 0;">
-            <a href="index.html"><img src="graphics/ui/home.gif"></a>
-        </div>
-    </section>
-
-    <section>
-        <div class="window" style="width: 20%; position: fixed ; top: 1%; left: 75%;">
-            <audio id="playing">
-            </audio>
-            <div class="window-header alt-header">
-                <div>
-                    <img src="graphics/ui/mediaplayer/mediaplayer.gif">
-                    <h2>Media Player</h2>
-                </div>
-                <div style="margin-top: 1%; margin-bottom: 1%;">
-                    <button class="maximize">
-                    </button>
-                    <button class="close" id="closebtn">
-                    </button>
-                </div>
-            </div>
-            <div class="links">
-                <p class="link"><u>F</u>ile</p>
-                <p class="link"><u>E</u>dit</p>
-                <p class="link"><u>D</u>evice</p>
-                <p class="link"><u>H</u>elp</p>
-            </div>
-            <hr>
-            <div class="flex">
-                <input type="range" id="seek" min="0" max="100" value="0" class="slider">
-            </div>
-            <hr>
-            <div class="toolbar">
-                <div>
-                    <button class="togglebtn" id="togglebtn"></button>
-                </div>
-                <div class="skip-buttons">
-                    <button class="back" id="back"></button>
-                    <button class="next" id="next"></button>
-                </div>
-                <input type="range" id="volume" min="0" max="100" step="1" value="100" class="slider"
-                    style="flex-grow: 1;">
-                <div class="vertical-hr"></div>
-                <div class="time">
-                    <span id="time">00:00</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="window" style="width: 27%; position: fixed ; top: 2%; left: 15%;">
+        <div class="window" style="width: 27%; position: fixed ; top: 1%; left: 12%;">
             <div class="window-header">
                 <div>
                     <img src="graphics/ui/graphics.gif">
@@ -197,11 +146,11 @@
                         <div class="handle" style="bottom: -0.15vw; right: -0.15vw; background-color: #000000;">
                         </div>
                         <div>
-                            <img style="width: 30%;" src="graphics/Triangle dude.gif">
+                            <img style="width: 30%;" src="graphics/pics/Triangle dude.gif">
                         </div>
                         <div>
-                            <img style="width: 40%;" src="graphics/SquigleBoi.gif">
-                            <img style="width: 40%;" src="graphics/CommieBot.gif">
+                            <img style="width: 40%;" src="graphics/pics/SquigleBoi.gif">
+                            <img style="width: 40%;" src="graphics/pics/CommieBot.gif">
                         </div>
                     </div>
                 </div>
@@ -295,8 +244,29 @@
     </section>
 
     <section>
-        <div class="window"
-            style="width: 20%; overflow: visible; position: fixed ; top: 30%; left: 60%;">
+        <div class="window" style="width: 25%; overflow: visible; position: fixed ; top: 4%; left: 42%;">
+            <div class="window-header alt-header">
+                <div>
+                    <img src="graphics/ui/image.gif">
+                    <h2>Airsoft pics</h2>
+                </div>
+                <div style="margin-top: 1%; margin-bottom: 1%;">
+                    <button class="maximize">
+                    </button>
+                    <button class="close">
+                    </button>
+                </div>
+            </div>
+            <div class="pics-window">
+                <img style="width: 47%;" src="graphics/pics/Airsoft_1.gif">
+                <img style="width: 47%;" src="graphics/pics/Airsoft_3.gif">
+                <img style="width: 98%;" src="graphics/pics/Airsoft_2.gif">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="window" style="width: 20%; overflow: visible; position: fixed ; top: 47%; left: 69%;">
             <div class="window-header alt-header">
                 <div>
                     <img src="graphics/ui/picoCAD/picoCAD.gif">
@@ -339,6 +309,57 @@
                 <div style="background-color: #ff004d; height: 2vw;">
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="window" style="width: 20%; position: fixed ; top: 1%; left: 75%;">
+            <audio id="playing">
+            </audio>
+            <div class="window-header alt-header">
+                <div>
+                    <img src="graphics/ui/mediaplayer/mediaplayer.gif">
+                    <h2>Media Player</h2>
+                </div>
+                <div style="margin-top: 1%; margin-bottom: 1%;">
+                    <button class="maximize">
+                    </button>
+                    <button class="close" id="closebtn">
+                    </button>
+                </div>
+            </div>
+            <div class="links">
+                <p class="link"><u>F</u>ile</p>
+                <p class="link"><u>E</u>dit</p>
+                <p class="link"><u>D</u>evice</p>
+                <p class="link"><u>H</u>elp</p>
+            </div>
+            <hr>
+            <div class="flex">
+                <input type="range" id="seek" min="0" max="100" value="0" class="slider">
+            </div>
+            <hr>
+            <div class="toolbar">
+                <div>
+                    <button class="togglebtn" id="togglebtn"></button>
+                </div>
+                <div class="skip-buttons">
+                    <button class="back" id="back"></button>
+                    <button class="next" id="next"></button>
+                </div>
+                <input type="range" id="volume" min="0" max="100" step="1" value="100" class="slider"
+                    style="flex-grow: 1;">
+                <div class="vertical-hr"></div>
+                <div class="time">
+                    <span id="time">00:00</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div style="display: inline; position: fixed; margin: 0%; width: 15%; top: 0; left: 0;">
+            <a href="index.html"><img src="graphics/ui/home.gif"></a>
         </div>
     </section>
 

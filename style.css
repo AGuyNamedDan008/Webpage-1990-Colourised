@@ -882,3 +882,16 @@ footer>p {
     font-size: 0.85vw;
     color: #000000;
 }
+
+.pics-window {
+    margin: 1%;
+    background-color: #808080;
+    padding: 1%;
+    border: 0.2vw solid #fff;
+    border-top-color: #424242;
+    border-left-color: #424242;
+}
+
+.pics-window img {
+    padding: 1%;
+}
