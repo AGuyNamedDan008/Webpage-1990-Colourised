@@ -1,10 +1,19 @@
-div[id^="obj"] {
+div[id^="trail"] {
+    background-image:url("graphics/ui/firecursor.gif");
     margin: 0%;
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 100;
     transform: translate(-38%, -38%);
-    pointer-events: none
+    pointer-events: none;
+    position:absolute;
+    z-Index:100;
+    height:35px;
+    width:35px;
+}
+
+.hidetrail:hover ~ [id^="trail"], *:has(.hidetrail:hover) ~ [id^="trail"]{
+    display: none;
 }
 
 ::-webkit-scrollbar {
