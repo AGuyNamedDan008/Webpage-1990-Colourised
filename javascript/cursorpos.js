@@ -1,5 +1,4 @@
 var canvas = document.getElementById("canvas");
-//var pos = document.getElementById("pos");
 var isMouseHover = false;
 
 canvas.addEventListener("mouseleave", function (event) {
