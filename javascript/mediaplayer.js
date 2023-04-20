@@ -1,15 +1,15 @@
 var playlist = [
-    "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/Music_test/playlist/Frontier%20Elite%20II.mp3?raw=true",
-    "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/Music_test/playlist/02_Docking%20Sequence.mp3?raw=true",
-    "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/Music_test/playlist/07%20Moon%20Surface%20(The%20Moon).mp3?raw=true",
-    "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/Music_test/playlist/034%20-%207%20PM%20(Normal).mp3?raw=true",
-    "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/Music_test/playlist/24%20Clash!%20Gourmet%20Race%20-%20Pumpkin%20Grand.mp3?raw=true",
-    "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/Music_test/playlist/1-02%20Opening.mp3?raw=true",
-    "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/Music_test/playlist/1-05%20Chemical%20Warfare%20Facility%20%232.mp3?raw=true",
-    "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/Music_test/playlist/02%20M25%20South.mp3?raw=true",
-    "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/Music_test/playlist/06%20Country%20Route%20to%20London.mp3?raw=true",
-    "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/Music_test/playlist/portal_radio_mix.mp3?raw=true",
-    "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/Music_test/playlist/24.%20Credits%20Closing%20Theme.mp3?raw=true",
+    "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/playlist/Frontier%20Elite%20II.mp3?raw=true",
+    "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/playlist/02_Docking%20Sequence.mp3?raw=true",
+    "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/playlist/07%20Moon%20Surface%20(The%20Moon).mp3?raw=true",
+    "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/playlist/034%20-%207%20PM%20(Normal).mp3?raw=true",
+    "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/playlist/24%20Clash!%20Gourmet%20Race%20-%20Pumpkin%20Grand.mp3?raw=true",
+    "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/playlist/1-02%20Opening.mp3?raw=true",
+    "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/playlist/1-05%20Chemical%20Warfare%20Facility%20%232.mp3?raw=true",
+    "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/playlist/02%20M25%20South.mp3?raw=true",
+    "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/playlist/06%20Country%20Route%20to%20London.mp3?raw=true",
+    "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/playlist/portal_radio_mix.mp3?raw=true",
+    "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/playlist/24.%20Credits%20Closing%20Theme.mp3?raw=true",
 ];
 var index = 0;
 var seek = document.getElementById("seek");
