@@ -773,6 +773,15 @@ footer>p {
     overflow-y: hidden;
 }
 
+.home {
+    display: inline;
+    position: fixed;
+    margin: 0%;
+    width: 15%;
+    top: 0;
+    left: 0;
+}
+
 .sidebar {
     background: silver;
     border-top: 0.15vw solid #fff;
@@ -903,4 +912,21 @@ footer>p {
 
 .pics-window img {
     padding: 1%;
+}
+
+.blog {
+    background-image: url("graphics/backgrounds/paper.gif");
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.webring {
+    margin-left: 37.75%;
+    margin-right: 42.25%;
+}
+
+.webring > * {
+    display: inline-block;
+    width: 25%;
 }
