@@ -919,6 +919,7 @@ footer>p {
     background-color: #fff;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow-y: hidden;
 
 }
 .webring {
