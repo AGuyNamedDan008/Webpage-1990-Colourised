@@ -109,6 +109,13 @@ div[id^="trail"] {
     background-color: silver
 }
 
+@font-face {
+    font-family: 'picoCAD';
+    src: url("graphics/fonts/picoCAD.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
     cursor: url("graphics/ui/firecursor.gif"), default;
     height: 100%;
@@ -905,16 +912,31 @@ footer>p {
 }
 
 .pics-window {
+    height: 22vw;
     margin: 1%;
     background-color: #808080;
     padding: 1%;
     border: 0.2vw solid #fff;
     border-top-color: #424242;
     border-left-color: #424242;
+    overflow-y: scroll;
 }
 
 .pics-window img {
     padding: 1%;
+}
+
+.pico-dropdown {
+    font-family: picoCAD;
+    text-align: left;
+    color: #ff77a8;
+    font-size: 1vw;
+    margin-top: 0%;
+}
+
+.pico-dropdown:hover {
+    background-color: #ff77a8;
+    color: #7e2553;
 }
 
 .blog {

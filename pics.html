@@ -258,14 +258,15 @@
             </div>
             <div class="pics-window">
                 <img style="width: 47%;" src="graphics/pics/Airsoft_1.gif">
-                <img style="width: 47%;" src="graphics/pics/Airsoft_3.gif">
-                <img style="width: 98%;" src="graphics/pics/Airsoft_2.gif">
+                <img style="width: 47%;" src="graphics/pics/Airsoft_2.gif">
+                <img style="width: 98%;" src="graphics/pics/Airsoft_3.gif">
+                <img style="width: 98%;" src="graphics/pics/Airsoft_4.gif">
             </div>
         </div>
     </section>
 
     <section>
-        <div class="window" style="width: 20%; overflow: visible; position: fixed ; top: 47%; left: 69%;">
+        <div class="window" style="width: 20%; overflow: visible; position: fixed ; top: 21%; left: 69%;">
             <div class="window-header alt-header">
                 <div>
                     <img src="graphics/ui/picoCAD/picoCAD.gif">
@@ -278,41 +279,37 @@
                     </button>
                 </div>
             </div>
-            <div style="background-color: #83769c;">
-                <div style="background-color: #ff004d; height: 2vw;">
-                    <br>
-                    <br>
+            <div
+                style="background-color: #83769c; font-family: picoCAD; text-align: left; color: #ffccaa; font-size: 1vw;">
+                <div style="background-color: #ff004d; height: 1.2vw;">
+                    <div style="margin-left: 10%;">PICOcad</div>
                 </div>
-                <div class="window"
-                    style="width: 150%; margin-top: 15%; margin-bottom: 15%; position: relative; left: -30%;">
-                    <div class="window-header alt-header">
-                        <div>
-                            <h2>picoCAD.exe - Application Error</h2>
-                        </div>
-                        <div style="margin-top: 1%; margin-bottom: 1%;">
-                            <button class="close">
-                            </button>
+                <img id="image" src="graphics/pics/crisps.gif">
+                <div style="background-color: #ff004d; height: 1.2vw; display: flex;">
+                    <div class="dropdown" style="width: 7%;">
+                        <a class="dropdown-btn" style="height: 1vw; width: 1vw;"><img
+                                style=" margin-left: 18%; margin-bottom: 7%; height: 1vw; width: 1vw;"
+                                src="graphics/ui/picoCAD/plus.gif"></a>
+                        <div class="dropdown-list" style="width: 1000%; top: -2vw;">
+                            <div class="dropdown" style="background-color: #7e2553;">
+                                <p class="pico-dropdown" style="font-family: picoCAD; margin-left: 2%;" id="crispsbtn">
+                                    crisps</p>
+                                <p class="pico-dropdown" style="font-family: picoCAD; margin-left: 2%;" id="eggbtn">egg
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <div class="flex">
-                        <div style="width: 15%;">
-                            <img style="margin: 20%; margin-bottom: 0;" src="graphics/ui/error.gif">
-                        </div>
-                        <div>
-                            <p class="wintext" style="margin-top: 3%;">The application failed to initialize properly
-                                (0xc0000005). Click OK to terminate the application.</p>
-                        </div>
-                    </div>
-                    <button style="margin-bottom: 2%; width: 5vw;">OK</button>
-                </div>
-                <div style="background-color: #ff004d; height: 2vw;">
+                    <div class="vertical-hr" style="border-color: #7e2553; margin-left: 0%;"></div>
+                    <p style="font-family: picoCAD; text-align: left; color: #ffccaa; font-size: 1vw; margin-top: 0%;"
+                        id="text">
+                        crisps</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section>
-        <div class="window" style="width: 20%; position: fixed ; top: 1%; left: 75%;">
+        <div class="window" style="width: 20%; position: fixed; top: 1%; left: 75%;">
             <audio id="playing">
             </audio>
             <div class="window-header alt-header">
@@ -357,7 +354,32 @@
     </section>
 
     <section>
-        <div class="window" style="width: 7%; padding-top: 0.5%; padding-bottom: 0.5%; position: fixed; top: 20%; left: 1.5%;">
+        <div class="window" style="width: 30%; position: fixed; top: 60%; left: 10%;">
+            <div class="window-header alt-header">
+                <div>
+                    <h2>Untitled.py - Application Error</h2>
+                </div>
+                <div style="margin-top: 1%; margin-bottom: 1%;">
+                    <button class="close">
+                    </button>
+                </div>
+            </div>
+            <div class="flex">
+                <div style="width: 15%;">
+                    <img style="margin: 20%; margin-bottom: 0;" src="graphics/ui/error.gif">
+                </div>
+                <div>
+                    <p class="wintext" style="margin-top: 3%;">The application failed to initialize properly
+                        (0xc0000005). Click OK to terminate the application.</p>
+                </div>
+            </div>
+            <button style="margin-bottom: 2%; width: 5vw;">OK</button>
+        </div>
+    </section>
+
+    <section>
+        <div class="window"
+            style="width: 7%; padding-top: 0.5%; padding-bottom: 0.5%; position: fixed; top: 20%; left: 1.5%;">
             <div class="webring">
                 <script style="display: none;" src="https://nuthead.neocities.org/ring/ring.js"></script>
             </div>
@@ -377,6 +399,8 @@
         <script language="JavaScript" src="javascript/cursorpos.js"></script>
         <script language="JavaScript" src="javascript/mediaplayer.js"></script>
         <script language="JavaScript" src="javascript/cursortrail.js"></script>
+        <script language="JavaScript" src="javascript/dropdown.js"></script>
+        <script language="JavaScript" src="javascript/picoCAD.js"></script>
     </scripts>
 
 </body>
