@@ -347,15 +347,12 @@ footer>p {
     width: 100vw;
     height: 100vh;
     position: fixed;
-    top: 0px;
-    margin: 0px;
+    top: 0%;
+    margin: 0%;
     display: block;
     animation: scan 0.1s 0s infinite;
-    background-color: transparent;
-    z-index: 9;
     pointer-events: none;
     background-image: url(graphics/ui/scanlines.png);
-    opacity: 1;
 }
 
 @keyframes scan {
