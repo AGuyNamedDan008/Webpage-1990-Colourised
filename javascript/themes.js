@@ -41,6 +41,7 @@ function datecheck() {
         }
         else {
             var theme_overlay = document.querySelector(".theme_overlay");
+            document.body.style.backgroundImage = "url('graphics/themes/halloween/halloween.gif')";
             theme_overlay.classList.toggle("hallows");
         }
     playlist.unshift("https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/halloween/Monster%20Mash.mp3?raw=true");
@@ -86,6 +87,7 @@ function datecheck() {
         }
         else {
             var theme_overlay = document.querySelector(".theme_overlay");
+            document.body.style.backgroundImage = "url('graphics/themes/crimbo/crimbo.gif')";
             theme_overlay.classList.toggle("crimbo");
         }
     playlist.unshift("https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/crimbo/It's%20Beginning%20To%20Look%20A%20Lot%20Like%20Christmas.mp3?raw=true");
