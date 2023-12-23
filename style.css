@@ -78,7 +78,7 @@ div[id^="trail"] {
 }
 
 ::-webkit-scrollbar-button:horizontal:increment {
-    background: silver url(ui/comboright.gif) no-repeat 50%;
+    background: silver url(graphics/ui/comboright.gif) no-repeat 50%;
     -webkit-transform: rotateX(-90deg);
     transform: rotateX(-90deg);
     -webkit-transform: rotateY(-90deg);
@@ -94,7 +94,7 @@ div[id^="trail"] {
 }
 
 ::-webkit-scrollbar-button:horizontal:decrement {
-    background: silver url(ui/comboleft.gif) no-repeat 50%;
+    background: silver url(graphics/ui/comboleft.gif) no-repeat 50%;
     -webkit-transform: rotateY(180deg);
     transform: rotateX(180deg);
 }
@@ -112,6 +112,13 @@ div[id^="trail"] {
 @font-face {
     font-family: 'picoCAD';
     src: url("graphics/fonts/picoCAD.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Road';
+    src: url("graphics/fonts/Road.woff") format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -775,6 +782,48 @@ footer>p {
     border-color: #424242;
 }
 
+.the {
+    position: absolute;
+    left: 16%;
+    top: 35%;
+    font-family: sans-serif;
+    font-size: 4vw;
+    color: #eef228;
+}
+
+.poll {
+    position: absolute;
+    left: 30%;
+    top: 33%;
+    width: 19%;
+}
+
+.toll {
+    position: absolute;
+    right: 16%;
+    top: 29%;
+    font-family: Road;
+    font-size: 6vw;
+}
+
+.poll-box {
+    margin: auto;
+    text-align: unset;
+    font-size: 1vw;
+    color:#FFFFFF;
+    background-image: url('https://images.boardhost.com/bg/camouflage.gif');
+}
+
+.poll-box .lable {
+    float:left;
+    margin-left: 5%;
+}
+
+.poll-box .input {
+    float:left;
+    margin-left: 5%;
+}
+
 .pics {
     background-image: url("graphics/backgrounds/servers.gif");
     overflow-y: hidden;
@@ -919,6 +968,14 @@ footer>p {
     overflow-y: scroll;
 }
 
+.x {
+    height: 11vw;
+    display: flex;
+    justify-content: flex-start;
+    overflow-y: auto;
+    overflow-x: scroll;
+}
+
 .pics-window img {
     padding: 1%;
 }
@@ -952,4 +1009,119 @@ footer>p {
 .webring>* {
     display: inline-block;
     width: 30%;
+}
+
+.theme_overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    margin: 0%;
+    display: block;
+    pointer-events: none;
+    background-size: cover; 
+}
+
+.theme_overlay.hallows {
+    background-image: url("graphics/themes/halloween/blood-drip.gif");
+}
+
+.theme_1.hallows {
+    content:url("graphics/themes/halloween/skeleton-wave.gif")
+}
+
+.theme_2.hallows {
+    content:url("graphics/themes/halloween/skeleton-creep.gif")
+}
+
+.theme_3.hallows {
+    content:url("graphics/themes/halloween/skeleton-hello.gif")
+}
+
+.theme_4.hallows {
+    content:url("graphics/themes/halloween/skeleton-dance.gif")
+}
+
+.theme_5.hallows {
+    content:url("graphics/themes/halloween/skeleton-hang.gif")
+}
+
+.theme_6.hallows {
+    content:url("graphics/themes/halloween/skeleton-run.gif")
+}
+
+.headingtop.hallows {
+    content:url("graphics/themes/halloween/headingtop.gif")
+}
+
+.headingbottom.hallows {
+    content:url("graphics/themes/halloween/headingbottom.gif")
+}
+
+.theme_title.hallows {
+    content:url("graphics/themes/halloween/spookyedition.gif")
+}
+
+.left.hallows {
+    content:url("graphics/themes/halloween/skeleton-dootleft.gif")
+}
+
+.right.hallows {
+    content:url("graphics/themes/halloween/skeleton-dootright.gif")
+}
+
+.theme_overlay.crimbo {
+    background-image: url("graphics/themes/crimbo/snow.gif");
+}
+
+.theme_1.crimbo {
+    width: 75%;
+    content:url("graphics/themes/crimbo/santa-wave.gif")
+}
+
+.theme_2.crimbo {
+    width: 75%;
+    content:url("graphics/themes/crimbo/christmasbike.gif")
+}
+
+.theme_3.crimbo {
+    width: 50%;
+    content:url("graphics/themes/crimbo/christmastree.gif")
+}
+
+.theme_4.crimbo {
+    width: 75%;
+    content:url("graphics/themes/crimbo/fireplace.gif")
+}
+
+.theme_5.crimbo {
+    content:url("graphics/themes/crimbo/reindeer.gif")
+}
+
+.theme_6.crimbo {
+    content:url("graphics/themes/crimbo/sneakingsanta.gif")
+}
+
+
+.headingtop.crimbo {
+    content:url("graphics/themes/crimbo/headingtop.gif")
+}
+
+.headingbottom.crimbo {
+    content:url("graphics/themes/crimbo/headingbottom.gif")
+}
+
+.theme_title.crimbo {
+    content:url("graphics/themes/crimbo/CrimboEdition.gif")
+}
+
+.left.crimbo {
+    width: 75%;
+    content:url("graphics/themes/crimbo/santadancing-left.gif")
+}
+
+.right.crimbo {
+    width: 75%;
+    content:url("graphics/themes/crimbo/santadancing-right.gif")
 }
