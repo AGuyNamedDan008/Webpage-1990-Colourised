@@ -1,4 +1,4 @@
-const trailLength = 15;
+const trailLength = 8;
 const trailImage = "graphics/ui/firecursor.gif";
 let coordsStore = new Array(trailLength).fill({});
 
