@@ -1010,7 +1010,8 @@ footer>p {
     padding: 1%;
 }
 
-.pico-dropdown {
+.dropdown-list .pico-dropdown {
+    padding-left: 0%;
     font-family: picoCAD;
     text-align: left;
     color: #ff77a8;
@@ -1018,7 +1019,8 @@ footer>p {
     margin-top: 0%;
 }
 
-.pico-dropdown:hover {
+.dropdown-list .pico-dropdown:hover {
+    width: 98%;
     background-color: #ff77a8;
     color: #7e2553;
 }
