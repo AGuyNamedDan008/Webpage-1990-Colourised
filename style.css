@@ -1,10 +1,10 @@
 div[id^="trail"] {
-    background-image: url("graphics/ui/cusors/Normal\ Select.cur");
+    background-image: url("graphics/ui/cusors/Normal\ Select.gif");
     margin: 0%;
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 100;
-    transform: translate(-69%, -65%);
+    transform: translate(-37%, -37%);
     pointer-events: none;
     position: absolute;
     z-Index: 100;
@@ -124,7 +124,7 @@ div[id^="trail"] {
 }
 
 html {
-    cursor: url("graphics/ui/cusors/Normal\ Select.cur"), default;
+    cursor: url("graphics/ui/cusors/Normal\ Select.gif"), default;
     height: 100%;
 }
 
@@ -200,13 +200,13 @@ div>p {
 }
 
 div>a {
-    cursor: url("graphics/ui/cusors/Link\ Select.cur"), pointer;
+    cursor: url("graphics/ui/cusors/Link\ Select.gif"), pointer;
     font-size: 1.2vw;
 }
 
 a:hover~[id^="trail"],
 *:has(a:hover)~[id^="trail"] {
-    background-image: url("graphics/ui/cusors/Link\ Select.cur");
+    background-image: url("graphics/ui/cusors/Link\ Select.gif");
 }
 
 div>textarea {
@@ -225,7 +225,7 @@ div>iframe {
 }
 
 button {
-    cursor: url("graphics/ui/cusors/Link\ Select.cur"), pointer;
+    cursor: url("graphics/ui/cusors/Link\ Select.gif"), pointer;
     font-family: "MS Sans Serif", Tahoma, Verdana, sans-serif;
     font-size: 1vw;
     border: solid;
@@ -245,7 +245,7 @@ button:active {
 
 button:hover~[id^="trail"],
 *:has(button:hover)~[id^="trail"] {
-    background-image: url("graphics/ui/cusors/Link\ Select.cur");
+    background-image: url("graphics/ui/cusors/Link\ Select.gif");
 }
 
 img {
@@ -259,12 +259,12 @@ hr {
 }
 
 input {
-    cursor: url("graphics/ui/cusors/Link\ Select.cur"), pointer;
+    cursor: url("graphics/ui/cusors/Link\ Select.gif"), pointer;
 }
 
 input:hover~[id^="trail"],
 *:has(input:hover)~[id^="trail"] {
-    background-image: url("graphics/ui/cusors/Link\ Select.cur");
+    background-image: url("graphics/ui/cusors/Link\ Select.gif");
 }
 
 section>footer {
@@ -597,7 +597,7 @@ footer>p {
 }
 
 .slider {
-    cursor: url("graphics/ui/cusors/Link\ Select.cur"), pointer;
+    cursor: url("graphics/ui/cusors/Link\ Select.gif"), pointer;
     margin: auto;
     margin-top: 3%;
     margin-bottom: 3%;
@@ -615,7 +615,7 @@ footer>p {
 
 .slider:hover~[id^="trail"],
 *:has(.slider:hover)~[id^="trail"] {
-    background-image: url("graphics/ui/cusors/Link\ Select.cur");
+    background-image: url("graphics/ui/cusors/Link\ Select.gif");
 }
 
 .slider::-webkit-slider-thumb {
@@ -787,7 +787,7 @@ footer>p {
 }
 
 .myspace>a {
-    cursor: url("graphics/ui/cusors/Link\ Select.cur"), pointer;
+    cursor: url("graphics/ui/cusors/Link\ Select.gif"), pointer;
     font-weight: normal;
     color: #039;
     text-decoration: none;
@@ -909,7 +909,7 @@ footer>p {
 }
 
 .canvas {
-    cursor: url("graphics/ui/cusors/Precision\ Select.cur"), crosshair;
+    cursor: url("graphics/ui/cusors/Precision\ Select.gif"), crosshair;
     position: relative;
     background-color: #fff;
     margin: 1%;
@@ -919,7 +919,7 @@ footer>p {
 
 .canvas:hover~[id^="trail"],
 *:has(.canvas:hover)~[id^="trail"] {
-    background-image: url("graphics/ui/cusors/Precision\ Select.cur");
+    background-image: url("graphics/ui/cusors/Precision\ Select.gif");
 }
 
 
