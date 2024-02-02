@@ -16,11 +16,15 @@ function datecheck() {
             var right = document.querySelector(".right");
             document.body.style.backgroundImage = "url('graphics/themes/halloween/halloween.gif')";
             theme_overlay.classList.toggle("hallows");
+            theme_1.classList.remove("hide");
             theme_1.classList.toggle("hallows");
+            theme_2.classList.remove("hide");
             theme_2.classList.toggle("hallows");
+            theme_3.classList.remove("hide");
             theme_3.classList.toggle("hallows");
             headingtop.classList.toggle("hallows");
             headingbottom.classList.toggle("hallows");
+            theme_title.classList.remove("hide");
             theme_title.classList.toggle("hallows");
             left.classList.toggle("hallows");
             right.classList.toggle("hallows");
@@ -29,6 +33,7 @@ function datecheck() {
             var theme_overlay = document.querySelector(".theme_overlay");
             var theme_4 = document.querySelector(".theme_4");
             theme_overlay.classList.toggle("hallows");
+            theme_4.classList.remove("hide");
             theme_4.classList.toggle("hallows");
         }
         else if (page == 'blog') {
@@ -36,7 +41,9 @@ function datecheck() {
             var theme_5 = document.querySelector(".theme_5");
             var theme_6 = document.querySelector(".theme_6");
             theme_overlay.classList.toggle("hallows");
+            theme_5.classList.remove("hide");
             theme_5.classList.toggle("hallows");
+            theme_6.classList.remove("hide");
             theme_6.classList.toggle("hallows");
         }
         else {
@@ -62,11 +69,15 @@ function datecheck() {
             var right = document.querySelector(".right");
             document.body.style.backgroundImage = "url('graphics/themes/crimbo/crimbo.gif')";
             theme_overlay.classList.toggle("crimbo");
+            theme_1.classList.remove("hide");
             theme_1.classList.toggle("crimbo");
+            theme_2.classList.remove("hide");
             theme_2.classList.toggle("crimbo");
+            theme_3.classList.remove("hide");
             theme_3.classList.toggle("crimbo");
             headingtop.classList.toggle("crimbo");
             headingbottom.classList.toggle("crimbo");
+            theme_title.classList.remove("hide");
             theme_title.classList.toggle("crimbo");
             left.classList.toggle("crimbo");
             right.classList.toggle("crimbo");
@@ -75,6 +86,7 @@ function datecheck() {
             var theme_overlay = document.querySelector(".theme_overlay");
             var theme_4 = document.querySelector(".theme_4");
             theme_overlay.classList.toggle("crimbo");
+            theme_4.classList.remove("hide");
             theme_4.classList.toggle("crimbo");
         }
         else if (page == 'blog') {
@@ -82,7 +94,9 @@ function datecheck() {
             var theme_5 = document.querySelector(".theme_5");
             var theme_6 = document.querySelector(".theme_6");
             theme_overlay.classList.toggle("crimbo");
+            theme_5.classList.remove("hide");
             theme_5.classList.toggle("crimbo");
+            theme_6.classList.remove("hide");
             theme_6.classList.toggle("crimbo");
         }
         else {
