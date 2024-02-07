@@ -22,7 +22,7 @@ const trail = () => {
     for (let i = trailLength; i >= 1; i--) {
         coordsStore[i] = coordsStore[i - 1];
     }
-    setTimeout(trail, 0);
+    setTimeout(trail, 30);
 };
 initTrail();
 document.onmousemove = (e) => void(coordsStore[0] = {
