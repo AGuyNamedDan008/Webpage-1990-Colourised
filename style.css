@@ -199,6 +199,12 @@ div>p {
     color: #fff;
 }
 
+p>a {
+    display: inline !important;
+    padding-left: 0% !important;
+    color: #08216b;
+}
+
 div>a {
     cursor: url("graphics/ui/cusors/Link\ Select.gif"), pointer;
     font-size: 1.2vw;
@@ -1056,104 +1062,194 @@ footer>p {
 }
 
 .theme_overlay.hallows {
+    display: inline-block;
     background-image: url("graphics/themes/halloween/blood-drip.gif");
 }
 
 .theme_1.hallows {
-    content:url("graphics/themes/halloween/skeleton-wave.gif")
+    display: inline-block;
+    content:url("graphics/themes/halloween/skeleton-wave.gif");
 }
 
 .theme_2.hallows {
-    content:url("graphics/themes/halloween/skeleton-creep.gif")
+    display: inline-block;
+    content:url("graphics/themes/halloween/skeleton-creep.gif");
 }
 
 .theme_3.hallows {
-    content:url("graphics/themes/halloween/skeleton-hello.gif")
+    display: inline-block;
+    content:url("graphics/themes/halloween/skeleton-hello.gif");
 }
 
 .theme_4.hallows {
-    content:url("graphics/themes/halloween/skeleton-dance.gif")
+    display: inline-block;
+    content:url("graphics/themes/halloween/skeleton-dance.gif");
 }
 
 .theme_5.hallows {
-    content:url("graphics/themes/halloween/skeleton-hang.gif")
+    display: inline-block;
+    content:url("graphics/themes/halloween/skeleton-hang.gif");
 }
 
 .theme_6.hallows {
-    content:url("graphics/themes/halloween/skeleton-run.gif")
+    display: inline-block;
+    content:url("graphics/themes/halloween/skeleton-run.gif");
 }
 
 .headingtop.hallows {
-    content:url("graphics/themes/halloween/headingtop.gif")
+    display: inline-block;
+    content:url("graphics/themes/halloween/headingtop.gif");
 }
 
 .headingbottom.hallows {
-    content:url("graphics/themes/halloween/headingbottom.gif")
+    display: inline-block;
+    content:url("graphics/themes/halloween/headingbottom.gif");
 }
 
 .theme_title.hallows {
-    content:url("graphics/themes/halloween/spookyedition.gif")
+    display: inline-block;
+    content:url("graphics/themes/halloween/spookyedition.gif");
 }
 
 .left.hallows {
-    content:url("graphics/themes/halloween/skeleton-dootleft.gif")
+    display: inline-block;
+    content:url("graphics/themes/halloween/skeleton-dootleft.gif");
 }
 
 .right.hallows {
-    content:url("graphics/themes/halloween/skeleton-dootright.gif")
+    display: inline-block;
+    content:url("graphics/themes/halloween/skeleton-dootright.gif");
 }
 
 .theme_overlay.crimbo {
+    display: inline-block;
     background-image: url("graphics/themes/crimbo/snow.gif");
 }
 
 .theme_1.crimbo {
+    display: inline-block;
     width: 75%;
-    content:url("graphics/themes/crimbo/santa-wave.gif")
+    content:url("graphics/themes/crimbo/santa-wave.gif");
 }
 
 .theme_2.crimbo {
+    display: inline-block;
     width: 75%;
-    content:url("graphics/themes/crimbo/christmasbike.gif")
+    content:url("graphics/themes/crimbo/christmasbike.gif");
 }
 
 .theme_3.crimbo {
+    display: inline-block;
     width: 50%;
-    content:url("graphics/themes/crimbo/christmastree.gif")
+    content:url("graphics/themes/crimbo/christmastree.gif");
 }
 
 .theme_4.crimbo {
+    display: inline-block;
     width: 75%;
-    content:url("graphics/themes/crimbo/fireplace.gif")
+    content:url("graphics/themes/crimbo/fireplace.gif");
 }
 
 .theme_5.crimbo {
-    content:url("graphics/themes/crimbo/reindeer.gif")
+    display: inline-block;
+    content:url("graphics/themes/crimbo/reindeer.gif");
 }
 
 .theme_6.crimbo {
-    content:url("graphics/themes/crimbo/sneakingsanta.gif")
+    display: inline-block;
+    content:url("graphics/themes/crimbo/sneakingsanta.gif");
 }
 
 
 .headingtop.crimbo {
-    content:url("graphics/themes/crimbo/headingtop.gif")
+    display: inline-block;
+    content:url("graphics/themes/crimbo/headingtop.gif");
 }
 
 .headingbottom.crimbo {
-    content:url("graphics/themes/crimbo/headingbottom.gif")
+    display: inline-block;
+    content:url("graphics/themes/crimbo/headingbottom.gif");
 }
 
 .theme_title.crimbo {
-    content:url("graphics/themes/crimbo/CrimboEdition.gif")
+    display: inline-block;
+    content:url("graphics/themes/crimbo/CrimboEdition.gif");
 }
 
 .left.crimbo {
+    display: inline-block;
     width: 75%;
-    content:url("graphics/themes/crimbo/santadancing-left.gif")
+    content:url("graphics/themes/crimbo/santadancing-left.gif");
 }
 
 .right.crimbo {
+    display: inline-block;
     width: 75%;
-    content:url("graphics/themes/crimbo/santadancing-right.gif")
+    content:url("graphics/themes/crimbo/santadancing-right.gif");
+}
+
+.theme_overlay.valentine {
+    display: inline-block;
+    background-image: url("graphics/themes/valentine/hearts.gif");
+}
+
+.theme_1.valentine {
+    display: inline-block;
+    width: 75%;
+    content:url("graphics/themes/Valentine/fairy.gif");
+}
+
+.theme_2.valentine {
+    display: inline-block;
+    width: 75%;
+    content:url("graphics/themes/Valentine/bubsvalgift.gif");
+}
+
+.theme_3.valentine {
+    display: inline-block;
+    width: 75%;
+    content:url("graphics/themes/Valentine/mickey.gif");
+}
+
+.theme_4.valentine {
+    display: inline-block;
+    width: 75%;
+    content:url("graphics/themes/Valentine/Valentinespin.gif");
+}
+
+.theme_5.valentine {
+    display: inline-block;
+    content:url("graphics/themes/Valentine/dogvalentine.gif");
+}
+
+.theme_6.valentine {
+    display: inline-block;
+    content:url("graphics/themes/Valentine/bear.gif");
+}
+
+.headingtop.valentine {
+    display: inline-block;
+    content:url("graphics/themes/Valentine/headingtop.gif");
+}
+
+.headingbottom.valentine {
+    display: inline-block;
+    content:url("graphics/themes/Valentine/headingbottom.gif");
+}
+
+.theme_title.valentine {
+    display: inline-block;
+    content:url("graphics/themes/Valentine/ValentineEdition.gif");
+}
+
+.left.valentine {
+    display: inline-block;
+    width: 50%;
+    content:url("graphics/themes/valentine/heart-spin.gif");
+}
+
+.right.valentine {
+    display: inline-block;
+    width: 50%;
+    content:url("graphics/themes/valentine/heart-spin.gif");
 }
