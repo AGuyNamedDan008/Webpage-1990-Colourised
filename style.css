@@ -1025,6 +1025,17 @@ footer>p {
     margin-top: 0%;
 }
 
+.plus {
+    background: url(graphics/ui/picoCAD/plus.gif) no-repeat;
+    background-color: none;
+    border: none;
+    margin-left: 5%;
+    background-size: 75%;
+    background-position: top 40% left 35%;
+    width: 1.25vw;
+    height: 1.25vw;
+}
+
 .dropdown-list .pico-dropdown:hover {
     width: 98%;
     background-color: #ff77a8;
