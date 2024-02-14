@@ -53,7 +53,7 @@ function monthcheck() {
             theme_overlay.classList.toggle("hallows");
         }
     playlist.unshift("https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/halloween/Monster%20Mash.mp3?raw=true");
-    playing.src = "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/halloween/Monster%20Mash.mp3?raw=true"
+    playing.src = "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/halloween/Monster%20Mash.mp3?raw=true";
     }
 
     if (month == 12) {
@@ -105,7 +105,7 @@ function monthcheck() {
             theme_overlay.classList.toggle("crimbo");
         }
     playlist.unshift("https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/crimbo/It's%20Beginning%20To%20Look%20A%20Lot%20Like%20Christmas.mp3?raw=true");
-    playing.src = "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/crimbo/It's%20Beginning%20To%20Look%20A%20Lot%20Like%20Christmas.mp3?raw=true"
+    playing.src = "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/crimbo/It's%20Beginning%20To%20Look%20A%20Lot%20Like%20Christmas.mp3?raw=true";
     }
 
     if (month == 2 && date == 14) {
@@ -156,8 +156,8 @@ function monthcheck() {
             document.body.style.backgroundImage = "url('graphics/themes/valentine/valentine.gif')";
             theme_overlay.classList.toggle("valentine");
         }
-    playlist.unshift("hhttps://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/Valentine/Valentines%20Day.mp3?raw=true");
-    playing.src = "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/Valentine/Valentines%20Day.mp3?raw=true"
+    playlist.unshift("hhttps://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/valentine/Valentines%20Day.mp3?raw=true");
+    playing.src = "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/valentine/Valentines%20Day.mp3?raw=true";
     }
 }
 
