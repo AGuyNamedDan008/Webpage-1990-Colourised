@@ -29,15 +29,17 @@ function monthcheck() {
             theme_title.classList.toggle("hallows");
             left.classList.toggle("hallows");
             right.classList.toggle("hallows");
-        }
-        else if (page == 'pics') {
+            playlist.unshift("https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/halloween/Monster%20Mash.mp3?raw=true");
+            playing.src = "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/halloween/Monster%20Mash.mp3?raw=true";
+        } else if (page == 'pics') {
             var theme_overlay = document.querySelector(".theme_overlay");
             var theme_4 = document.querySelector(".theme_4");
             theme_overlay.classList.toggle("hallows");
             theme_4.classList.remove("hide");
             theme_4.classList.toggle("hallows");
-        }
-        else if (page == 'blog') {
+            playlist.unshift("https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/halloween/Monster%20Mash.mp3?raw=true");
+            playing.src = "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/halloween/Monster%20Mash.mp3?raw=true";
+        } else if (page == 'blog') {
             var theme_overlay = document.querySelector(".theme_overlay");
             var theme_5 = document.querySelector(".theme_5");
             var theme_6 = document.querySelector(".theme_6");
@@ -46,14 +48,11 @@ function monthcheck() {
             theme_5.classList.toggle("hallows");
             theme_6.classList.remove("hide");
             theme_6.classList.toggle("hallows");
-        }
-        else {
+        } else {
             var theme_overlay = document.querySelector(".theme_overlay");
             document.body.style.backgroundImage = "url('graphics/themes/halloween/halloween.gif')";
             theme_overlay.classList.toggle("hallows");
         }
-    playlist.unshift("https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/halloween/Monster%20Mash.mp3?raw=true");
-    playing.src = "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/halloween/Monster%20Mash.mp3?raw=true";
     }
 
     if (month == 12) {
@@ -81,15 +80,17 @@ function monthcheck() {
             theme_title.classList.toggle("crimbo");
             left.classList.toggle("crimbo");
             right.classList.toggle("crimbo");
-        }
-        else if (page == 'pics') {
+            playlist.unshift("https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/crimbo/It's%20Beginning%20To%20Look%20A%20Lot%20Like%20Christmas.mp3?raw=true");
+            playing.src = "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/crimbo/It's%20Beginning%20To%20Look%20A%20Lot%20Like%20Christmas.mp3?raw=true";
+        } else if (page == 'pics') {
             var theme_overlay = document.querySelector(".theme_overlay");
             var theme_4 = document.querySelector(".theme_4");
             theme_overlay.classList.toggle("crimbo");
             theme_4.classList.remove("hide");
             theme_4.classList.toggle("crimbo");
-        }
-        else if (page == 'blog') {
+            playlist.unshift("https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/crimbo/It's%20Beginning%20To%20Look%20A%20Lot%20Like%20Christmas.mp3?raw=true");
+            playing.src = "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/crimbo/It's%20Beginning%20To%20Look%20A%20Lot%20Like%20Christmas.mp3?raw=true";
+        } else if (page == 'blog') {
             var theme_overlay = document.querySelector(".theme_overlay");
             var theme_5 = document.querySelector(".theme_5");
             var theme_6 = document.querySelector(".theme_6");
@@ -98,14 +99,11 @@ function monthcheck() {
             theme_5.classList.toggle("crimbo");
             theme_6.classList.remove("hide");
             theme_6.classList.toggle("crimbo");
-        }
-        else {
+        } else {
             var theme_overlay = document.querySelector(".theme_overlay");
             document.body.style.backgroundImage = "url('graphics/themes/crimbo/crimbo.gif')";
             theme_overlay.classList.toggle("crimbo");
         }
-    playlist.unshift("https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/crimbo/It's%20Beginning%20To%20Look%20A%20Lot%20Like%20Christmas.mp3?raw=true");
-    playing.src = "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/crimbo/It's%20Beginning%20To%20Look%20A%20Lot%20Like%20Christmas.mp3?raw=true";
     }
 
     if (month == 2 && date == 14) {
@@ -133,15 +131,17 @@ function monthcheck() {
             theme_title.classList.toggle("valentine");
             left.classList.toggle("valentine");
             right.classList.toggle("valentine");
-        }
-        else if (page == 'pics') {
+            playlist.unshift("hhttps://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/valentine/Valentines%20Day.mp3?raw=true");
+            playing.src = "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/valentine/Valentines%20Day.mp3?raw=true";
+        } else if (page == 'pics') {
             var theme_overlay = document.querySelector(".theme_overlay");
             var theme_4 = document.querySelector(".theme_4");
             theme_overlay.classList.toggle("valentine");
             theme_4.classList.remove("hide");
             theme_4.classList.toggle("valentine");
-        }
-        else if (page == 'blog') {
+            playlist.unshift("hhttps://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/valentine/Valentines%20Day.mp3?raw=true");
+            playing.src = "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/valentine/Valentines%20Day.mp3?raw=true";
+        } else if (page == 'blog') {
             var theme_overlay = document.querySelector(".theme_overlay");
             var theme_5 = document.querySelector(".theme_5");
             var theme_6 = document.querySelector(".theme_6");
@@ -150,14 +150,11 @@ function monthcheck() {
             theme_5.classList.toggle("valentine");
             theme_6.classList.remove("hide");
             theme_6.classList.toggle("valentine");
-        }
-        else {
+        } else {
             var theme_overlay = document.querySelector(".theme_overlay");
             document.body.style.backgroundImage = "url('graphics/themes/valentine/valentine.gif')";
             theme_overlay.classList.toggle("valentine");
         }
-    playlist.unshift("hhttps://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/valentine/Valentines%20Day.mp3?raw=true");
-    playing.src = "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/valentine/Valentines%20Day.mp3?raw=true";
     }
 }
 
