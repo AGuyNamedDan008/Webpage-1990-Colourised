@@ -139,7 +139,6 @@ section {
     margin: auto;
     margin-bottom: 0;
     width: 60%;
-    display: flex;
 }
 
 header {
@@ -221,8 +220,6 @@ div>textarea {
 }
 
 div>iframe {
-    width: 100%;
-    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -399,17 +396,39 @@ footer>p {
 
 .container {
     position: relative;
-    width: 100%;
     padding-top: 50%;
+    overflow: hidden;
 }
 
-.iframepet {
+.guestbook {
+    width: 100%;
+    height: 100%;
+}
+
+.gifypet {
     width: 314px;
     height: 321px;
+    border: none;
+}
+
+.navlink {
+    width: 180px;
+    height: 180px;
+    border: none;
+}
+
+.bannerlink {
+    width: 468px;
+    height: 60px;
+    border: none;
 }
 
 .halfwidth {
     width: 50%;
+}
+
+.nomargin {
+    margin: 0%;
 }
 
 .dropdown {
@@ -836,11 +855,11 @@ footer>p {
 }
 
 .poll-box {
+    width: 15vw;
     margin: auto;
     text-align: unset;
     font-size: 1vw;
     color:#FFFFFF;
-    background-image: url('https://images.boardhost.com/bg/camouflage.gif');
 }
 
 .poll-box .lable {
