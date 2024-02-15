@@ -32,25 +32,22 @@ div[id^="trail"] {
 }
 
 ::-webkit-scrollbar-button:vertical:increment {
-    width: 18px;
-    background: silver url(graphics/ui/combo.gif) no-repeat 50%;
-    height: 18px;
-    margin: 1px 1px 1px 10px;
-    -webkit-transform: rotateX(-90deg);
+    background-color: #c0c0c0;
+    background-image: url(graphics/ui/combo.gif);
+    background-repeat: no-repeat;
+    background-position: 50%;
     transform: rotateX(-90deg);
-    -webkit-transform: rotateY(-90deg);
     transform: rotateY(-90deg);
-    border: 1px outset #fff;
+    border: 0.15vw outset #fff;
 }
 
 ::-webkit-scrollbar-button:vertical:decrement {
-    width: 11px;
-    background: silver url(graphics/ui/comboup.gif) no-repeat 50%;
-    height: 16px;
-    margin: 1px 1px 1px 10px;
-    -webkit-transform: rotateY(180deg);
+    background-color: #c0c0c0;
+    background-image: url(graphics/ui/comboup.gif);
+    background-repeat: no-repeat;
+    background-position: 50%;
     transform: rotateX(180deg);
-    border: 1px outset #fff;
+    border: 0.15vw outset #ffffff;
 }
 
 ::-webkit-scrollbar-track {
@@ -58,9 +55,8 @@ div[id^="trail"] {
 }
 
 ::-webkit-scrollbar-thumb:vertical {
-    border: 1px outset #fff;
-    height: 40px;
-    background-color: silver
+    border: 0.15vw outset #fff;
+    background-color: #c0c0c0
 }
 
 ::-webkit-scrollbar-corner:vertical {
@@ -78,35 +74,34 @@ div[id^="trail"] {
 }
 
 ::-webkit-scrollbar-button:horizontal:increment {
-    background: silver url(graphics/ui/comboright.gif) no-repeat 50%;
-    -webkit-transform: rotateX(-90deg);
+    background-color: #c0c0c0;
+    background-image: url(graphics/ui/comboright.gif);
+    background-repeat: no-repeat;
+    background-position: 50%;
     transform: rotateX(-90deg);
-    -webkit-transform: rotateY(-90deg);
     transform: rotateY(-90deg)
 }
 
 ::-webkit-scrollbar-button:horizontal:decrement,
 ::-webkit-scrollbar-button:horizontal:increment {
-    width: 18px;
-    height: 18px;
-    margin: 1px 1px 1px 10px;
-    border: 1px outset #fff;
+    border: 0.15vw outset #fff;
 }
 
 ::-webkit-scrollbar-button:horizontal:decrement {
-    background: silver url(graphics/ui/comboleft.gif) no-repeat 50%;
-    -webkit-transform: rotateY(180deg);
+    background-color: #c0c0c0;
+    background-image: url(graphics/ui/comboleft.gif);
+    background-repeat: no-repeat;
+    background-position: 50%;
     transform: rotateX(180deg);
 }
 
 ::-webkit-scrollbar-track-piece {
-    margin: 1px;
+    margin: 0.05vw;
 }
 
 ::-webkit-scrollbar-thumb:horizontal {
-    border: 1px outset #fff;
-    height: 40px;
-    background-color: silver
+    border: 0.15vw outset #fff;
+    background-color: #c0c0c0
 }
 
 @font-face {
@@ -258,7 +253,10 @@ img {
 hr {
     margin: auto;
     width: 98%;
-    height: 0%;
+    border-width: 0.15vw;
+    border-bottom-color: #fff;
+    border-left: none;
+    border-right: none;
 }
 
 input {
@@ -341,8 +339,9 @@ footer>p {
 }
 
 .window-header .maximize {
-    background: url(graphics/ui/maximize.gif) no-repeat;
-    background-color: silver;
+    background-color: #c0c0c0;
+    background-image: url(graphics/ui/maximize.gif);
+    background-repeat: no-repeat;
     background-size: 75%;
     background-position: top 40% left 35%;
     width: 1.25vw;
@@ -350,8 +349,10 @@ footer>p {
 }
 
 .window-header .close {
-    background: url(graphics/ui/close.gif) no-repeat;
-    background-color: silver;
+
+    background-color: #c0c0c0;
+    background-image: url(graphics/ui/close.gif);
+    background-repeat: no-repeat;
     background-size: 75%;
     background-position: top 45% left 45%;
     width: 1.25vw;
@@ -572,18 +573,13 @@ footer>p {
     border-color: #ffc #ffc transparent transparent;
 }
 
-.clippy-box hr {
-    border-bottom: 2px solid rgb(255, 255, 255);
-    border-top: 2px solid rgb(136, 140, 143);
-}
-
 .clippy-button {
     width: 20%;
     background-color: #ffc;
     border: solid;
     border-width: 0.15vw;
     border-radius: .3em;
-    border-color: rgb(188, 188, 188);
+    border-color: #bcbcbc;
 }
 
 .clippy-button:active {
@@ -592,7 +588,7 @@ footer>p {
     border: solid;
     border-width: 0.15vw;
     border-radius: .3em;
-    border-color: rgb(188, 188, 188);
+    border-color: #bcbcbc;
 }
 
 .hide {
@@ -617,7 +613,7 @@ footer>p {
     font-size: 1vw;
     display: inline-flex;
     color: #888c8f;
-    text-shadow: rgb(255 255 255) 1px 1px;
+    text-shadow: #fff 0.05vw 0.05vw;
     border: none;
 }
 
@@ -631,8 +627,7 @@ footer>p {
     appearance: none;
     border: solid;
     border-width: 0.2vw;
-    border-bottom-color: #fff;
-    border-right-color: #fff;
+    border-color: #fff;
     border-left-color: #424242;
     border-top-color: #424242;
     background: #fff;
@@ -681,7 +676,7 @@ footer>p {
 
 .back {
     background: url(graphics/ui/mediaplayer/backskip.gif) no-repeat;
-    background-color: silver;
+    background-color: #c0c0c0;
     background-size: 75%;
     background-position: top 40% left 40%;
     width: 1.5vw;
@@ -690,7 +685,7 @@ footer>p {
 
 .next {
     background: url(graphics/ui/mediaplayer/forwardskip.gif) no-repeat;
-    background-color: silver;
+    background-color: #c0c0c0;
     background-size: 75%;
     background-position: top 40% left 40%;
     width: 1.5vw;
@@ -699,8 +694,12 @@ footer>p {
 
 .vertical-hr {
     width: 0%;
-    border-right: 2px solid rgb(255, 255, 255);
-    border-left: 2px solid rgb(136, 140, 143);
+    border: solid;
+    border-width: 0.15vw;
+    border-color: #888c8f;
+    border-right-color: #fff;
+    border-top: none;
+    border-bottom: none;
     align-self: stretch;
     margin-left: 2%;
     margin-right: 2%;
@@ -710,8 +709,11 @@ footer>p {
     position: relative;
     padding: 1%;
     border-style: solid;
-    border-width: 2px;
-    border-color: rgb(136, 140, 143) rgb(255, 255, 255) rgb(255, 255, 255) rgb(136, 140, 143);
+    border-width: 0.15vw;
+    border-bottom-color: #fff;
+    border-right-color: #fff;
+    border-left-color: #888c8f;
+    border-top-color: #888c8f;
     font-size: 1vw;
     font-family: "MS Sans Serif";
     color: #212529;
@@ -720,14 +722,17 @@ footer>p {
 
 .time::before {
     position: absolute;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
     content: "";
-    width: calc(100% - 4px);
-    height: calc(100% - 4px);
+    width: calc(100% - 0.2vw);
+    height: calc(100% - 0.25vw);
     border-style: solid;
-    border-width: 2px;
-    border-color: rgb(5, 6, 8) rgb(223, 224, 227) rgb(223, 224, 227) rgb(5, 6, 8);
+    border-width: 0.15vw;
+    border-bottom-color: #dfe0e3;
+    border-right-color: #dfe0e3;
+    border-left-color: #050608;
+    border-top-color: #050608;
 }
 
 .marquee {
