@@ -889,19 +889,44 @@ footer>p {
 .poll-box {
     width: 15vw;
     margin: auto;
+    margin-bottom: 1vw;
     text-align: unset;
     font-size: 1vw;
     color:#FFFFFF;
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+.poll-box>div {
+    flex-basis: 100%;
 }
 
 .poll-box .lable {
     float:left;
+    text-align: left;
     margin-left: 5%;
 }
 
 .poll-box .input {
     float:left;
     margin-left: 5%;
+    width: 0.75vw;
+    height: 0.75vw;
+    border-width: 0.01vw;
+}
+
+.submit-box {
+    padding:1%;
+    display: flex;
+    justify-content: center;
+    column-gap: 0.25vw;
+}
+
+.poll-box .submit {
+    height: 1.25vw;
+    width: 3vw;
+    font-size: 0.75vw;
 }
 
 .pics {
