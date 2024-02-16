@@ -798,6 +798,10 @@ footer>p {
     height: 25vw;
     padding-top: 2%;
     padding-bottom: 1%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 1%;
 }
 
 .graphics img {
