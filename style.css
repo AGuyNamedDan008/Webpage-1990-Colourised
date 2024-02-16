@@ -886,6 +886,12 @@ footer>p {
     font-size: 6vw;
 }
 
+.img-hr {
+    width: 2%;
+    clip-path: margin-box;
+    margin-bottom: -20%;
+}
+
 .poll-box {
     width: 15vw;
     margin: auto;
