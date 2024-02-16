@@ -843,6 +843,19 @@ footer>p {
     text-decoration: underline;
 }
 
+.bumper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    row-gap: 0.25vw;
+    column-gap: 0.25vw;
+    margin-bottom: 0.25vw;
+}
+
+.bumper>img {
+    width: 24%;
+}
+
 .me {
     border: solid;
     border-width: 0.01vw;
