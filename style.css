@@ -820,6 +820,16 @@ footer>p {
     margin-left: 3%;
 }
 
+.myspace-contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly
+}
+
+.myspace-contact>a {
+    width: 47%;
+}
+
 .myspace>a {
     cursor: url("graphics/ui/cusors/Link\ Select.gif"), pointer;
     font-weight: normal;
