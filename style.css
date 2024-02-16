@@ -531,7 +531,10 @@ footer>p {
     text-align: left;
     font-family: "MS Sans Serif", Tahoma, Verdana, sans-serif;
     background-color: #ffc;
-    border-radius: .25em;
+    border-color: #000;
+    border: solid;
+    border-width: 1%;
+    border-radius: .5em;
     margin: auto;
     float: right;
 }
@@ -554,19 +557,19 @@ footer>p {
 
 .clippy-box:before {
     left: auto;
-    right: 49.5%;
-    bottom: -26px;
+    right: 34.5%;
+    bottom: -1.3vw;
     border-style: solid;
-    border-width: 0 19px 25px 0;
+    border-width: 0 1vw 1.3vw 0;
     border-color: #000 #000 transparent transparent;
 }
 
 .clippy-box:after {
     left: auto;
-    right: 50%;
-    bottom: -20px;
+    right: 35%;
+    bottom: -1vw;
     border-style: solid;
-    border-width: 0 15px 20px 0;
+    border-width: 0 0.8vw 1vw 0;
     border-color: #ffc #ffc transparent transparent;
 }
 
