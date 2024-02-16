@@ -531,10 +531,7 @@ footer>p {
     text-align: left;
     font-family: "MS Sans Serif", Tahoma, Verdana, sans-serif;
     background-color: #ffc;
-    border-color: #000;
-    border: solid;
-    border-width: 1%;
-    border-radius: .5em;
+    border-radius: .25em;
     margin: auto;
     float: right;
 }
