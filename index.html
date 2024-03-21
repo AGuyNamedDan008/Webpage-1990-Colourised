@@ -279,6 +279,19 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="dropdown">
+                                <a class="dropdown-btn">21/03/2024<p>⏵</p></a>
+                                <div class="dropdown-list window dropdown-inner">
+                                    <div class="nav-text">
+                                        <h1>21/03/2024</h1>
+                                        <hr>
+                                        <p>
+                                            Done with all sizing improvements. This website now almost looks normal on
+                                            mobile and should look the same on most screen sizes.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <hr>
@@ -375,8 +388,8 @@
                 </div>
             </div>
             <div class="container">
-                <iframe class="guestbook hidetrail" scrolling="yes"
-                    src="disablehttp://webpage1990colour.123guestbook.com/" title="guestbook" frameborder="0">
+                <iframe class="guestbook hidetrail" scrolling="yes" src="http://webpage1990colour.123guestbook.com/"
+                    title="guestbook" frameborder="0">
                 </iframe>
             </div>
         </div>
@@ -1539,10 +1552,11 @@ umb%2F2%2F2c%2FRotating_earth_%2528large%2529.gif%2F200px-Rotating_earth_%2528la
                         </div>
                     </div>
                     <div class="links">
-                        <p class="link"><u>F</u>ile</p>
-                        <p class="link"><u>E</u>dit</p>
-                        <p class="link"><u>D</u>evice</p>
-                        <p class="link"><u>H</u>elp</p>
+                        <a href="https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/tree/4db5987a3294658b65642c7467292c32e83b0be8/playlist"
+                            class="link active"><u>F</u>ile</a>
+                        <a class="link"><u>E</u>dit</a>
+                        <a class="link"><u>D</u>evice</a>
+                        <a class="link"><u>H</u>elp</a>
                     </div>
                     <hr>
                     <div class="flex">
@@ -1551,12 +1565,11 @@ umb%2F2%2F2c%2FRotating_earth_%2528large%2529.gif%2F200px-Rotating_earth_%2528la
                     </div>
                     <hr>
                     <div class="toolbar">
-                        <div>
-                            <button class="togglebtn" id="togglebtn" aria-label="toggle"></button>
-                        </div>
+                        <a class="togglebtn" id="togglebtn"
+                            style="background-image: url(graphics/ui/mediaplayer/play.gif)"></a>
                         <div class="skip-buttons">
-                            <button class="back" id="back" aria-label="back"></button>
-                            <button class="next" id="next" aria-label="next"></button>
+                            <a class="back" id="back"></a>
+                            <a class="next" id="next"></a>
                         </div>
                         <input type="range" id="volume" min="0" max="100" step="1" value="100" class="slider"
                             style="flex-grow: 1;" aria-label="volume slider">

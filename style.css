@@ -4,12 +4,12 @@ div[id^="trail"] {
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 100;
-    transform: translate(-37%, -37%);
+    transform: translate(-12px, -12px);
     pointer-events: none;
     position: absolute;
     z-Index: 100;
-    height: 1.67vw;
-    width: 1.67vw;
+    height: 32px;
+    width: 32px;
 }
 
 .hidetrail:hover~[id^="trail"],
@@ -343,7 +343,7 @@ footer>p {
 
 .window-header img {
     width: 1vw;
-    display:inline-block;
+    display: inline-block;
     vertical-align: text-top;
 }
 
@@ -641,21 +641,20 @@ footer>p {
 }
 
 .clippy-button {
-    width: 20%;
+    width: 18%;
     background-color: #ffc;
     border: solid;
     border-width: 0.15vw;
-    border-radius: .3em;
+    border-radius: .2em;
     border-color: #bcbcbc;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1vw;
 }
 
 .clippy-button:active {
-    width: 20%;
-    background-color: #ffc;
-    border: solid;
-    border-width: 0.15vw;
-    border-radius: .3em;
-    border-color: #bcbcbc;
+    text-decoration: none;
+    color: #000;
 }
 
 .hide {
@@ -680,8 +679,14 @@ footer>p {
     font-size: 1vw;
     display: inline-flex;
     color: #888c8f;
+    text-decoration: none;
     text-shadow: #fff 0.05vw 0.05vw;
     border: none;
+}
+
+.active {
+    text-shadow: none !important;
+    color: #000 !important;
 }
 
 .slider {
@@ -728,11 +733,27 @@ footer>p {
 }
 
 .togglebtn {
-    background: url(graphics/ui/mediaplayer/play.gif) no-repeat;
-    background-size: 75%;
-    background-position: top 40% left 40%;
-    width: 1.5vw;
-    height: 1.5vw;
+    background-image: url(graphics/ui/mediaplayer/play.gif);
+    background-repeat: no-repeat !important;
+    background-size: 75% !important;
+    background-position: 50% !important;
+    display: inline-block;
+    width: 2.5vw;
+    height: 1.25vw;
+    margin: auto;
+    border: solid;
+    border-width: 0.2vw;
+    border-color: #fff;
+    border-bottom-color: #424242;
+    border-right-color: #424242;
+    background: #c0c0c0;
+    color: #212529;
+}
+
+.togglebtn:active {
+    border-color: #424242;
+    border-bottom-color: #fff;
+    border-right-color: #fff;
 }
 
 .skip-buttons {
@@ -742,21 +763,51 @@ footer>p {
 }
 
 .back {
-    background: url(graphics/ui/mediaplayer/backskip.gif) no-repeat;
-    background-color: #c0c0c0;
-    background-size: 75%;
-    background-position: top 40% left 40%;
-    width: 1.5vw;
-    height: 1.5vw;
+    background-image: url(graphics/ui/mediaplayer/backskip.gif) !important;
+    background-repeat: no-repeat !important;
+    background-size: 75% !important;
+    background-position: 50% !important;
+    display: inline-block;
+    width: 1.25vw;
+    height: 1.25vw;
+    margin: auto;
+    border: solid;
+    border-width: 0.2vw;
+    border-color: #fff;
+    border-bottom-color: #424242;
+    border-right-color: #424242;
+    background: #c0c0c0;
+    color: #212529;
+}
+
+.back:active {
+    border-color: #424242;
+    border-bottom-color: #fff;
+    border-right-color: #fff;
 }
 
 .next {
-    background: url(graphics/ui/mediaplayer/forwardskip.gif) no-repeat;
-    background-color: #c0c0c0;
-    background-size: 75%;
-    background-position: top 40% left 40%;
-    width: 1.5vw;
-    height: 1.5vw;
+    background-image: url(graphics/ui/mediaplayer/forwardskip.gif) !important;
+    background-repeat: no-repeat !important;
+    background-size: 75% !important;
+    background-position: 50% !important;
+    display: inline-block;
+    width: 1.25vw;
+    height: 1.25vw;
+    margin: auto;
+    border: solid;
+    border-width: 0.2vw;
+    border-color: #fff;
+    border-bottom-color: #424242;
+    border-right-color: #424242;
+    background: #c0c0c0;
+    color: #212529;
+}
+
+.next:active {
+    border-color: #424242;
+    border-bottom-color: #fff;
+    border-right-color: #fff;
 }
 
 .vertical-hr {
@@ -1027,19 +1078,27 @@ footer>p {
 .tools {
     position: relative;
     top: -0.1vw;
+    width: 3.5vw;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .tool {
-    border-width: 0.15vw;
-    background: no-repeat;
-    background-color: silver;
-    background-size: 75%;
-    background-position: top 45% left 45%;
-    width: 1.5vw;
-    height: 1.5vw;
+    background-repeat: no-repeat !important;
+    background-size: 75% !important;
+    background-position: 50% !important;
+    display: inline-block;
+    width: 35%;
+    height: 1.25vw;
+    vertical-align: text-top;
+    border: solid;
+    border-width: 0.2vw;
+    border-color: #fff;
+    border-bottom-color: #424242;
+    border-right-color: #424242;
+    background: #c0c0c0;
+    color: #212529;
 }
 
 .tool-options {
@@ -1070,6 +1129,13 @@ footer>p {
     margin: 1%;
     height: 95%;
     margin-right: 10%;
+}
+
+.canvas-pics {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 1%;
 }
 
 .canvas:hover~[id^="trail"],
@@ -1143,14 +1209,19 @@ footer>p {
 }
 
 .pics-window {
+    overflow-y: scroll;
     height: 22vw;
+    padding: 1%;
     margin: 1%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 1%;
     background-color: #808080;
     padding: 1%;
     border: 0.2vw solid #fff;
     border-top-color: #424242;
     border-left-color: #424242;
-    overflow-y: scroll;
 }
 
 .x {
@@ -1159,10 +1230,6 @@ footer>p {
     justify-content: flex-start;
     overflow-y: auto;
     overflow-x: scroll;
-}
-
-.pics-window img {
-    padding: 1%;
 }
 
 .dropdown-list .pico-dropdown {
@@ -1191,6 +1258,35 @@ footer>p {
     color: #7e2553;
 }
 
+.error {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 0.2vw;
+    justify-content: space-evenly;
+    margin: 2%;
+}
+
+.ok {
+    display: inline-block;
+    width: 5vw;
+    margin: auto;
+    font-family: "MS Sans Serif", Tahoma, Verdana, sans-serif;
+    font-size: 1vw;
+    border: solid;
+    border-width: 0.2vw;
+    border-color: #fff;
+    border-bottom-color: #424242;
+    border-right-color: #424242;
+    background: #c0c0c0;
+    color: #212529;
+}
+
+.ok:active {
+    border-color: #424242;
+    border-bottom-color: #fff;
+    border-right-color: #fff;
+}
+
 .blog {
     background-image: url("graphics/backgrounds/paper.gif");
     background-color: #fff;
@@ -1202,6 +1298,7 @@ footer>p {
 
 .webring {
     margin: auto;
+    line-height: 30%;
 }
 
 .webring>* {
