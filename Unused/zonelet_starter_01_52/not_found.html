@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- This page shows up when someone tries to go to a page on your site that doesn't exist! E.g. if someone had linked to a blog post that you later deleted. -->
+<html>
+  <head>
+    <title>Page Not Found</title>
+    <meta name="author" content="Marina Kittaka">
+    <!-- This specifies the favicon (little icon on the browser tab) -->
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon"/>
+    <!-- Setting the viewport scale does most of the work in making the site readable whether you're on a phone or desktop computer ("responsive design") -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"> 
+    <!-- Here's the link to our CSS stylesheet! -->
+    <link href="./style/style.css" rel="stylesheet" type="text/css" media="all">    
+  </head>
+  <body>
+    <div id="container">
+    <!-- Don't put content in "header" div! It will be replaced! If JavaScript is disabled, the following note will appear. -->
+    <div id="header">This site requires JavaScript!</div>
+    <div id="content">    
+    <h1>Page Not Found</h1>
+    
+    <p>The requested web page was not found on this site. Rats!</p>
+    </div> <!-- end of div id="content" -->
+    <div id="footer"></div>
+    </div> <!-- end of div id="container" -->
+  <script src="./script.js"></script>
+  </body>
+</html>
