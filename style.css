@@ -279,6 +279,11 @@ input:hover~[id^="trail"],
     background-image: url("graphics/ui/cusors/Link\ Select.gif");
 }
 
+ul {
+    font-size: 1vw;
+    padding-left: 1.5vw;
+}
+
 section>footer {
     width: 100%;
     margin: 2%;
@@ -1287,15 +1292,6 @@ footer>p {
     border-right-color: #fff;
 }
 
-.blog {
-    background-image: url("graphics/backgrounds/paper.gif");
-    background-color: #fff;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow-y: hidden;
-
-}
-
 .webring {
     margin: auto;
     line-height: 30%;
@@ -1305,6 +1301,53 @@ footer>p {
     display: inline-block;
     width: 30%;
 }
+
+.blog {
+    background-image: url("graphics/backgrounds/paper-top.gif"), url("graphics/backgrounds/paper.gif");
+    background-position: left top, left top 25.5vw;
+    background-color: #fff;
+    background-repeat: no-repeat, repeat;
+    background-size: 100% auto, 100% auto;
+
+}
+
+.blog-box {
+    border: solid;
+    border-bottom-color: #52a5ef;
+    border-right-color: #52a5ef;
+    border-left-color: #52a5de;
+    border-top-color: #52a5de;
+    background: #fff;
+    color: #212529;
+    text-align: left;
+    padding: 1vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    width: auto;
+}
+
+.blog-box h1, h2, h3, h4, h5 {
+    font-family: Tahoma, Geneva, sans-serif;
+    color: #212529;
+}
+
+.blog-box p {
+    color: #212529;
+}
+.blog-box hr {
+    border-color: #52a5ef;
+    border-width: 0.1vw;
+}
+
+#recentpostlistdiv h1{
+    font-family: Tahoma, Geneva, sans-serif;
+    color: #000;
+}
+
+#nextprev {
+    text-align: center;
+    margin-bottom: 1%;
+  }
 
 .theme_overlay {
     width: 100vw;
