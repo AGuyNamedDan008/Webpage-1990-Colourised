@@ -196,6 +196,12 @@ div>h2 {
     color: #fff;
 }
 
+div>h3 {
+    font-size: 0.8vw;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
 div>p {
     margin-top: 1%;
     margin-bottom: 1%;
@@ -1335,7 +1341,7 @@ footer>p {
     color: #212529;
 }
 .blog-box hr {
-    border-color: #52a5ef;
+    border-color: #ef5a6b;
     border-width: 0.1vw;
 }
 
@@ -1344,10 +1350,72 @@ footer>p {
     color: #000;
 }
 
+#postDate {
+    font-size: 0.8vw;
+}
+
+sup a {
+    text-decoration: none;
+}
+
+.sources {
+    font-size: 0.9vw;
+    padding-inline-start: 2vw;
+}
+
+.source::after {
+    content: " ";
+    background-image: url(graphics/ui/link.gif);
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 0.857em;
+    padding-right: 1em;
+}
+
 #nextprev {
     text-align: center;
     margin-bottom: 1%;
+    font-size: 1.5vw;
   }
+
+.updates-box {
+    overflow-y: scroll;
+    height: 3vw;
+}
+
+.updates-box li::marker {
+    content: '-  ';
+}
+
+.updates-box::-webkit-scrollbar { 
+    display: none;
+}
+
+.blog-footer {
+    border: solid;
+    border-bottom: none;
+    border-right-color: #52a5ef;
+    border-left-color: #52a5de;
+    border-top-color: #52a5de;
+    background: #fff;
+    color: #212529;
+    text-align: left;
+    padding: 1vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    width: auto;
+}
+
+#footer p {
+    color: #000;
+    text-align: center;
+}
+
+#footer a:-webkit-any-link {
+	color: -webkit-link;
+	cursor: pointer;
+	text-decoration: underline;
+}
 
 .theme_overlay {
     width: 100vw;
