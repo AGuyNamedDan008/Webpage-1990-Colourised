@@ -1,12 +1,12 @@
-let blogName = "Webpage-1990-Colourised";
-let authorName = "Daniel Miller";
+let blogName = "The Blog Zone";
+let authorName = "Webpage-1990-Colourised";
 let authorLink = "https://webpage-1990-colourised.neocities.org";
 
 let postsArray = [
-[ "posts/2024-04-07-My-Fourth-Post-Example.html"],
-[ "posts/2024-04-06-My-Third-Post-Example.html"],
-[ "posts/2024-04-05-My-Second-Post-Example.html"],
-[ "posts/2024-04-04-Post-Template.html"] ];
+[ "posts/2024-05-27-Death-of-my-Grandad.html"],
+[ "posts/2024-05-05-The-End-Of-123Guestbook.html"],
+[ "posts/2024-04-12-A-Start-To-Blogging.html"]
+];
 
 let url = window.location.pathname;
 const postDateFormat = /\d{4}\-\d{2}\-\d{2}\-/;
@@ -89,7 +89,7 @@ for ( let i = 0; i < postsArray.length; i++ ) {
 }
 postListHTML += "</ul>";
 
-let recentPostsCutoff = 3;
+let recentPostsCutoff = 5;
 let recentPostListHTML = "<h1>Recent Posts:</h1><ul>";
 let numberOfRecentPosts = Math.min( recentPostsCutoff, postsArray.length );
 for ( let i = 0; i < numberOfRecentPosts; i++ ) {
