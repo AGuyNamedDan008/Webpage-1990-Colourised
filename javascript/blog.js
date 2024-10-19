@@ -3,6 +3,7 @@ let authorName = "Webpage-1990-Colourised";
 let authorLink = "https://webpage-1990-colourised.neocities.org";
 
 let postsArray = [
+[ "posts/2024-10-19-Doing-numbers.html"],
 [ "posts/2024-05-27-Death-of-my-Grandad.html"],
 [ "posts/2024-05-05-The-End-Of-123Guestbook.html"],
 [ "posts/2024-04-12-A-Start-To-Blogging.html"]
