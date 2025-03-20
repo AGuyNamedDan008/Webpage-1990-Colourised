@@ -131,7 +131,7 @@ function monthcheck() {
             theme_title.classList.toggle("valentine");
             left.classList.toggle("valentine");
             right.classList.toggle("valentine");
-            playlist.unshift("hhttps://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/valentine/Valentines%20Day.mp3?raw=true");
+            playlist.unshift("https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/valentine/Valentines%20Day.mp3?raw=true");
             playing.src = "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/valentine/Valentines%20Day.mp3?raw=true";
         } else if (page == 'pics') {
             var theme_overlay = document.querySelector(".theme_overlay");
@@ -139,7 +139,7 @@ function monthcheck() {
             theme_overlay.classList.toggle("valentine");
             theme_4.classList.remove("hide");
             theme_4.classList.toggle("valentine");
-            playlist.unshift("hhttps://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/valentine/Valentines%20Day.mp3?raw=true");
+            playlist.unshift("https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/valentine/Valentines%20Day.mp3?raw=true");
             playing.src = "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/valentine/Valentines%20Day.mp3?raw=true";
         } else if (page == 'blog') {
             var theme_overlay = document.querySelector(".theme_overlay");
@@ -154,6 +154,56 @@ function monthcheck() {
             var theme_overlay = document.querySelector(".theme_overlay");
             document.body.style.backgroundImage = "url('graphics/themes/valentine/valentine.gif')";
             theme_overlay.classList.toggle("valentine");
+        }
+    }
+    if (month == 4) {
+        if (page == 'index') {
+            var theme_overlay = document.querySelector(".theme_overlay");
+            var theme_1 = document.querySelector(".theme_1");
+            var theme_2 = document.querySelector(".theme_2");
+            var theme_3 = document.querySelector(".theme_3");
+            var headingtop = document.querySelector(".headingtop");
+            var headingbottom = document.querySelector(".headingbottom");
+            var theme_title = document.querySelector(".theme_title");
+            var left = document.querySelector(".left");
+            var right = document.querySelector(".right");
+            document.body.style.backgroundImage = "url('graphics/themes/easter/easter.gif')";
+            theme_overlay.classList.toggle("easter");
+            theme_1.classList.remove("hide");
+            theme_1.classList.toggle("easter");
+            theme_2.classList.remove("hide");
+            theme_2.classList.toggle("easter");
+            theme_3.classList.remove("hide");
+            theme_3.classList.toggle("easter");
+            headingtop.classList.toggle("easter");
+            headingbottom.classList.toggle("easter");
+            theme_title.classList.remove("hide");
+            theme_title.classList.toggle("easter");
+            left.classList.toggle("easter");
+            right.classList.toggle("easter");
+            playlist.unshift("https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/easter/Rappin%20For%20Jesus.mp3?raw=true");
+            playing.src = "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/easter/Rappin%20For%20Jesus.mp3?raw=true";
+        } else if (page == 'pics') {
+            var theme_overlay = document.querySelector(".theme_overlay");
+            var theme_4 = document.querySelector(".theme_4");
+            theme_overlay.classList.toggle("easter");
+            theme_4.classList.remove("hide");
+            theme_4.classList.toggle("easter");
+            playlist.unshift("https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/easter/Rappin%20For%20Jesus.mp3?raw=true");
+            playing.src = "https://github.com/AGuyNamedDan008/Webpage-1990-Colourised/blob/main/graphics/themes/easter/Rappin%20For%20Jesus.mp3?raw=true";
+        } else if (page == 'blog') {
+            var theme_overlay = document.querySelector(".theme_overlay");
+            var theme_5 = document.querySelector(".theme_5");
+            var theme_6 = document.querySelector(".theme_6");
+            theme_overlay.classList.toggle("easter");
+            theme_5.classList.remove("hide");
+            theme_5.classList.toggle("easter");
+            theme_6.classList.remove("hide");
+            theme_6.classList.toggle("easter");
+        } else {
+            var theme_overlay = document.querySelector(".theme_overlay");
+            document.body.style.backgroundImage = "url('graphics/themes/easter/easter.gif')";
+            theme_overlay.classList.toggle("easter");
         }
     }
 }
