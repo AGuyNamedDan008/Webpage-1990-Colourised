@@ -1442,13 +1442,14 @@ sup a {
     z-index: 100;
 }
 
-.sam-and-max-nav > .SM-navbtn {
+.sam-and-max-nav>.SM-navbtn {
     border: none;
     background: none;
 }
 
 .sam-and-max-content {
-    background-color: #dbdabf; margin: 0%;
+    background-color: #dbdabf;
+    margin: 0%;
     position: relative;
     height: 25vw;
     z-index: 0;
@@ -1657,4 +1658,70 @@ sup a {
     display: inline-block;
     width: 50%;
     content: url("graphics/themes/valentine/heart-spin.gif");
+}
+
+.theme_overlay.easter {
+    display: inline-block;
+    background-image: url("graphics/themes/easter/falling-petals.gif");
+}
+
+.theme_1.easter {
+    display: inline-block;
+    width: 75%;
+    content: url("graphics/themes/easter/easter-bunny-25.gif");
+}
+
+.theme_2.easter {
+    display: inline-block;
+    width: 75%;
+    content: url("graphics/themes/easter/happy-easter-egg-with-bow.gif");
+}
+
+.theme_3.easter {
+    display: inline-block;
+    width: 75%;
+    content: url("graphics/themes/easter/Easterbunny.gif");
+}
+
+.theme_4.easter {
+    display: inline-block;
+    width: 75%;
+    content: url("graphics/themes/easter/easter-bunny-chasing-egg.gif");
+}
+
+.theme_5.easter {
+    display: inline-block;
+    content: url("graphics/themes/easter/Easterbunny-flower.gif");
+}
+
+.theme_6.easter {
+    display: inline-block;
+    content: url("graphics/themes/easter/easter-bunny-eggs.gif");
+}
+
+.headingtop.easter {
+    display: inline-block;
+    content: url("graphics/themes/easter/headingtop.gif");
+}
+
+.headingbottom.easter {
+    display: inline-block;
+    content: url("graphics/themes/easter/headingbottom.gif");
+}
+
+.theme_title.easter {
+    display: inline-block;
+    content: url("graphics/themes/easter/easteredition.gif");
+}
+
+.left.easter {
+    display: inline-block;
+    width: 50%;
+    content: url("graphics/themes/easter/egg-left.gif");
+}
+
+.right.easter {
+    display: inline-block;
+    width: 50%;
+    content: url("graphics/themes/easter/egg-right.gif");
 }
