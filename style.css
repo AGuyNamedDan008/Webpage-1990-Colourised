@@ -121,13 +121,13 @@ div[id^="trail"] {
 html {
     cursor: url("graphics/ui/cusors/Normal\ Select.gif"), default;
     height: 100%;
+    scrollbar-color: #c0c0c0 #fff;
 }
 
 body {
     background-color: #000;
     background-image: url("graphics/backgrounds/space.gif");
     margin: 0%;
-    overflow-x: hidden;
 }
 
 section {
@@ -722,11 +722,12 @@ footer>p {
     background-image: url("graphics/ui/cusors/Link\ Select.gif");
 }
 
-.slider::-webkit-slider-thumb {
+.slider::-moz-range-thumb {
     appearance: none;
-    width: 0.75vw;
-    height: 1.5vw;
+    width: 0.45vw;
+    height: 1.1vw;
     border: solid;
+    border-radius: 0;
     border-bottom-color: #424242;
     border-right-color: #424242;
     border-left-color: #fff;
