@@ -121,7 +121,6 @@ div[id^="trail"] {
 html {
     cursor: url("graphics/ui/cusors/Normal\ Select.gif"), default;
     height: 100%;
-    scrollbar-color: #c0c0c0 #fff;
 }
 
 body {
@@ -725,7 +724,20 @@ footer>p {
 .slider::-moz-range-thumb {
     appearance: none;
     width: 0.45vw;
-    height: 1.1vw;
+    height: 1.2vw;
+    border: solid;
+    border-radius: 0;
+    border-bottom-color: #424242;
+    border-right-color: #424242;
+    border-left-color: #fff;
+    border-top-color: #fff;
+    background: silver;
+}
+
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 0.75vw;
+    height: 1.5vw;
     border: solid;
     border-radius: 0;
     border-bottom-color: #424242;
