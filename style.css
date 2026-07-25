@@ -1235,7 +1235,6 @@ footer>p {
 
 .pics-window {
     overflow-y: scroll;
-    height: 22vw;
     padding: 1%;
     margin: 1%;
     display: flex;
@@ -1250,10 +1249,9 @@ footer>p {
 }
 
 .x {
-    height: 11vw;
-    display: flex;
-    justify-content: flex-start;
-    overflow-y: auto;
+    flex-wrap: nowrap;
+    column-gap: 1%;
+    overflow-y: hidden;
     overflow-x: scroll;
 }
 
