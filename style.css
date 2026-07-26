@@ -121,6 +121,7 @@ div[id^="trail"] {
 html {
     cursor: url("graphics/ui/cusors/Normal\ Select.gif"), default;
     height: 100%;
+    overflow-x: hidden;
 }
 
 body {
